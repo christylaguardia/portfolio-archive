@@ -1,0 +1,15 @@
+.template {
+  display: none;
+}
+
+.article-picture img {
+  max-height: 200px;
+  /*max-width: 300px;
+  float: left;*/
+}
+
+.article-body{
+  border: 1px solid green;
+  /*max-width: 300px;
+  float: right;*/
+}
