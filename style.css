@@ -1,24 +1,45 @@
+/*font-family: 'Cutive Mono', monospace;*/
+/*font-family: 'Roboto', sans-serif;*/
+/*font-family: 'Open Sans', sans-serif;*/
+
 body {
   margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#blogContainer {
+  padding: 1%;
 }
 
 header {
-  padding: 10px;
-  background-color: grey;
+  /*padding: 10px;*/
+  background-color: #FFF8D2;
+  height: 10rem;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+h1, h2 {
+  font-family: 'Poppins', sans-serif;
+}
+
+p {
+
 }
 
 nav li {
   list-style-type: none;
   display: inline;
-  padding: 20px;
+  padding-left: 2rem;
 }
 
 nav li:hover {
-  background-color: red; 
+  color: blue;
 }
 
 nav a {
   text-decoration: none;
+  /*color: #000;*/
 }
 
 .template {
@@ -32,7 +53,29 @@ nav a {
 }
 
 .article-body{
-  border: 1px solid green;
+  /*border: 1px solid green;*/
   /*max-width: 300px;
   float: right;*/
+  /*border-bottom: 1px solid grey;*/
+}
+
+.fromMsg, .toMsg {
+  border-radius: 2%;
+  padding: 1%;
+  margin-bottom: 2%;
+  color: #ffffff;
+  max-width: 50%;
+  font-family: 'Arial', sans-serif;
+}
+
+.fromMsg {
+  background-color: #5296ce;
+  margin-left: 10%;
+  margin-right: 40%;
+}
+
+.toMsg {
+  background-color: #56ab60;
+  margin-left: 40%;
+  margin-right: 10%;
 }
