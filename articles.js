@@ -1,18 +1,10 @@
 var blogData = [];
 
 blogData = [
-  // {
-  //   title:    '',
-  //   category:  '',
-  //   published: '',
-  //   image:     '',
-  //   caption:   '',
-  //   body:      ''
-  // },
   {
   	title: 'Why\'d you leave?',
     category: 'ex-jw',
-    published: '2016-08-02',
+    publishedOn: '2016-08-02',
   	image: 'images/pioneer-cards.jpeg',
     caption: 'I was totally a legit Pioneer, I even have the business cards to prove it',
   	body: '<p>I&#39;ve been asked many times &#34;Why did you leave your religion?&#34; from both ex-JWs and non-ex-JWs. My default answer has usually been something related to the false doctrine I uncovered or the controlling nature of religion or the scandalous lies told by the leaders, etc., etc., etc.</p>'
@@ -26,7 +18,7 @@ blogData = [
   {
   	title: 'Thank you Google for helping me find Joel',
     category: 'ex-jw',
-    published: '2016-05-31',
+    publishedOn: '2016-05-31',
   	image: 'images/me-and-joel.jpeg',
     caption: 'Skipping service and hanging out with my new apostate buddy',
     body: '<p>One night while I was secretly investigating Jehovah&#39;s Witnesses on the web, I decided to read about what ex-Jehovah&#39;s Witnesses had to say. To make a well informed decision to leave my religion, I needed to hear what both sides had to say and I have already done exhausting amounts of research from Watchtower publications. I realized this would be directly seeking out &#34;apostates,&#34; but I reasoned that all I would do is just see what they had to say then make up my own mind.</p>'
@@ -80,7 +72,7 @@ blogData = [
   {
     title: 'Compulsory Devotion',
     category: 'ex-jw',
-    published: '2017-01-05',
+    publishedOn: '2017-01-05',
     image: 'images/family-at-woodburn.jpeg',
     caption: 'My family at a Circuit Assembly in Woodburn, Oregon, early 90\'s, I\'m the one with the bad hair',
     body: '<p>I was raised in a Jehovah&#39;s Witness family. Although not universally recognized as a cult, JW&#39;s fit the definition perfectly (don&#39;t just take my word for it, read more at sites like JWfacts). Growing up, this meant that our lives revolved around JW activities - Sunday morning we met at the Kingdom Hall to listen to a talk, followed by a question and answer discussion of the current issue of the Watchtower. Monday and Tuesday evenings were spent in personal Bible study and preparing student assignments for the ministry school, which was on Wednesday evening. Thursday was the small group Bible study (this one was my favorite because we usually met at someone&#39;s house and had desert after).'
@@ -100,10 +92,12 @@ blogData = [
   {
     title: 'Reuniting with my sister',
     category: 'ex-jw',
-    published: '2017-04-25',
+    publishedOn: '2017-04-25',
     image: 'images/me-and-missy.jpeg',
     caption: 'Meeting my sister after almost 10 years apart',
-    body: '<p>It had been almost ten years since I had contact with my sister Missy. We were close a kids until she left the church and eventually I was no longer allowed to have contact with her and was forced to sever ties and not return her calls or texts. My mother even forced me to change me phone number for that reason. During that time apart I missed her terribly. I cried every time I thought about her and carried that pain in my heart everyday. Right after I knew I was going to leave the church, I sent the email below in an effort to rekindle our relationship. I was excited, but also nervous because I wasn&#39;t sure how a decade of shunning has altered our sisterly bond.</p>'
+    body: '<p>It had been almost ten years since I had contact with my sister Missy. We were close a kids, until she moved out at 17. She had decided to leave the church, although she left over a period of a few years. Because she left e&39;the Truthe&39;, she was considered bad association and my parents feared I would follow in her footsteps. So they limited my contact with her. Eventually I was no longer allowed to have contact with her at all, and was forced to not return her calls or texts. My mother even made change me phone number so she would not be able to contact me.</p>'
+    
+    + '<p>During that time apart I missed her terribly. I cried every time I thought about her and carried that pain in my heart everyday. I knew she loved me, and although I couldne&39;t understand why she left, I hoped wee&39;d be reunited someday. Fasforward to over a decade as I finally decided that I was going to leave the church, I sent the email below in an effort to rekindle our relationship. I was excited, but also nervous because I wasn&#39;t sure how a decade of shunning has altered our sisterly bond.</p>'
 
       + '<div class="toMsg"><p>From: Christy<br>Sent: Jun 2, 2015 3&#58;52 PM<br><br>I found your email from your website so I hope you don&#39;t mind sending a message to it. I know contacting you now might come as a surprise, but I would really like to talk to you. I miss you and it&#39;s been too long since I&#39;ve acted like you sister and I really regret it. Mom and Dad don&#39;t know I&#39;ve been trying to get a hold of you, and I haven&#39;t told Amy. This might sound weird but I don&#39;t want them to know just yet. I really hope you want to see me, there&#39;s so much I want to tell you.<br>Love,<br>Christy</p></div>'
 

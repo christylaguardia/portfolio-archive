@@ -88,13 +88,30 @@ article {
   color: grey;
 }
 
+.read-more {
+    color: #616161;
+    border: none;
+    background-color: #ffffff;
+    padding: .3rem;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.read-more:hover {
+  color: #ff98dd;
+}
+
 .fromMsg, .toMsg {
   border: 1px solid #616161;
-  border-radius: 2%;
+  border-radius: 10px;
   padding: 1%;
   margin-bottom: 2%;
-  /*min-width: 300px;*/
   max-width: 50%;
+}
+
+.fromMsg p, .toMsg p {
+  margin: 0;
 }
 
 .fromMsg {
