@@ -2,13 +2,17 @@ var blogData = [];
 
 blogData = [
   // {
-  //   title: '',
-  //   image: '',
-  //   caption: '',
-  //   body: ''
+  //   title:    '',
+  //   category:  '',
+  //   published: '',
+  //   image:     '',
+  //   caption:   '',
+  //   body:      ''
   // },
   {
   	title: 'Why\'d you leave?',
+    category: 'ex-jw',
+    published: '2016-08-02',
   	image: 'images/pioneer-cards.jpeg',
     caption: 'I was totally a legit Pioneer, I even have the business cards to prove it',
   	body: '<p>I&#39;ve been asked many times &#34;Why did you leave your religion?&#34; from both ex-JWs and non-ex-JWs. My default answer has usually been something related to the false doctrine I uncovered or the controlling nature of religion or the scandalous lies told by the leaders, etc., etc., etc.</p>'
@@ -21,6 +25,8 @@ blogData = [
   },
   {
   	title: 'Thank you Google for helping me find Joel',
+    category: 'ex-jw',
+    published: '2016-05-31',
   	image: 'images/me-and-joel.jpeg',
     caption: 'Skipping service and hanging out with my new apostate buddy',
     body: '<p>One night while I was secretly investigating Jehovah&#39;s Witnesses on the web, I decided to read about what ex-Jehovah&#39;s Witnesses had to say. To make a well informed decision to leave my religion, I needed to hear what both sides had to say and I have already done exhausting amounts of research from Watchtower publications. I realized this would be directly seeking out &#34;apostates,&#34; but I reasoned that all I would do is just see what they had to say then make up my own mind.</p>'
@@ -73,6 +79,8 @@ blogData = [
   },
   {
     title: 'Compulsory Devotion',
+    category: 'ex-jw',
+    published: '2017-01-05',
     image: 'images/family-at-woodburn.jpeg',
     caption: 'My family at a Circuit Assembly in Woodburn, Oregon, early 90\'s, I\'m the one with the bad hair',
     body: '<p>I was raised in a Jehovah&#39;s Witness family. Although not universally recognized as a cult, JW&#39;s fit the definition perfectly (don&#39;t just take my word for it, read more at sites like JWfacts). Growing up, this meant that our lives revolved around JW activities - Sunday morning we met at the Kingdom Hall to listen to a talk, followed by a question and answer discussion of the current issue of the Watchtower. Monday and Tuesday evenings were spent in personal Bible study and preparing student assignments for the ministry school, which was on Wednesday evening. Thursday was the small group Bible study (this one was my favorite because we usually met at someone&#39;s house and had desert after).'
@@ -91,6 +99,8 @@ blogData = [
   },
   {
     title: 'Reuniting with my sister',
+    category: 'ex-jw',
+    published: '2017-04-25',
     image: 'images/me-and-missy.jpeg',
     caption: 'Meeting my sister after almost 10 years apart',
     body: '<p>It had been almost ten years since I had contact with my sister Missy. We were close a kids until she left the church and eventually I was no longer allowed to have contact with her and was forced to sever ties and not return her calls or texts. My mother even forced me to change me phone number for that reason. During that time apart I missed her terribly. I cried every time I thought about her and carried that pain in my heart everyday. Right after I knew I was going to leave the church, I sent the email below in an effort to rekindle our relationship. I was excited, but also nervous because I wasn&#39;t sure how a decade of shunning has altered our sisterly bond.</p>'
