@@ -19,6 +19,14 @@ blue        #98ddff
 body {
   margin: 0 auto;
   font-family: 'Open Sans', sans-serif;
+  /*this is for the fade in effect*/
+  opacity: 1;
+  transition: 1s opacity;
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: none;
 }
 
 header {
@@ -61,12 +69,14 @@ nav a {
 
 nav a:hover {
   color: #ff98dd;
+  transition: color 1s ease-out;
 }
 
 #headshot {
   margin-top: 5rem;
   height: 10rem;
   border-radius: 5rem;
+  box-shadow: 0 0 1rem #bdbdbd;
 }
 
 .template {
@@ -79,27 +89,41 @@ article {
   margin: 0 auto;
 }
 
+.article-picture {
+  text-align: center;
+}
+
 .article-picture img {
-  max-height: 200px;
+  max-width: 60%;
+  border-radius: .25rem;
 }
 
 .article-caption {
-  font-family: font-family: 'Poppins', sans-serif;
-  color: grey;
+  max-width: 60%;
+  margin: 0 auto;
+  color: #424242;
+  font-style: italic;
 }
 
-.read-more {
-    color: #616161;
-    border: none;
-    background-color: #ffffff;
-    padding: .3rem;
-    text-align: center;
-    text-decoration: none;
-    font-size: 1rem;
+button {
+  font-size: .75rem;
+  color: #bdbdbd;
+  border: 1px solid #bdbdbd;
+  border-radius: 2px;
+  background-color: #ffffff;
+  padding: .3rem;
+  text-align: center;
 }
 
-.read-more:hover {
-  color: #ff98dd;
+button:hover {
+  color: #bdbdbd;
+  background-color: #ff98dd;
+  /* TODO: this not working */
+  transition: background-color 1s ease-in-out;
+}
+
+button:focus {
+  outline: 0;
 }
 
 .fromMsg, .toMsg {
@@ -124,4 +148,8 @@ article {
   background-color: #ddff98;
   margin-left: 40%;
   margin-right: 10%;
+}
+
+@media only screen and (min-width: 320px) {
+
 }

@@ -1,6 +1,11 @@
 // array that will hold all the blog article objects
 var articles = [];
 
+// fade in the page by removing the class
+$(function() {
+    $('body').removeClass('fade-out');
+});
+
 // constructor function
 function Article(blogObject) {
   this.title = blogObject.title;
@@ -20,9 +25,10 @@ Article.prototype.toHtml = function() {
   newArticle.find('.article-title').text(this.title);
   newArticle.find('.article-date').attr('datetime', this.publishedOn);
   newArticle.find('.article-date').text('Published ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
+  newArticle.find('.article-body').html(this.body);
   newArticle.find('.article-picture').children('img').attr('src', this.image);
   newArticle.find('.article-caption').text(this.caption);
-  newArticle.find('.article-body').html(this.body);
+
   // console.log("Created new Article object", newArticle)
   return newArticle;
 }
@@ -55,15 +61,15 @@ articleView.setTeasers = function() {
 }
 
 $('.read-more').click(function() {
-    // if($(this).text() === 'Read more') {
-      $(this).siblings('section').find('p').fadeIn(423);
-      // $(this).siblings('section').fadeIn(1000);
-      // TODO: get the msg and picture to unhide
-    //   $(this).text('Show Less');
-    // } else if ($(this).text() === 'Show Less'){
-    //   $('.article-body *:nth-of-type(n+2)').hide();
-    //   $(this).text('Read more');
-    // }
-  });
+  // hide the button after click
+  $(this).fadeOut(1000);
+  // show all the body paragraphs
+  $(this).siblings('section').find('p').fadeIn(600);
+  // show the messages if any
+  $(this).parent().children('div.toMsg').fadeIn(1000);
+  $(this).parent().children('div.fromMsg').fadeIn(1000);
+  // show the image and caption
+  $(this).parent().children('div.article-picture').fadeIn(1000);
+});
 
 articleView.setTeasers();
