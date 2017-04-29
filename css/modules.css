@@ -1,0 +1,64 @@
+.template {
+  display: none;
+}
+
+article {
+  padding: 1%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.article-picture {
+  text-align: center;
+}
+
+.article-picture img {
+  max-width: 60%;
+  border-radius: .25rem;
+}
+
+.article-caption {
+  max-width: 60%;
+  margin: 0 auto;
+  color: #424242;
+  font-style: italic;
+}
+
+.fromMsg, .toMsg {
+  border: 1px solid #616161;
+  border-radius: 10px;
+  padding: 1%;
+  margin-bottom: 2%;
+  max-width: 50%;
+}
+
+.fromMsg p, .toMsg p {
+  margin: 0;
+}
+
+.fromMsg {
+  background-color: #98ddff;
+  margin-left: 10%;
+  margin-right: 40%;
+}
+
+.toMsg {
+  background-color: #ddff98;
+  margin-left: 40%;
+  margin-right: 10%;
+}
+
+/* TODO: add the media queries for a smaller screen */
+/*@media only screen and (min-width: 320px) {
+  .icon-menu {
+    display: none;
+  }
+  .main-nav ul {
+    display: block;
+  }
+  .main-nav li {
+    display: inline-block;
+    border-bottom: none;
+    padding-left: .667em;
+  }
+ }*/

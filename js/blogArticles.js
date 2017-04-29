@@ -1,11 +1,6 @@
 // array that will hold all the blog article objects
 var articles = [];
 
-// fade in the page by removing the class
-$(function() {
-    $('body').removeClass('fade-out');
-});
-
 // constructor function
 function Article(blogObject) {
   this.title = blogObject.title;
@@ -54,22 +49,29 @@ articles.forEach(function(something) {
 var articleView = {};
 articleView.setTeasers = function() {
   // hide everything but the first paragraph
-  $('.article-body *:nth-of-type(n+2)').hide();
-  $('.toMsg').hide();
-  $('.fromMsg').hide();
-  $('.article-picture').hide();
+  $('.article-body *:nth-of-type(n+2)').fadeOut(600);
+  $('.toMsg').fadeOut(600);
+  $('.fromMsg').fadeOut(600);
+  $('.article-picture').fadeOut(600);
 }
 
 $('.read-more').click(function() {
-  // hide the button after click
-  $(this).fadeOut(1000);
-  // show all the body paragraphs
-  $(this).siblings('section').find('p').fadeIn(600);
-  // show the messages if any
-  $(this).parent().children('div.toMsg').fadeIn(1000);
-  $(this).parent().children('div.fromMsg').fadeIn(1000);
-  // show the image and caption
-  $(this).parent().children('div.article-picture').fadeIn(1000);
+  if ($(this).text() === 'Read More') {
+    // change the button text
+    $(this).text('Show Less');
+    // show all the body paragraphs
+    $(this).siblings('section').find('p').fadeIn(600);
+    // show the messages if any
+    $(this).parent().find('div.toMsg').fadeIn(600);
+    $(this).parent().find('div.fromMsg').fadeIn(600);
+    // show the image and caption
+    $(this).parent().children('div.article-picture').fadeIn(600);
+  } else {
+    // change the button text
+    $(this).text('Read More');
+    // hide all the stuff
+    articleView.setTeasers();
+  }
 });
 
 articleView.setTeasers();
