@@ -10,10 +10,13 @@
   <body class="fade-out">
     <header>
       <nav>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="https://github.com/christylaguardia/" target="_blank">GitHub</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <ul>
+          <li id="menuIcon" onclick="showMenuOptions()">&#9776;</li>
+          <li class="menuOption" data-content="articles"><a href="#">Home</a></li>
+          <li class="menuOption" data-content="about"><a href="#">About</a></li>
+          <li class="menuOption"><a href="https://github.com/christylaguardia/" target="_blank">GitHub</a></li>
+          <li class="menuOption" data-content="contact"><a href="#">Contact</a></li>
+        </ul>
       </nav>
       <img id="headshot" src="images/christy-headshot.jpeg">
       <h1>Christy La Guardia</h1>

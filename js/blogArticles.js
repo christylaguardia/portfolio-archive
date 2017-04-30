@@ -59,13 +59,8 @@ $('.read-more').click(function() {
   if ($(this).text() === 'Read More') {
     // change the button text
     $(this).text('Show Less');
-    // show all the body paragraphs
-    $(this).siblings('section').find('p').fadeIn(600);
-    // show the messages if any
-    $(this).parent().find('div.toMsg').fadeIn(600);
-    $(this).parent().find('div.fromMsg').fadeIn(600);
-    // show the image and caption
-    $(this).parent().children('div.article-picture').fadeIn(600);
+    // show all the hidden content
+    $(this).parent().find('*').fadeIn(600);
   } else {
     // change the button text
     $(this).text('Read More');

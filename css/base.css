@@ -66,6 +66,11 @@ nav {
   border-bottom: 1px solid #000;
 }
 
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
 nav li {
   list-style-type: none;
   display: inline;
@@ -89,6 +94,12 @@ nav a:hover {
   border-radius: 5rem;
   /*box-shadow: 0 0 1rem #bdbdbd;*/
   box-shadow: 0 0 2rem #212121;
+}
+
+article {
+  padding: 1%;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 button {

@@ -2,3 +2,7 @@
 $(function() {
     $('body').removeClass('fade-out');
 });
+
+function showMenuOptions() {
+  $('.menuOption').toggle();
+}

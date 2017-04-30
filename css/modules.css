@@ -2,22 +2,19 @@
   display: none;
 }
 
-article {
-  padding: 1%;
-  max-width: 960px;
-  margin: 0 auto;
-}
-
 .article-picture {
+  display: none;
   text-align: center;
 }
 
 .article-picture img {
+  display: none;
   max-width: 60%;
   border-radius: .25rem;
 }
 
 .article-caption {
+  display: none;
   max-width: 60%;
   margin: 0 auto;
   color: #424242;
@@ -25,6 +22,7 @@ article {
 }
 
 .fromMsg, .toMsg {
+  display: none;
   border: 1px solid #616161;
   border-radius: 10px;
   padding: 1%;
@@ -48,17 +46,45 @@ article {
   margin-right: 10%;
 }
 
-/* TODO: add the media queries for a smaller screen */
-/*@media only screen and (min-width: 320px) {
-  .icon-menu {
+/* QUESTION: not sure if this is needed */
+#menuIcon {
+  display: none;
+  color: #ffffff;
+  font-size: 2rem;
+}
+
+#menuIcon:hover {
+  color: #ff98dd;
+}
+
+/* QUESTION: not sure if this is needed */
+.menuOption {
+  display: inline-block;
+ }
+
+/*for smaller screens*/
+@media screen and (max-width: 600px) {
+  #menuIcon {
+    display: block;
+    text-align: right;
+    font-size: 2rem;
+    color: #ffffff;
+  }
+  .menuOption {
+    display: none;
+    text-align: left;
+    font-size: 1.25rem;
+  }
+}
+
+/*for larger screen*/
+@media screen and (min-width: 600px) {
+  #menuIcon {
     display: none;
   }
-  .main-nav ul {
-    display: block;
-  }
-  .main-nav li {
+  .menuOption {
     display: inline-block;
-    border-bottom: none;
-    padding-left: .667em;
+    /*text-align: center;*/
+    /*font-size: 1.25rem;*/
   }
- }*/
+}
