@@ -42,31 +42,4 @@ articles.sort(function(a,b) {
 // add each blog article to the page
 articles.forEach(function(something) {
   $('#blogContainer').append(something.toHtml());
-  console.log("Added article to page");
 });
-
-// hide some of the content
-var articleView = {};
-articleView.setTeasers = function() {
-  // hide everything but the first paragraph
-  $('.article-body *:nth-of-type(n+2)').fadeOut(600);
-  $('.toMsg').fadeOut(600);
-  $('.fromMsg').fadeOut(600);
-  $('.article-picture').fadeOut(600);
-}
-
-$('.read-more').click(function() {
-  if ($(this).text() === 'Read More') {
-    // change the button text
-    $(this).text('Show Less');
-    // show all the hidden content
-    $(this).parent().find('*').fadeIn(600);
-  } else {
-    // change the button text
-    $(this).text('Read More');
-    // hide all the stuff
-    articleView.setTeasers();
-  }
-});
-
-articleView.setTeasers();

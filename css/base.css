@@ -48,7 +48,7 @@ h1, h2, h3 {
 }
 
 header h1, h2 {
-  margin-bottom: 0;
+  margin: 0;
 }
 
 header p {
@@ -97,9 +97,22 @@ nav a:hover {
 }
 
 article {
-  padding: 1%;
+  padding: 3% 1%;
   max-width: 960px;
   margin: 0 auto;
+  border-top: 2px solid #bdbdbd;
+}
+
+#blogContainer {
+  display: block;
+}
+
+#about {
+  display: none;
+}
+
+#contact {
+  display: none;
 }
 
 button {

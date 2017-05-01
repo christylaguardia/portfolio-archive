@@ -3,18 +3,18 @@
 }
 
 .article-picture {
-  display: none;
+  /*display: none;*/
   text-align: center;
 }
 
 .article-picture img {
-  display: none;
+  /*display: none;*/
   max-width: 60%;
   border-radius: .25rem;
 }
 
 .article-caption {
-  display: none;
+  /*display: none;*/
   max-width: 60%;
   margin: 0 auto;
   color: #424242;
@@ -58,7 +58,7 @@
 }
 
 /* QUESTION: not sure if this is needed */
-.menuOption {
+.menuOption, .menuLink {
   display: inline-block;
  }
 
@@ -70,7 +70,7 @@
     font-size: 2rem;
     color: #ffffff;
   }
-  .menuOption {
+  .menuOption, .menuLink {
     display: none;
     text-align: left;
     font-size: 1.25rem;
@@ -82,9 +82,7 @@
   #menuIcon {
     display: none;
   }
-  .menuOption {
+  .menuOption, .menuLink {
     display: inline-block;
-    /*text-align: center;*/
-    /*font-size: 1.25rem;*/
   }
 }
