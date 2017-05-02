@@ -133,12 +133,19 @@ article {
   margin: 1rem auto;
   padding: 1rem;
   text-align: center;
-  border-top: none;
-  border-left: none;
-  border-right: none;
+  background-color: inherit;
+  border-top: 2px solid #fafafa;
+  border-left: 2px solid #fafafa;
+  border-right: 2px solid #fafafa;
   border-bottom: 2px solid #bdbdbd;
   width: auto;
   font-size: 1rem;
+}
+
+#category-filter:hover {
+  cursor: pointer;
+  background-color: #ff98dd;
+  transition: background-color .5s ease-in-out;
 }
 
 label {
@@ -149,11 +156,12 @@ label {
   text-align: center;
 }
 
-#category-filter, button {
+button, time {
   font-size: .75rem;
-  color: #212121;
+}
 
-  /*background-color: #ffffff;*/
+#category-filter, button {
+  color: #212121;
   background-color: inherit;
   opacity: .8;
   padding: .5rem;

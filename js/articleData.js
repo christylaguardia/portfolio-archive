@@ -3,7 +3,8 @@ var blogData = [];
 blogData = [
   {
   	title: 'Why\'d you leave?',
-    category: 'me',
+    // Read about my
+    category: 'life.',
     publishedOn: '2016-08-02',
   	image: 'images/pioneer-cards.jpeg',
     caption: 'I was totally a legit Pioneer and I have the business cards to prove it',
@@ -17,7 +18,7 @@ blogData = [
   },
   {
   	title: 'Thank you Google for helping me find Joel',
-    category: 'ex-jw',
+    category: 'ex-JW history.',
     publishedOn: '2016-05-31',
   	image: 'images/me-and-joel.jpeg',
     caption: 'Skipping service and hanging out with my new apostate buddy',
@@ -71,7 +72,7 @@ blogData = [
   },
   {
     title: 'Compulsory Devotion',
-    category: 'ex-jw',
+    category: 'ex-JW history.',
     publishedOn: '2017-01-05',
     image: 'images/family-at-woodburn.jpeg',
     caption: 'My family at a Circuit Assembly in Woodburn, Oregon, early 90\'s, I\'m the one with the bad hair',
@@ -92,7 +93,7 @@ blogData = [
   },
   {
     title: 'Reuniting with my sister',
-    category: 'family',
+    category: 'family.',
     publishedOn: '2017-04-25',
     image: 'images/me-and-missy.jpeg',
     caption: 'Meeting my sister after almost 10 years apart',

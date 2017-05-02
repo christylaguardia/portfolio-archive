@@ -20,7 +20,9 @@ Article.prototype.toHtml = function() {
   newArticle.attr('data-category', this.category);
   newArticle.find('.article-title').text(this.title);
   newArticle.find('.article-date').attr('datetime', this.publishedOn);
-  newArticle.find('.article-date').text('Published on ' + this.publishedOn + ' (' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago)');
+  var publishedOnDate = new Date(this.publishedOn);
+  var publishedDays = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
+  newArticle.find('.article-date').text('Published on ' + (publishedOnDate.getMonth()+1) +'/' + (publishedOnDate.getDate()) + '/' + (publishedOnDate.getFullYear()) + ' (' +  publishedDays + ' days ago)');
   newArticle.find('.article-body').html(this.body);
   newArticle.find('.article-picture').children('img').attr('src', this.image);
   newArticle.find('.article-caption').text(this.caption);
