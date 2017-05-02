@@ -17,13 +17,13 @@ Article.prototype.toHtml = function() {
   // remove the template class
   newArticle.removeClass('template');
   // add the article data to the cloned template
+  newArticle.attr('data-category', this.category);
   newArticle.find('.article-title').text(this.title);
   newArticle.find('.article-date').attr('datetime', this.publishedOn);
-  newArticle.find('.article-date').text('Published ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
+  newArticle.find('.article-date').text('Published on ' + this.publishedOn + ' (' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago)');
   newArticle.find('.article-body').html(this.body);
   newArticle.find('.article-picture').children('img').attr('src', this.image);
   newArticle.find('.article-caption').text(this.caption);
-
   // console.log("Created new Article object", newArticle)
   return newArticle;
 }

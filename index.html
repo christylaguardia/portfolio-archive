@@ -24,12 +24,18 @@
     </header>
 
     <section id="blogContainer" class="tabContent">
-      <!-- TODO: add catgory selector -->
-      <article class="template">
-        <!-- <hr> -->
+      <!-- filters -->
+      <div id="filterContainer">
+        <label for="category-filter">Read about my </label>
+        <select id="category-filter">
+          <option value="">...</option>
+        </select>
+      </div>
+      <!-- template -->
+      <article class="template" data-category="placeholder-category">
         <h2 class="article-title">Article Title</h2>
         <time class="article-date" datetime="2017-04-23">Published Date</time>
-        <section class="article-body"></section>
+        <div class="article-body"></div>
         <div class="article-picture">
           <img src="">
           <figcaption class="article-caption">Image Caption</figcaption>

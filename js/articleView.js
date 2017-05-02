@@ -44,5 +44,30 @@ $('.read-more').click(function() {
   }
 });
 
+articleView.populateTags = function() {
+  $('#blogContainer article').not('.template').each(function() {
+    var category = $(this).attr('data-category');
+    console.log(category);
+    var optionTag = '<option value="' + category + '">' + category + '</option>';
+    if ($('#category-filter option[value="' + category + '"]').length === 0) {
+      $('#category-filter').append(optionTag);
+    }
+  });
+};
+
+articleView.handleCategoryFilter = function() {
+  $('#category-filter').on('change', function () {
+    var selection = $(this).val();
+    if (selection) {
+      $('#blogContainer article').hide();
+      $('#blogContainer article[data-category="' + selection + '"]').fadeIn(800);
+    } else {
+      $('#blogContainer article').not('.template').show();
+    }
+  })
+};
+
 articleView.handleMainNav();
 articleView.setTeasers();
+articleView.populateTags();
+articleView.handleCategoryFilter();

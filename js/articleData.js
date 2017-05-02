@@ -3,7 +3,7 @@ var blogData = [];
 blogData = [
   {
   	title: 'Why\'d you leave?',
-    category: 'ex-jw',
+    category: 'me',
     publishedOn: '2016-08-02',
   	image: 'images/pioneer-cards.jpeg',
     caption: 'I was totally a legit Pioneer and I have the business cards to prove it',
@@ -92,7 +92,7 @@ blogData = [
   },
   {
     title: 'Reuniting with my sister',
-    category: 'ex-jw',
+    category: 'family',
     publishedOn: '2017-04-25',
     image: 'images/me-and-missy.jpeg',
     caption: 'Meeting my sister after almost 10 years apart',
