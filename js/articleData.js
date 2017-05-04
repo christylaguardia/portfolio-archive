@@ -94,17 +94,21 @@ blogData = [
   {
     title: 'Reuniting with my sister',
     category: 'family.',
-    publishedOn: '2017-04-25',
+    publishedOn: '2015-07-01',
     image: 'images/me-and-missy.jpeg',
     caption: 'Meeting my sister after almost 10 years apart',
-    body: '<p>It had been almost ten years since I had contact with my sister Missy. We were close a kids and teenagers. But our relationship was abrubtly severed when she decided to leave the church and move out at 17. She was considered &#34;bad association&#34; and my parents feared I would follow in her footsteps. So they limited my contact with her, at first just severly limited and hightly supervised. But eventually I was no longer allowed to have contact with her at all, and was forced not to return her calls or texts. My mother even made change my phone number so she would not be able to contact me.</p>'
+    body: '<p>Yesterday I saw my sister for the first time in about 15 years. We were close a kids, until she moved out at 17. She had decided to leave the church, although she left over a period of a few years. Because she left &#39;the Truth&#39;, she was considered bad association and my parents feared I would follow in her footsteps. So they limited my contact with her. Eventually I was no longer allowed to have contact with her at all, and was forced to not return her calls or texts. My mother even made change me phone number so she would not be able to contact me.</p>'
 
-    + '<p>During that time apart I missed her terribly. I cried every time I thought about her and carried that pain in my heart everyday. I knew she loved me, and although I couldn&#39;t understand why she left, I hoped we&#39;d be reunited someday. Fastforward a decade as I finally decided that I was going to leave the church. I sent the email below in an effort to rekindle our relationship. I was excited, but also nervous because I wasn&#39;t sure how a decade of shunning had altered our sisterly bond.</p>'
+    + '<p>During that time apart I missed her terribly. I cried every time I thought about her and carried that pain in my heart everyday. I knew she loved me, and although I couldn&#39;t understand why she left, I hoped we&#39;d be reunited someday. Fast Forward to over a decade as I finally decided that I was going to leave the church, I sent the email below in an effort to rekindle our relationship. I was excited, but also nervous because I wasn&#39;t sure how a decade of shunning has altered our sisterly bond. I also knew my parents would be really upset if they found out.</p>'
 
       + '<div class="fromMsg"><p>From: Christy<br>Sent: Jun 2, 2015 3&#58;52 PM</p><p>I found your email from your website so I hope you don&#39;t mind sending a message to it. I know contacting you now might come as a surprise, but I would really like to talk to you. I miss you and it&#39;s been too long since I&#39;ve acted like you sister and I really regret it. Mom and Dad don&#39;t know I&#39;ve been trying to get a hold of you, and I haven&#39;t told Amy. This might sound weird but I don&#39;t want them to know just yet. I really hope you want to see me, there&#39;s so much I want to tell you.<br>Love,<br>Christy</p></div>'
 
       + '<div class="toMsg"><p>From: Missy<br>Sent: June 24, 2015 3&#58;56 PM</p><p>I want to see you everyday.<br>I think of you often and you&#39;ve never been far from my heart.<br>When are you free next?<br>I respect your wishes on who knows what.</p></div>'
 
       + '<p>We met that following Friday, hugged, talked and cried. I can only describe reuniting with my sister as one of the happiest days of my life.</p>'
+
+      + '<p>Although we had a few brief encounters over the years, this was the first time we were really able to talk openly and honestly (and at length). She still has the same familiar face and expressions as I remembered, but in many ways is a complete stranger to me. I guess that’s what happens.</p>'
+
+      + '<p>As she talked about her beliefs on life and family, I couldn&#39;t help but envy her conviction. For years I painted myself as the solidly grounded one, unchanging with a strong sense of identity. Yet, as I looked at her and listened to her speak, it was clear that I was wrong. She wasn’t lost, being “tossed about as by waves and carried hither and thither.” In fact, it was the complete opposite! I was now the lost one, while my sister was doing what she had been all these years, being herself.</p>'
   }
 ]

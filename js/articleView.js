@@ -47,7 +47,7 @@ $('.read-more').click(function() {
 articleView.populateTags = function() {
   $('#blogContainer article').not('.template').each(function() {
     var category = $(this).attr('data-category');
-    console.log(category);
+    // console.log(category);
     var optionTag = '<option value="' + category + '">' + category + '</option>';
     if ($('#category-filter option[value="' + category + '"]').length === 0) {
       $('#category-filter').append(optionTag);
