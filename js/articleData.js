@@ -96,7 +96,7 @@ blogData = [
     category: 'family.',
     publishedOn: '2015-07-01',
     image: 'images/me-and-missy.jpeg',
-    caption: 'Meeting my sister after almost 10 years apart',
+    caption: 'Meeting my sister after almost 15 years apart',
     body: '<p>Yesterday I saw my sister for the first time in about 15 years. We were close a kids, until she moved out at 17. She had decided to leave the church, although she left over a period of a few years. Because she left &#39;the Truth&#39;, she was considered bad association and my parents feared I would follow in her footsteps. So they limited my contact with her. Eventually I was no longer allowed to have contact with her at all, and was forced to not return her calls or texts. My mother even made change me phone number so she would not be able to contact me.</p>'
 
     + '<p>During that time apart I missed her terribly. I cried every time I thought about her and carried that pain in my heart everyday. I knew she loved me, and although I couldn&#39;t understand why she left, I hoped we&#39;d be reunited someday. Fast Forward to over a decade as I finally decided that I was going to leave the church, I sent the email below in an effort to rekindle our relationship. I was excited, but also nervous because I wasn&#39;t sure how a decade of shunning has altered our sisterly bond. I also knew my parents would be really upset if they found out.</p>'

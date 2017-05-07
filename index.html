@@ -11,11 +11,11 @@
       <article data-category="{{ category }}">
         <h2 class="article-title">{{ title }}</h2>
         <time class="article-date" datetime="{{ publishedOn }}">{{{ publishStatus }}}</time>
-        <div class="article-body">{{{ body }}}</div>
         <div class="article-picture">
           <img src="{{ image }}">
           <figcaption class="article-caption">{{ caption }}</figcaption>
         </div>
+        <div class="article-body">{{{ body }}}</div>
         <button type="button" class="read-more">Read More</button>
       </article>
     </script>
