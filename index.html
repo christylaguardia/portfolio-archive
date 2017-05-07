@@ -1,33 +1,43 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/modules.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Poppins" rel="stylesheet">
     <title>Christy's Blog</title>
   </head>
-  <body>
+  <body class="fade-out">
     <header>
-      <h1>Christy's Blog About Something</h1>
       <nav>
-        <li>Home</li>
-        <li>Archive</li>
-        <li>GitHub</li>
-        <li>Contact</li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="https://github.com/christylaguardia/" target="_blank">GitHub</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </nav>
+      <img id="headshot" src="images/christy-headshot.jpeg">
+      <h1>Christy La Guardia</h1>
+      <p>Beagle lover, wannabe coder and ex-JW.</p>
     </header>
-    <section>
-      <h2>Article 1</h2>
-      <img src="https://www.google.com/search?q=stock+image+puppy&rlz=1C5CHFA_enUS709US710&tbm=isch&imgil=ZgyUCSR-wKAX2M%253A%253BEWDjJ8M60PDgjM%253Bhttp%25253A%25252F%25252Fstockfresh.com%25252Fimage%25252F764562%25252Flabrador-puppy&source=iu&pf=m&fir=ZgyUCSR-wKAX2M%253A%252CEWDjJ8M60PDgjM%252C_&usg=__DMHGC8h8MmbUTUbP5dGkCsbtowQ%3D">
-      <p>Puppy kitty ipsum dolor sit good dog stripes string. Speak licks kitten gimme five cage litter box bird water catch hamster. Ball litter box bark bird seed run fast Buddy wag tail. Furry parakeet play dead chew groom twine hamster fluffy biscuit dog chew. Harness nest cat bird pet food kitten fish throw roll over bird seed. Hamster aquarium foot brush canary dinnertime bird food licks water paws lazy dog vaccine kitty carrier walk cat running cat.Cat water cage Mittens chew slobber puppy Rover dinnertime meow scratcher run teeth dinnertime Rover toy ball water dog vaccination nest. Stripes leash food throw slobbery Snowball vaccine scratcher twine fleas walk tail running kisses collar kitty wag tail feeder left paw cage. Sit string water cage wagging bird seed litter box ferret aquarium ball chew commands drool twine good boy toy running cage. Fur scratcher Spike heel dinnertime scratch window lazy cat roll over. </p>
+    <section id="blogContainer">
+      <article class="template">
+        <hr>
+        <h2 class="article-title">Article Title</h2>
+        <time class="article-date" datetime="2017-04-23">Published Date</time>
+        <section class="article-body"></section>
+        <div class="article-picture">
+          <img src="">
+          <figcaption class="article-caption">Image Caption</figcaption>
+        </div>
+        <button type="button" class="read-more">Read More</button>
+      </article>
     </section>
-    <section>
-      <h2>Article 2</h2>
-      <img src="https://www.google.com/search?q=stock+image+puppy&rlz=1C5CHFA_enUS709US710&tbm=isch&imgil=ZgyUCSR-wKAX2M%253A%253BEWDjJ8M60PDgjM%253Bhttp%25253A%25252F%25252Fstockfresh.com%25252Fimage%25252F764562%25252Flabrador-puppy&source=iu&pf=m&fir=ZgyUCSR-wKAX2M%253A%252CEWDjJ8M60PDgjM%252C_&usg=__DMHGC8h8MmbUTUbP5dGkCsbtowQ%3D">
-      <p>Puppy kitty ipsum dolor sit good dog stripes string. Speak licks kitten gimme five cage litter box bird water catch hamster. Ball litter box bark bird seed run fast Buddy wag tail. Furry parakeet play dead chew groom twine hamster fluffy biscuit dog chew. Harness nest cat bird pet food kitten fish throw roll over bird seed. Hamster aquarium foot brush canary dinnertime bird food licks water paws lazy dog vaccine kitty carrier walk cat running cat.Cat water cage Mittens chew slobber puppy Rover dinnertime meow scratcher run teeth dinnertime Rover toy ball water dog vaccination nest. Stripes leash food throw slobbery Snowball vaccine scratcher twine fleas walk tail running kisses collar kitty wag tail feeder left paw cage. Sit string water cage wagging bird seed litter box ferret aquarium ball chew commands drool twine good boy toy running cage. Fur scratcher Spike heel dinnertime scratch window lazy cat roll over. </p>
-    </section>
-    <section>
-      <h2>Article 3</h2>
-      <img src="https://www.google.com/search?q=stock+image+puppy&rlz=1C5CHFA_enUS709US710&tbm=isch&imgil=ZgyUCSR-wKAX2M%253A%253BEWDjJ8M60PDgjM%253Bhttp%25253A%25252F%25252Fstockfresh.com%25252Fimage%25252F764562%25252Flabrador-puppy&source=iu&pf=m&fir=ZgyUCSR-wKAX2M%253A%252CEWDjJ8M60PDgjM%252C_&usg=__DMHGC8h8MmbUTUbP5dGkCsbtowQ%3D">
-      <p>Puppy kitty ipsum dolor sit good dog stripes string. Speak licks kitten gimme five cage litter box bird water catch hamster. Ball litter box bark bird seed run fast Buddy wag tail. Furry parakeet play dead chew groom twine hamster fluffy biscuit dog chew. Harness nest cat bird pet food kitten fish throw roll over bird seed. Hamster aquarium foot brush canary dinnertime bird food licks water paws lazy dog vaccine kitty carrier walk cat running cat.Cat water cage Mittens chew slobber puppy Rover dinnertime meow scratcher run teeth dinnertime Rover toy ball water dog vaccination nest. Stripes leash food throw slobbery Snowball vaccine scratcher twine fleas walk tail running kisses collar kitty wag tail feeder left paw cage. Sit string water cage wagging bird seed litter box ferret aquarium ball chew commands drool twine good boy toy running cage. Fur scratcher Spike heel dinnertime scratch window lazy cat roll over. </p>
-    </section>
-
+    <footer>
+      &copy; 2017 Christine La Guardia
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+    <script src="js/articles.js"></script>
+    <script src="js/blogArticles.js"></script>
   </body>
 </html>
