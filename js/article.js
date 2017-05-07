@@ -17,13 +17,15 @@ Article.prototype.toHtml = function() {
   // remove the template class
   newArticle.removeClass('template');
   // add the article data to the cloned template
+  newArticle.attr('data-category', this.category);
   newArticle.find('.article-title').text(this.title);
   newArticle.find('.article-date').attr('datetime', this.publishedOn);
-  newArticle.find('.article-date').text('Published ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
+  var publishedOnDate = new Date(this.publishedOn);
+  var publishedDays = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
+  newArticle.find('.article-date').text('Published on ' + (publishedOnDate.getMonth()+1) +'/' + (publishedOnDate.getDate()) + '/' + (publishedOnDate.getFullYear()) + ' (' +  publishedDays + ' days ago)');
   newArticle.find('.article-body').html(this.body);
   newArticle.find('.article-picture').children('img').attr('src', this.image);
   newArticle.find('.article-caption').text(this.caption);
-
   // console.log("Created new Article object", newArticle)
   return newArticle;
 }
@@ -42,36 +44,4 @@ articles.sort(function(a,b) {
 // add each blog article to the page
 articles.forEach(function(something) {
   $('#blogContainer').append(something.toHtml());
-  console.log("Added article to page");
 });
-
-// hide some of the content
-var articleView = {};
-articleView.setTeasers = function() {
-  // hide everything but the first paragraph
-  $('.article-body *:nth-of-type(n+2)').fadeOut(600);
-  $('.toMsg').fadeOut(600);
-  $('.fromMsg').fadeOut(600);
-  $('.article-picture').fadeOut(600);
-}
-
-$('.read-more').click(function() {
-  if ($(this).text() === 'Read More') {
-    // change the button text
-    $(this).text('Show Less');
-    // show all the body paragraphs
-    $(this).siblings('section').find('p').fadeIn(600);
-    // show the messages if any
-    $(this).parent().find('div.toMsg').fadeIn(600);
-    $(this).parent().find('div.fromMsg').fadeIn(600);
-    // show the image and caption
-    $(this).parent().children('div.article-picture').fadeIn(600);
-  } else {
-    // change the button text
-    $(this).text('Read More');
-    // hide all the stuff
-    articleView.setTeasers();
-  }
-});
-
-articleView.setTeasers();

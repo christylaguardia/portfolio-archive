@@ -10,21 +10,32 @@
   <body class="fade-out">
     <header>
       <nav>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="https://github.com/christylaguardia/" target="_blank">GitHub</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <ul>
+          <li id="menuIcon" onclick="showMenuOptions()">&#9776;</li>
+          <li class="menuOption" data-content="blogContainer"><a href="#">Home</a></li>
+          <li class="menuOption" data-content="about"><a href="#">About</a></li>
+          <li class="menuLink"><a href="https://github.com/christylaguardia/" target="_blank">GitHub</a></li>
+          <li class="menuOption" data-content="contact"><a href="#">Contact</a></li>
+        </ul>
       </nav>
       <img id="headshot" src="images/christy-headshot.jpeg">
       <h1>Christy La Guardia</h1>
       <p>Beagle lover, wannabe coder and ex-JW.</p>
     </header>
-    <section id="blogContainer">
-      <article class="template">
-        <hr>
+
+    <section id="blogContainer" class="tabContent">
+      <!-- filters -->
+      <div id="filterContainer">
+        <label for="category-filter">Read about my </label>
+        <select id="category-filter">
+          <option value="">...</option>
+        </select>
+      </div>
+      <!-- template -->
+      <article class="template" data-category="placeholder-category">
         <h2 class="article-title">Article Title</h2>
         <time class="article-date" datetime="2017-04-23">Published Date</time>
-        <section class="article-body"></section>
+        <div class="article-body"></div>
         <div class="article-picture">
           <img src="">
           <figcaption class="article-caption">Image Caption</figcaption>
@@ -32,12 +43,51 @@
         <button type="button" class="read-more">Read More</button>
       </article>
     </section>
+
+    <section id="about" class="tabContent">
+      <article>
+        <h2>Welcome to my blog!</h2>
+        <p>Hi! I&#39;m Christy, a native Portlander, wannabe coder, lover of beagles, and pottery enthusiast. I&#39;m also an ex-JW (Jehovah Witness) and this blog is dedicated to telling my story about leaving and moving on.</p>
+        <p>Here&#39;s my story in thirty seconds or less&#58;</p>
+        <p>I was raised by Jehovah Witness parents, and was baptized at 16. I was very good witness girl and daughter. Despite &#34;losing&#34; fleshly sisters and friends to &#34;the world,&#34; throughout my teen years and early 20s, I was very active in meetings and field service. I was definitely drinking the kool-aid and firmly believed every Watchtower teaching. In my mid 20s some things about the organization started to bother me. But instead of leaving, I decided to become a full time minister, hoping it would help me make up my mind. Shortly after, I resigned from the organization and started a new life free of control and inauthenticity.</p>
+        <div class="article-picture">
+          <img src="images/freedom.gif">
+          <figcaption class="article-caption">The power or right to act, speak, or think as one wants.</figcaption>
+        </div>
+      </article>
+    </section>
+
+    <section id="contact" class="tabContent">
+      <article>
+        <h2>Contact Info.</h2>
+        <p>Email me at <a href="mailto:christinelaguardia@gmail.com">christinelaguardia@gmail.com</a></p>
+        <p>Read my <a href="http://exjehovahswitnessportland.blogspot.com/2015/07/">letter</a> to my parents, explaining that I would be leaving our religion on Joel's blog, <a href="http://exjehovahswitnessportland.blogspot.com/">Ex-Jehovah's Witnesses of Portland, Oregon</a></p>
+        <!-- TODO: find out how to add links to fb, linkedin and other -->
+        <hr>
+        <h3>If you want to know more about Jehovah's Witnesses, checkout these sites:</h3>
+        <p>The official church site at <a href="https://www.jw.org/en/">JW.ORG</a></p>
+        <p>One of the most comprehensive about the relgion is <a href="https://www.jwfacts.com/">JW Facts</a></p>
+        <p>Incredebly moving stories about survivors of abuse at <a href="https://www.jwfacts.com/">JW Stories</a></p>
+        <p>An amazing tell-all from an former Bethalite, <a href="http://watchtowerdocuments.org/">Barbara Anderson's Watchtower Documents</a></p>
+        <h3>Like paper books?</h3>
+        <p>#1 Apostate book <a href="http://a.co/05mxIuQ">Crisis of Conscience, by Raymond Franz</a></p>
+        <p>If you're not sure if JW's are a cult, read <a href="http://a.co/36gQnqb">Cult Mind Control: The #1 Best-selling Guide to Protection, Rescue, and Recovery from Destructive Cults, by Steven Hassan</a></p>
+        <p>Need some lighter reading, check out the hilarious <a href="http://a.co/hhFYvbe">I'm Perfect, You're Doomed: Tales from a Jehovah's Witness Upbringing, by Kyria Abrahams</a></p>
+        <h3>If reading is not your thing:</h3>
+        <p><a href="https://jwpodcastshow.podbean.com/">JW Podcast</a></p>
+        <a href="https://youtu.be/gZqVj0z7_yA">2017 Australian Royal Commission - Jehovah's Witnesses and Child Abuse</a>
+        <a href="https://youtu.be/RDvT_gYq-ls">Brave high school student exposes abuse and corruption within Jehovahs witnesses</a>
+      </article>
+    </section>
+
     <footer>
       &copy; 2017 Christine La Guardia
     </footer>
+
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="js/app.js"></script>
-    <script src="js/articles.js"></script>
-    <script src="js/blogArticles.js"></script>
+    <script src="js/articleData.js"></script>
+    <script src="js/article.js"></script>
+    <script src="js/articleView.js"></script>
   </body>
 </html>
