@@ -1,0 +1,80 @@
+/*HEADER*/
+
+#headshot {
+  margin-top: 5rem;
+  height: 10rem;
+  border-radius: 5rem;
+  box-shadow: 0 0 2rem #212121;
+}
+
+#menuIcon {
+  display: none;
+  color: #ffffff;
+  font-size: 2rem;
+}
+
+#menuIcon:hover {
+  color: #ff98dd;
+}
+
+.menuOption, .menuLink {
+  display: inline-block;
+ }
+
+/*BODY*/
+
+#blogContainer {
+  display: block;
+}
+
+#about {
+  display: none;
+}
+
+#contact {
+  display: none;
+}
+
+.fromMsg, .toMsg {
+  display: none;
+  border: 1px solid #616161;
+  border-radius: 10px;
+  padding: 1%;
+  margin-bottom: 2%;
+  max-width: 50%;
+}
+
+.fromMsg {
+  background-color: #98ddff;
+  margin-left: 10%;
+  margin-right: 40%;
+}
+
+.toMsg {
+  background-color: #ddff98;
+  margin-left: 40%;
+  margin-right: 10%;
+}
+
+/*for smaller screens*/
+
+@media screen and (max-width: 600px) {
+  #menuIcon {
+    display: block;
+    text-align: right;
+    font-size: 2rem;
+    color: #ffffff;
+  }
+
+  .menuOption, .menuLink {
+    display: none;
+    text-align: left;
+    font-size: 1.25rem;
+  }
+
+  .fromMsg, .toMsg {
+    margin-right: 3%;
+    margin-left: 3%;
+    min-width: 90%;
+  }
+}

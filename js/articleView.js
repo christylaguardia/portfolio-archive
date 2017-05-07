@@ -1,3 +1,14 @@
+// fade in the page by removing the class
+$(function() {
+    $('body').removeClass('fade-out');
+});
+
+// for smaller screens, show menu option when clicking the hambuger icon
+function showMenuOptions() {
+  $('.menuOption').toggle();
+  $('.menuLink').toggle();
+}
+
 // hide or show content
 var articleView = {};
 
@@ -16,7 +27,7 @@ articleView.handleMainNav = function() {
     }
   })
   // show the blog articles on page load
-  $('nav .tab:second').click();
+  // $('nav .tab:second').click();
 };
 
 // hide some of the content
@@ -47,7 +58,7 @@ $('.read-more').click(function() {
 articleView.populateTags = function() {
   $('#blogContainer article').not('.template').each(function() {
     var category = $(this).attr('data-category');
-    console.log(category);
+    // console.log(category);
     var optionTag = '<option value="' + category + '">' + category + '</option>';
     if ($('#category-filter option[value="' + category + '"]').length === 0) {
       $('#category-filter').append(optionTag);
