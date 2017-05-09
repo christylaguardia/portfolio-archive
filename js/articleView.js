@@ -1,13 +1,13 @@
 // fade in the page by removing the class
-$(function() {
-    $('body').removeClass('fade-out');
-});
+// $(function() {
+//     $('body').removeClass('fade-out');
+// });
 
 // for smaller screens, show menu option when clicking the hambuger icon
-function showMenuOptions() {
+$('#menuIcon').click(function() {
   $('.menuOption').toggle();
   $('.menuLink').toggle();
-}
+});
 
 // hide or show content
 var articleView = {};
