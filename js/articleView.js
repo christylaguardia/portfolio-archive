@@ -10,27 +10,18 @@ $('#menuIcon').click(function() {
 });
 
 // hide or show content
-var articleView = {};
+const articleView = {};
 
 articleView.handleMainNav = function() {
   $('nav').on('click', '.menuOption', function() {
     // hide everything
     $('.tabContent').hide();
     // show the thing they clicked on
-    var selection = $(this).attr('data-content');
-    if (selection === 'blogContainer') {
-      $('#blogContainer').fadeIn(600);
-    } else if (selection === 'about') {
-      $('#about').fadeIn(600);
-    } else if (selection === 'contact') {
-      $('#contact').fadeIn(600);
-    }
-  })
-  // show the blog articles on page load
-  // $('nav .tab:second').click();
+    $(`#${$(this).data('content')}`).fadeIn(600);
+  });
+  $('nav .tab:first').click();
 };
 
-// hide some of the content
 articleView.setTeasers = function() {
   // hide everything but the first paragraph
   $('.article-body *:nth-of-type(n+2)').fadeOut(600);
@@ -43,6 +34,7 @@ articleView.setTeasers = function() {
 // toggle the read more / show less
 $('.read-more').click(function() {
   if ($(this).text() === 'Read More') {
+    console.log($(this).text);
     // change the button text
     $(this).text('Show Less');
     // show all the hidden content
@@ -78,7 +70,15 @@ articleView.handleCategoryFilter = function() {
   })
 };
 
-articleView.handleMainNav();
-articleView.setTeasers();
-articleView.populateTags();
-articleView.handleCategoryFilter();
+articleView.loadIndexPage = function() {
+  console.log('loading the index page...');
+  // add each article to the page
+  Article.all.forEach(function(a) {
+    $('#blogContainer').append(a.blogDataToHtml());
+  });
+  // do the other stuff
+  articleView.handleMainNav();
+  articleView.setTeasers();
+  articleView.populateTags();
+  articleView.handleCategoryFilter();
+};

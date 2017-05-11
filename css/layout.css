@@ -27,11 +27,7 @@
   display: block;
 }
 
-#about {
-  display: none;
-}
-
-#contact {
+#newArticle, #about, #contact {
   display: none;
 }
 

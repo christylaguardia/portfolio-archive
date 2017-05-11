@@ -30,6 +30,7 @@
         <li class="menuOption" data-content="about"><a href="#">About</a></li>
         <li class="menuLink"><a href="https://github.com/christylaguardia/" target="_blank">GitHub</a></li>
         <li class="menuOption" data-content="contact"><a href="#">Contact</a></li>
+        <li class="menuOption" data-content="newArticle"><a href="#">New Article</a></li>
       </ul>
     </nav>
     <img id="headshot" src="images/christy-headshot.jpeg">
@@ -38,13 +39,26 @@
   </header>
 
   <section id="blogContainer" class="tabContent">
-    <!-- filters -->
     <div id="filterContainer">
       <label for="category-filter">Read about my </label>
       <select id="category-filter">
         <option value="">...</option>
       </select>
     </div>
+    <!-- blog articles will go here -->
+  </section>
+
+  <section id="newArticle" class="tabContent">
+    <h2>Write a new blog post</h2>
+    <form id="newArticleForm" method="POST" action="">
+      <!-- <label>
+            <input type="text" id="article-title" placeholder="Article title" required>
+          </label>
+          <textarea id="article-body" rows="8" cols="40" required></textarea> -->
+        <label>Title: <input type="text" id="newArticleTitle" placeholder="Title" required></label><br>
+        <label>Category: <input type="text" id="newArticleCategory" placeholder="Category" required></label><br>
+        <textarea id="newArticleBody" rows="8" cols="40" required></textarea>
+    </form>
   </section>
 
   <section id="about" class="tabContent">
@@ -90,8 +104,12 @@
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js"></script>
-  <script src="js/articleData.js"></script>
+  <!-- <script src="js/articleData.js"></script> -->
   <script src="js/article.js"></script>
   <script src="js/articleView.js"></script>
+  <script>
+    // this will get the data from the localStorage and load to the page
+    Article.fetchData();
+  </script>
 </body>
 </html>
