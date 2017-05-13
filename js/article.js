@@ -41,20 +41,21 @@ Article.fetchData = function() {
   if (localStorage.blogData) {
     console.log('Local storage already exists.');
     Article.loadBlogData(JSON.parse(localStorage.blogData));
-    // articleView.loadIndexPage();
+    articleView.loadIndexPage();
   } else {
     $.getJSON('data/articleData.json', function(json) {
       console.log('Local storage does not exist.');
       localStorage.setItem('blogData', JSON.stringify(json));
       console.log('Local storage created');
       Article.loadBlogData(json);
+      articleView.loadIndexPage();
     });
-    // articleView.loadIndexPage();
   }
   // QUESTION: not sure if this should go here
-  articleView.loadIndexPage();
+  // articleView.loadIndexPage();
 }
 
+// TODO: add the etag function
 // Article.checkETag = function() {
 //   // get etag already in local storage
 //   var existingEtag = localStorage.getItem('ETAG');
