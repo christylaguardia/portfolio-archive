@@ -5,33 +5,30 @@
   height: 10rem;
   border-radius: 5rem;
   box-shadow: 0 0 2rem #212121;
+  opacity: .8;
 }
 
-#menuIcon {
+#menu-icon {
   display: none;
   color: #ffffff;
   font-size: 2rem;
 }
 
-#menuIcon:hover {
+#menu-icon:hover {
   color: #ff98dd;
 }
 
-.menuOption, .menuLink {
+#top-nav .menu-option {
   display: inline-block;
- }
+}
 
 /*BODY*/
 
-#blogContainer {
+#blog {
   display: block;
 }
 
-#about {
-  display: none;
-}
-
-#contact {
+#about, #blog ,#projects, #hire-me {
   display: none;
 }
 
@@ -59,14 +56,19 @@
 /*for smaller screens*/
 
 @media screen and (max-width: 600px) {
-  #menuIcon {
+
+  #headshot {
+    margin-top: 2rem;
+  }
+
+  #menu-icon {
     display: block;
     text-align: right;
     font-size: 2rem;
     color: #ffffff;
   }
 
-  .menuOption, .menuLink {
+  .nav menu-option{
     display: none;
     text-align: left;
     font-size: 1.25rem;

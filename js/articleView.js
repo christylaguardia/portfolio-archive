@@ -4,33 +4,34 @@
 // });
 
 // for smaller screens, show menu option when clicking the hambuger icon
-$('#menuIcon').click(function() {
-  $('.menuOption').toggle();
-  $('.menuLink').toggle();
+$('#menu-icon').click(function() {
+  $('.menu-option').toggle();
+  $('.menu-link').toggle();
 });
 
 // hide or show content
-var articleView = {};
+const articleView = {};
 
 articleView.handleMainNav = function() {
-  $('nav').on('click', '.menuOption', function() {
+  // $('.menu').on('click', '.menu-option', function() {
+  $('.menu-option').click(function() {
     // hide everything
-    $('.tabContent').hide();
+    $('.tab-content').hide();
+
     // show the thing they clicked on
-    var selection = $(this).attr('data-content');
-    if (selection === 'blogContainer') {
-      $('#blogContainer').fadeIn(600);
-    } else if (selection === 'about') {
-      $('#about').fadeIn(600);
-    } else if (selection === 'contact') {
-      $('#contact').fadeIn(600);
+    var selection = $(this).data('content');
+    $(`#${selection}`).fadeIn(600);
+
+    if (selection === 'home') {
+      $('#top-nav').fadeOut(600);
+    } else {
+      // TODO: don't need to do this everytime
+      $('#top-nav').fadeIn(600);
     }
-  })
-  // show the blog articles on page load
-  // $('nav .tab:second').click();
+  });
+  $('nav .tab:first').click();
 };
 
-// hide some of the content
 articleView.setTeasers = function() {
   // hide everything but the first paragraph
   $('.article-body *:nth-of-type(n+2)').fadeOut(600);
@@ -38,25 +39,25 @@ articleView.setTeasers = function() {
   $('.toMsg').fadeOut(600);
   $('.fromMsg').fadeOut(600);
   $('.article-picture').fadeOut(600);
+
+  $('.read-more').click(function() {
+    if ($(this).text() === 'read more') {
+      // show hidden blog article content
+      $(this).parent().find('*').fadeIn(600);
+      $(this).text('read less');
+    } else {
+      // hide some blog article content
+      $('.article-body *:nth-of-type(n+2)').fadeOut(600);
+      $('.toMsg').fadeOut(600);
+      $('.fromMsg').fadeOut(600);
+      $('.article-picture').fadeOut(600);
+      $(this).text('read less');
+    }
+  });
 };
 
-// toggle the read more / show less
-$('.read-more').click(function() {
-  if ($(this).text() === 'Read More') {
-    // change the button text
-    $(this).text('Show Less');
-    // show all the hidden content
-    $(this).parent().find('*').fadeIn(600);
-  } else {
-    // change the button text
-    $(this).text('Read More');
-    // hide all the stuff
-    articleView.setTeasers();
-  }
-});
-
 articleView.populateTags = function() {
-  $('#blogContainer article').not('.template').each(function() {
+  $('#blog article').not('.template').each(function() {
     var category = $(this).attr('data-category');
     // console.log(category);
     var optionTag = '<option value="' + category + '">' + category + '</option>';
@@ -70,15 +71,23 @@ articleView.handleCategoryFilter = function() {
   $('#category-filter').on('change', function () {
     var selection = $(this).val();
     if (selection) {
-      $('#blogContainer article').hide();
-      $('#blogContainer article[data-category="' + selection + '"]').fadeIn(800);
+      $('#blog article').hide();
+      $('#blog article[data-category="' + selection + '"]').fadeIn(800);
     } else {
-      $('#blogContainer article').not('.template').show();
+      $('#blog article').not('.template').show();
     }
   })
 };
 
-articleView.handleMainNav();
-articleView.setTeasers();
-articleView.populateTags();
-articleView.handleCategoryFilter();
+articleView.loadIndexPage = function() {
+  console.log('loading the index page...');
+  // add each article to the page
+  Article.all.forEach(function(a) {
+    $('#blog').append(a.blogDataToHtml());
+  });
+  // do the other stuff
+  articleView.handleMainNav();
+  articleView.setTeasers();
+  articleView.populateTags();
+  articleView.handleCategoryFilter();
+};
