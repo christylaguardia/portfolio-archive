@@ -1,0 +1,176 @@
+/*HEADER*/
+
+#top-nav {
+  display: none;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #212121;
+  opacity: .8;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: #f5f5f5;
+}
+
+nav li a {
+  color: #ffffff;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff98dd;
+  transition: color .5s ease-in-out;
+}
+
+#headshot {
+  margin-top: 3rem;
+  height: 10rem;
+  border-radius: 5rem;
+  box-shadow: 0 0 2rem #212121;
+}
+
+#bottom-nav li {
+  display: inline;
+  padding: 1rem;
+}
+
+#bottom-nav i {
+  font-size: 3rem;
+}
+
+/* TODO: */
+/*#logo {
+  display: inline-block;
+  float: left;
+}
+
+#logo h3, #logo p {
+  color: #ffffff;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+#headshot-small {
+  height: 3rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 .5rem #212121;
+}*/
+
+
+/*BODY*/
+
+#home {
+  text-align: center;
+}
+
+/*#home ul {
+  display: flex;
+}
+
+#home li {
+  display: inline-block;
+}*/
+
+#blog article {
+  background-color: #ffffff;
+  /*border: 2px solid #f5f5f5;*/
+  border-radius: 2px;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 1px #bdbdbd;
+}
+
+#category-filter {
+  display: inline-block;
+  margin: 1rem auto;
+  font-size: 1rem;
+  border: 1px solid #bdbdbd;
+  border-radius: 4px;
+  background-color: inherit;
+}
+
+#category-filter:hover {
+  cursor: pointer;
+  background-color: #ff98dd;
+  transition: background-color .5s ease-in-out;
+}
+
+#filterContainer {
+  text-align: center;
+}
+
+#category-filter, button {
+  color: #212121;
+  background-color: inherit;
+  opacity: .8;
+  padding: .5rem;
+  text-align: center;
+}
+
+#category-filter:focus, button:focus {
+  outline: 0;
+}
+
+.template {
+  display: none;
+}
+
+.article-picture {
+  text-align: center;
+}
+
+.article-picture img {
+  max-width: 60%;
+  border-radius: .25rem;
+}
+
+.article-caption {
+  max-width: 60%;
+  margin: 0 auto;
+  color: #424242;
+  font-style: italic;
+}
+
+.read-more {
+  cursor: pointer;
+  font-size: .8rem;
+}
+
+.read-more:hover {
+  color: #ff98dd;
+}
+
+.project-img {
+  width: 60%;
+  text-align: center;
+  opacity: .8;
+}
+
+.project-img:hover {
+  opacity: 1;
+  box-shadow: 0 0 .5rem #bdbdbd;
+}
