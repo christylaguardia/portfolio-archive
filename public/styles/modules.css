@@ -38,19 +38,11 @@ li {
   list-style-type: none;
 }
 
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  color: #ff98dd;
-  transition: color .5s ease-in-out;
-}
-
 #headshot {
   margin-top: 3rem;
   height: 10rem;
-  border-radius: 5rem;
+  /*border-radius: 5rem;*/
+  border-radius: 1rem;
   box-shadow: 0 0 2rem #212121;
 }
 
@@ -62,6 +54,24 @@ a:hover {
 #bottom-nav i {
   font-size: 3rem;
 }
+
+.link {
+  color: #424242;
+  text-decoration: none;
+}
+
+.link:visited {
+  color: #424242;
+}
+
+.link:hover {
+  color: #ff98dd;
+  /*box-shadow: 0 0 2rem #212121;*/
+  transition: color .5s ease-in-out;
+  /*transition: box-shadow .5s ease-in-out;*/
+}
+
+
 
 /* TODO: */
 /*#logo {
@@ -85,6 +95,8 @@ a:hover {
 /*BODY*/
 
 #home {
+  margin: 0 auto;
+  height: 50%;
   text-align: center;
 }
 
