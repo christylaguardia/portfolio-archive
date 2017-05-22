@@ -30,11 +30,11 @@
         <!-- TODO: get the logo to work -->
         <ul class="menu">
           <li id="menu-icon"><i class="fa fa-bars" aria-hidden="true"></i></li>
-          <li class="menu-option" data-content="home"><a href="#">Home</a></li>
-          <li class="menu-option" data-content="about"><a href="#">About</a></li>
-          <li class="menu-option" data-content="blog"><a href="#">Blog</a></li>
-          <li class="menu-option" data-content="projects"><a href="#">Projects</a></li>
-          <li class="menu-option" data-content="hire-me"><a href="#">Hire Me</a></li>
+          <li class="menu-option" data-content="home"><a href="/">Home</a></li>
+          <li class="menu-option" data-content="about"><a href="/about">About</a></li>
+          <li class="menu-option" data-content="blog"><a href="/blog">Blog</a></li>
+          <li class="menu-option" data-content="projects"><a href="/projects">Projects</a></li>
+          <li class="menu-option" data-content="hire-me"><a href="/hire-me">Hire Me</a></li>
         </ul>
       </nav>
     </header>
@@ -137,8 +137,11 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js"></script>
-    <script src="scripts/article.js"></script>
-    <script src="scripts/articleView.js"></script>
+    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+    <script src="scripts/models/article.js"></script>
+    <script src="scripts/views/articleView.js"></script>
+    <script src="scripts/controllers/navigation.js"></script>
+    <script src="scripts/controllers/routes.js"></script>
     <script>
       Article.fetchData();
     </script>
