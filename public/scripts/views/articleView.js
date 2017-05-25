@@ -1,30 +1,12 @@
 (function(module) {
+  // QUESTION: should this be in a function
   // for smaller screens, show menu option when clicking the hambuger icon
-  $('#menu-icon').click(function() {
-    $('.menu-option').toggle();
-    $('.menu-link').toggle();
+  $('#top-nav-hamburger').click(function() {
+    $('#top-nav li').toggle();
   });
 
   // hide or show content
   const articleView = {};
-
-  // articleView.handleMainNav = function() {
-  //   $('.menu-option').click(function() {
-  //     // hide everything
-  //     $('.tab-content').hide();
-  //     // show the thing they clicked on
-  //     var selection = $(this).data('content');
-  //     $(`#${selection}`).fadeIn(600);
-  //     // hide the top nav if going home
-  //     if (selection === 'home') {
-  //       $('#top-nav').fadeOut(600);
-  //     } else {
-  //       // TODO: don't need to do this everytime
-  //       $('#top-nav').fadeIn(600);
-  //     }
-  //   });
-  //   $('nav .tab:first').click();
-  // };
 
   articleView.setTeasers = function() {
     // hide everything but the first paragraph
@@ -50,42 +32,38 @@
     });
   };
 
-  articleView.populateTags = function() {
-    // $('#blog article').not('.template').each(function() {
-    $('#blog article').each(function() {
-      var category = $(this).attr('data-category');
-      // console.log(category);
-      var optionTag = '<option value="' + category + '">' + category + '</option>';
-      if ($('#category-filter option[value="' + category + '"]').length === 0) {
-        $('#category-filter').append(optionTag);
-      }
-    });
+  articleView.populateCategories = function() {
+    Article.all.map(function(article) {
+      return article.category;
+    })
+    .reduce(function (uniqueCategories, category) {
+      if (uniqueCategories.indexOf(category) < 0) uniqueCategories.push(category);
+        return uniqueCategories;
+    }, [])
+    // TODO:
+    // .sort(function(a,b) {
+    //   if (a.toUpperCase() < b.toUpperCase()) {
+    //     return -1;
+    //   } else {
+    //     return 0;
+    //   }
+    // })
+    .forEach(function(category) {
+      $('#category-list').append(`<li data-category='${category}'>${category}</li>`);
+    })
+    // TODO: maybe add a show all categories option?
   };
 
   articleView.handleCategoryFilter = function() {
-    $('#category-filter').on('change', function () {
-      var selection = $(this).val();
-      if (selection) {
-        $('#blog article').hide();
-        $('#blog article[data-category="' + selection + '"]').fadeIn(800);
-      } else {
-        $('#blog article').not('.template').show();
-        $('#blog article').show();
-      }
+    $('#category-list').on('click', 'li', function() {
+      // hide all the articles
+      $('#blog article').hide();
+      // show the articles with the category the user clicked on
+      $('#blog article[data-category="' + $(this).attr('data-category') + '"]').fadeIn(800);
+      // change the class of the selected category
+      $(this).parent().find('li').removeClass('active');
+      $(this).addClass('active');
     })
-  };
-
-  articleView.loadIndexPage = function() {
-    console.log('loading the index page...');
-    // add each article to the page
-    Article.all.forEach(function(a) {
-      $('#blog').append(a.blogDataToHtml());
-    });
-    // do the other stuff
-    // articleView.handleMainNav();
-    articleView.setTeasers();
-    articleView.populateTags();
-    articleView.handleCategoryFilter();
   };
 
   module.articleView = articleView;

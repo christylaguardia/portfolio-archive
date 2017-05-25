@@ -34,7 +34,7 @@
     rawBlogData.forEach(function(ele) {
       Article.all.push(new Article(ele));
     });
-    articleView.loadIndexPage();
+    // articleView.loadIndexPage();
   }
 
   Article.fetchData = function() {

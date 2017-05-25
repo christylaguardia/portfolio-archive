@@ -1,6 +1,6 @@
 /*
 typography
-font-family: 'Poppins', sans-serif;
+font-family: 'Roboto Slab', serif;
 font-family: 'Open Sans', sans-serif;
 
 color pallet
@@ -16,54 +16,29 @@ blue        #98ddff
 */
 
 body {
+  display: block;
   margin: 0 auto;
   min-width: 320px;
   font-family: 'Open Sans', sans-serif;
   font-size: 1.0625rem;
-  opacity: 1;
-  transition: 1s opacity;
+  /*opacity: 1;*/
+  /*transition: 1s opacity;*/
   background-color: #fafafa;
 }
 
-/*body.fade-out {
-  opacity: 0;
-  transition: none;
-}*/
-
-header, footer {
-  text-align: center;
-}
-
 footer {
-  background-color: rgba(255,152,221,.25);
-  font-size: .75rem;
-  margin-top: 5rem;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
-}
-
-h1 {
-  font-size: 2rem;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: .8rem;
+  padding: 2rem;
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Poppins', sans-serif;
-  margin-bottom: 0;
+  font-family: 'Roboto Slab', serif;
 }
 
-h1, h2, h3, p {
-  margin-top: 0;
-}
-
-section {
-  margin-top: 4rem;
-  padding: 2%;
-}
-
-article {
-  padding: 2%;
-  max-width: 960px;
-  margin: 0 auto;
+a {
+  text-decoration: none;
 }
 
 label {
@@ -81,21 +56,3 @@ input[type="text"], textarea {
   border: 1px solid #bdbdbd;
   margin: 2rem;
 }
-
-/*button {
-  font-size: .75rem;
-  border: 1px solid #bdbdbd;
-  border-radius: 4px;
-}
-
-button:hover {
-  color: #212121;
-  background-color: #ff98dd;
-  transition: color .5s ease-in-out;
-  transition: background-color .5s ease-in-out;
-  cursor: pointer;
-}*/
-/*
-.fa:hover {
-  color: #ff98dd;
-}*/
