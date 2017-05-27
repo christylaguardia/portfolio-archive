@@ -1,154 +1,155 @@
-/*HEADER*/
+#home {
+  max-width: 100%;
+}
 
-#top-nav {
+.tab-content {
+  margin: 0 auto;
+  max-width: 960px;
+  min-height: 95vh;
+}
+
+#top-nav-hamburger {
   display: none;
 }
 
-nav {
-  position: fixed;
-  top: 0;
+#top-nav {
+  display: none;
+  top: -1vh;
+  font-family: 'Roboto Slab', serif;
+  height: 5vh;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+#top-nav ul {
+  padding: 0;
   width: 100%;
-  background-color: #212121;
-  opacity: .8;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
 }
 
-nav ul {
-  margin: 0;
-  padding: 0;
+#top-nav li {
+  display: inline-block;
+  margin-right: 1rem;
 }
 
-nav li {
-  display: inline;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  color: #f5f5f5;
+#top-nav li a {
+  color: #bdbdbd;
 }
 
-nav li a {
+#top-nav li a:hover {
+  color: #212121;
+  border-bottom: 4px solid #ff98dd;
+  transition: color .5s ease-in-out;
+}
+
+/* TODO: define the headshot for mobile size */
+/*#headshot {
+  height: 10rem;
+  border-radius: 5rem;
+  box-shadow: 0 0 2rem #212121;
+}*/
+
+#headshot {
+  position: relative;
+  background: url("../images/christy.jpg");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  opacity: 1;
+  transition: opacity 6s ease-in-out;
+}
+
+#headshot-caption {
+  top: 70%;
+  padding-left: 10%;
+}
+
+#headshot-caption h1 {
+  font-size: 2rem;
+  margin-bottom: 0;
+  color: rgba(245,245,245,.7);
+}
+
+#headshot-caption h3 {
+  font-size: 1.5rem;
+  margin-top: 0;
+  color: rgba(245,245,245,.5);
+  font-family: 'Open Sans', sans-serif;
+}
+
+#home-nav, #headshot-caption {
+  font-family: 'Roboto Slab', sans-serif;
+  position: absolute;
+  /*color: #ffffff;*/
+}
+
+#home-nav {
+  text-align: left;
+  top: 25%;
+  left: 60%;
+}
+
+.home-nav-option, .home-nav-icon {
+  font-size: 3rem;
+  color: rgba(245,245,245,.7);
+  padding-bottom: .75rem;
+}
+
+.home-nav-option {
+  display: block;
+}
+
+.home-nav-option:hover {
   color: #ffffff;
+  text-decoration: underline;
+  text-decoration-color: #ff98dd;
+  transition: color .5s ease-in-out;
+  transition: text-decoration-color .5s ease-in-out;
 }
 
-ul {
-  padding: 0;
+.home-nav-icon {
+  display: inline;
+  padding-right: 1rem;
 }
 
-li {
+.home-nav-icon:hover {
+  color: #ff98dd;
+  transition: color .5s ease-in-out;
+}
+
+#category-list {
+  margin: 0 auto;
+  padding-left: 0;
+  width: 100%;
   list-style-type: none;
 }
 
-#headshot {
-  margin-top: 3rem;
-  height: 10rem;
-  /*border-radius: 5rem;*/
-  border-radius: 1rem;
-  box-shadow: 0 0 2rem #212121;
-}
-
-#bottom-nav li {
+#category-list li {
   display: inline;
-  padding: 1rem;
-}
-
-#bottom-nav i {
-  font-size: 3rem;
-}
-
-.link {
-  color: #424242;
-  text-decoration: none;
-}
-
-.link:visited {
-  color: #424242;
-}
-
-.link:hover {
-  color: #ff98dd;
-  /*box-shadow: 0 0 2rem #212121;*/
-  transition: color .5s ease-in-out;
-  /*transition: box-shadow .5s ease-in-out;*/
-}
-
-
-
-/* TODO: */
-/*#logo {
-  display: inline-block;
-  float: left;
-}
-
-#logo h3, #logo p {
   color: #ffffff;
-  margin: 0 auto;
-  padding: 0 auto;
+  font-size: .8rem;
+  border-radius: .5rem;
+  background-color: #424242;
+  padding: .25rem .5rem;
+  padding-left: .5rem;
+  margin-right: .5rem;
 }
 
-#headshot-small {
-  height: 3rem;
-  border-radius: 1.5rem;
-  box-shadow: 0 0 .5rem #212121;
-}*/
-
-
-/*BODY*/
-
-#home {
-  margin: 0 auto;
-  height: 50%;
-  text-align: center;
-}
-
-/*#home ul {
-  display: flex;
-}
-
-#home li {
-  display: inline-block;
-}*/
-
-#blog article {
-  background-color: #ffffff;
-  /*border: 2px solid #f5f5f5;*/
-  border-radius: 2px;
-  margin-bottom: 2rem;
-  box-shadow: 0 0 1px #bdbdbd;
-}
-
-#category-filter {
-  display: inline-block;
-  margin: 1rem auto;
-  font-size: 1rem;
-  border: 1px solid #bdbdbd;
-  border-radius: 4px;
-  background-color: inherit;
-}
-
-#category-filter:hover {
+#category-list li:hover {
   cursor: pointer;
   background-color: #ff98dd;
   transition: background-color .5s ease-in-out;
 }
 
-#filterContainer {
-  text-align: center;
+#category-list .active {
+  background-color: #ff98dd;
+  transition: background-color .5s ease-in-out;
 }
 
-#category-filter, button {
-  color: #212121;
-  background-color: inherit;
-  opacity: .8;
-  padding: .5rem;
-  text-align: center;
-}
-
-#category-filter:focus, button:focus {
-  outline: 0;
-}
-
-.template {
-  display: none;
+.article-title {
+  border-top: 2px solid #bdbdbd;
+  padding-top: 1rem;
+  margin-bottom: 0;
 }
 
 .article-picture {
@@ -167,6 +168,27 @@ li {
   font-style: italic;
 }
 
+.fromMsg, .toMsg {
+  display: none;
+  border: 1px solid #616161;
+  border-radius: 10px;
+  padding: 1%;
+  margin-bottom: 2%;
+  max-width: 50%;
+}
+
+.fromMsg {
+  background-color: #98ddff;
+  margin-left: 10%;
+  margin-right: 40%;
+}
+
+.toMsg {
+  background-color: #ddff98;
+  margin-left: 40%;
+  margin-right: 10%;
+}
+
 .read-more {
   cursor: pointer;
   font-size: .8rem;
@@ -174,10 +196,16 @@ li {
 
 .read-more:hover {
   color: #ff98dd;
+  transition: color .5s ease-in-out;
+}
+
+/* TODO: this doesn't look very good */
+#projectContainer {
+  display: flex;
 }
 
 .project-img {
-  width: 60%;
+  width: 100%;
   text-align: center;
   opacity: .8;
 }
@@ -185,4 +213,71 @@ li {
 .project-img:hover {
   opacity: 1;
   box-shadow: 0 0 .5rem #bdbdbd;
+}
+
+/* TODO: still working on this
+  need to change home page layout on small screens
+  for phones 320px
+  for big phones 480px
+  for tabets 768px
+*/
+
+
+@media screen and (max-width: 480px) {
+
+  .tab-content:not(#home), #top-nav {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    position: relative;
+  }
+
+  #top-nav-hamburger {
+    display: block;
+    font-size: 2rem;
+    margin-top: 1rem;
+    text-align: right;
+  }
+
+  #top-nav ul {
+    display: block;
+    list-style-type: none;
+    background-color: rgba(255,152,221,.5);
+    clear: both;
+  }
+
+  #top-nav li {
+    display: none;
+  }
+
+  #headshot {
+    display: block;
+    top: 10vh;
+    margin: 0 auto;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 5rem;
+    box-shadow: 0 0 2rem #212121;
+    background: url("../images/christy-headshot.jpeg");
+    background-position: center;
+    background-size: contain;
+  }
+
+  #headshot-caption {
+    top: 15rem;
+    padding: 2rem;
+  }
+
+  #home-nav {
+    text-align: center;
+    top: 20rem;
+    left: 0;
+  }
+
+  #headshot-caption h1, #headshot-caption h3, .home-nav-option, .home-nav-icon {
+    display: block;
+    padding: .5rem;
+    color: #212121;
+    font-size: 1.5rem;
+    text-align: center;
+  }
 }

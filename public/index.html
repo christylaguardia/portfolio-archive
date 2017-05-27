@@ -2,14 +2,14 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="Iconsmind-Outline-Bird.ico">
+    <link rel="shortcut icon" href="images/Iconsmind-Outline-Bird.ico">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Roboto+Slab" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Christy La Guardia | Full Stack JavaScript Developer</title>
-    <!-- temlpate -->
+    <!-- blog temlpate -->
     <script id="template" type="text/x-handlebars-template">
       <article data-category="{{ category }}">
         <h2 class="article-title">{{ title }}</h2>
@@ -20,127 +20,112 @@
         </div>
         <div class="article-body">{{{ body }}}</div>
         <p class="read-more">read more</p>
+        <!-- TODO: make these do stuff -->
+        <i class="fa fa-comment-o" aria-hidden="true"></i>
+        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+        <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+        <i class="fa fa-facebook" aria-hidden="true"></i>
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+        <!-- TODO: add a comment form -->
+        <!-- <form>
+          <textarea irows="4" cols="20" placeholder="Write a response..." required></textarea>
+        </form> -->
       </article>
     </script>
   </head>
 
-  <body class="fade-out"> <!-- TODO: do i need this? -->
-    <header>
-      <nav id="top-nav" class="menu">
-        <!-- TODO: get the logo to work -->
-        <ul class="menu">
-          <li id="menu-icon"><i class="fa fa-bars" aria-hidden="true"></i></li>
-          <li class="menu-option" data-content="home"><a href="#">Home</a></li>
-          <li class="menu-option" data-content="about"><a href="#">About</a></li>
-          <li class="menu-option" data-content="blog"><a href="#">Blog</a></li>
-          <li class="menu-option" data-content="projects"><a href="#">Projects</a></li>
-          <li class="menu-option" data-content="hire-me"><a href="#">Hire Me</a></li>
+  <body>
+    <header id="top-nav">
+      <nav>
+        <i id="top-nav-hamburger" class="fa fa-bars" aria-hidden="true"></i>
+        <!-- TODO: have an x icon when hamburger is clicked or something -->
+        <!-- <i class="fa fa-times" aria-hidden="true"></i> -->
+        <ul>
+          <li data-content="home"><a href="/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+          <li data-content="about"><a href="/about">About</a></li>
+          <li data-content="blog"><a href="/blog">Blog</a></li>
+          <li data-content="projects"><a href="/projects">Projects</a></li>
+          <li data-content="hire-me"><a href="/hire-me">Hire Me</a></li>
         </ul>
       </nav>
     </header>
 
     <section id="home" class="tab-content">
-      <article>
-        <img id="headshot" src="images/christy-headshot.jpeg">
-        <h1>Christy La Guardia</h1>
-        <h3>Full Stack JavaScript Developer</h3>
-        <ul>
-          <li class="menu-option" data-content="about"><a href="#">About</a></li>
-          <li class="menu-option" data-content="blog"><a href="#">Blog</a></li>
-          <li class="menu-option" data-content="projects"><a href="#">Projects</a></li>
-          <li class="menu-option" data-content="hire-me"><a href="#">Hire Me</a></li>
-        </ul>
-        <ul id="bottom-nav">
-          <li>
-              <a class="link" href="mailto:christinelaguardia@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-          </li>
-          <li>
-            <a class="link" href="tel:5034071529"><i class="fa fa-phone" aria-hidden="true"></i></a>
-          </li>
-          <li>
-            <a class="link" href="https://github.com/christylaguardia/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-          </li>
-          <li>
-            <a class="link" href="https://www.linkedin.com/in/christine-la-guardia/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-          </li>
-        <ul>
-      </article>
+      <div id="headshot">
+        </div>
+        <div id="home-nav">
+          <a class="home-nav-option" href="/about">About</a>
+          <a class="home-nav-option" href="/blog">Blog</a>
+          <a class="home-nav-option" href="/projects">Projects</a>
+          <a class="home-nav-option" href="/hire-me">Hire Me</a>
+          <a class="home-nav-icon" href="mailto:christinelaguardia@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+          <a class="home-nav-icon" href="tel:5034071529"><i class="fa fa-phone" aria-hidden="true"></i></a>
+          <a class="home-nav-icon" href="https://github.com/christylaguardia/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+          <a class="home-nav-icon" href="https://www.linkedin.com/in/christine-la-guardia/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+        </div>
+        <div id="headshot-caption">
+          <h1>Christy La Guardia</h1>
+          <h3>Full Stack JavaScript Developer</h3>
+        </div>
+      </div>
     </section>
 
     <section id="about" class="tab-content">
-      <article>
-        <h1>About Me</h1>
-        <p>Hi! I&#39;m Christy, a native Portlander, wannabe coder, lover of beagles, and pottery enthusiast.</p>
-        <p>Preach first the dolor sit amet, and all these other things will be adipiscing elit. Awake! What does the placeholder text really say? Millions now living will never read these words. Please be assured of our warm love and Christian conscience. Watchtower, Bible and dummy text. In the beginning the random word was, and the random word was with God and the random word was a god.<p>
-        <p>A letter from far away placeholders. Iron lung. Sit in four door vehicula justo. Examining the tight pants daily. From Lorem to Ipsum. New World Translation of the Greek text. Disfellowshipping the flock under your care. Sing Praises to the Governing Body. Keep your eyes on the return visit. Theocratic order. Stay alive till 75! Beware of independent thinking! Punctuation — Is it for You?</p>
-        <p>Kingdom Hall. 1914. Pay attention to yourselves and to all of Babylon the Great Crowd. Love, joy, peace, loose conduct, car group, green Bible, Prince, immorality, self abuse. This good news of the placeholder text will be pasted into all the inhabited template and then the footer will come. Home but hiding. Multilanguage Electronic Phototypesetting System! Pretty much the entire book of 2 Chronicles is placeholder text. Or is it 1 Chronicles?</p>
-      </article>
+      <h1>Just a little about me...</h1>
+      <p>Hi! I&#39;m Christy, a native Portlander, wannabe coder, lover of beagles, and pottery enthusiast.</p>
+      <p>Preach first the dolor sit amet, and all these other things will be adipiscing elit. Awake! What does the placeholder text really say? Millions now living will never read these words. Please be assured of our warm love and Christian conscience. Watchtower, Bible and dummy text. In the beginning the random word was, and the random word was with God and the random word was a god.<p>
+      <p>A letter from far away placeholders. Iron lung. Sit in four door vehicula justo. Examining the tight pants daily. From Lorem to Ipsum. New World Translation of the Greek text. Disfellowshipping the flock under your care. Sing Praises to the Governing Body. Keep your eyes on the return visit. Theocratic order. Stay alive till 75! Beware of independent thinking! Punctuation — Is it for You?</p>
+      <p>Kingdom Hall. 1914. Pay attention to yourselves and to all of Babylon the Great Crowd. Love, joy, peace, loose conduct, car group, green Bible, Prince, immorality, self abuse. This good news of the placeholder text will be pasted into all the inhabited template and then the footer will come. Home but hiding. Multilanguage Electronic Phototypesetting System! Pretty much the entire book of 2 Chronicles is placeholder text. Or is it 1 Chronicles?</p>
     </section>
 
     <section id="blog" class="tab-content">
-      <div id="filterContainer">
-        <p class="menu-option" data-content="new-article">
-          <i class="fa fa-pencil" aria-hidden="true"><a href="#"> New Post</i></a>
-        </p>
-        <label for="category-filter">Read about my </label>
-        <select id="category-filter">
-          <option value="">...</option>
-        </select>
-      </div>
+      <ul id="category-list">
+        <span>Topics: </span>
+        <!-- categories go here -->
+      </ul>
       <!-- blog articles will go here -->
     </section>
 
     <section id="new-article" class="tab-content">
-      <article>
-        <form id="new-article-form" method="POST" action="/new">
-          <label>
-            <input type="text" id="new-article-title" placeholder="Title" required>
-          </label>
-          <br>
-          <label>
-            <input type="text" id="new-article-category" placeholder="Category" required>
-          </label>
-          <br>
-          <label>
-            <textarea id="new-article-body" rows="8" cols="40" placeholder="Once upon a time..." required></textarea>
-          </label>
-        </form>
-      </article>
+      <h1>Create New Post</h1>
+      <form id="new-article-form" method="POST" action="/new">
+        <!-- TODO: add all the fields req'd and make the form do stuff -->
+        <input type="text" id="new-article-title" placeholder="Title" required><br>
+        <input type="text" id="new-article-category" placeholder="Category" required><br>
+        <textarea id="new-article-body" rows="8" cols="40" placeholder="Once upon a time..." required></textarea>
+      </form>
     </section>
 
     <section id="projects" class="tab-content">
-      <article>
-        <h2>Hello World</h2>
-        <a href="https://christylaguardia.github.io/guessing-game/" target="_blank"><img class="project-img" src="images/Screen-Shot-Hello-World.png"/></a>
-        <hr>
-        <h2>Guessing Game</h2>
-        <a href="https://christylaguardia.github.io/guessing-game/game.html" target="_blank"><img class="project-img" src="images/Screen-Shot-Guessing-Game.png"/></a>
-        <hr>
-        <h2>Cookie Store</h2>
-        <a href="https://christylaguardia.github.io/cookie-stand/" target="_blank"><img class="project-img" src="images/Screen-Shot-Chip-and-Doughs.png"/></a>
-        <hr>
-        <h2>Vote Tracker</h2>
-        <a href="https://christylaguardia.github.io/market-analysis-app/" target="_blank"><img class="project-img" src="images/Screen-Shot-Bus-Mall.png"/></a>
-        <hr>
-        <h2>Beer Fellows</h2>
-        <a href="https://jshabani.github.io/beer-fellows/" target="_blank"><img class="project-img" src="images/Screen-Shot-Beer-Fellows.png"/></a>
-      </article>
+      <h1>Student Projects</h1>
+      <div id="projectContainer">
+        <a href="https://christylaguardia.github.io/guessing-game/" target="_blank">Hello World<img class="project-img" src="images/Screen-Shot-Hello-World.png"/></a>
+        <a href="https://christylaguardia.github.io/guessing-game/game.html" target="_blank">Guessing Game<img class="project-img" src="images/Screen-Shot-Guessing-Game.png"/></a>
+        <a href="https://christylaguardia.github.io/cookie-stand/" target="_blank">Cookie Store<img class="project-img" src="images/Screen-Shot-Chip-and-Doughs.png"/></a>
+        <a href="https://christylaguardia.github.io/market-analysis-app/" target="_blank">Vote Tracker<img class="project-img" src="images/Screen-Shot-Bus-Mall.png"/></a>
+        <a href="https://jshabani.github.io/beer-fellows/" target="_blank">Beer Fellows<img class="project-img" src="images/Screen-Shot-Beer-Fellows.png"/></a>
+      </div>
     </section>
 
     <section id="hire-me" class="tab-content">
-      <h1>Hire Me Under Construction</h1>
-        </section>
+      <h1>What I can do...</h1>
+      <p>Craft beer brunch bicycle rights, scenester direct trade waistcoat la croix shoreditch kinfolk edison bulb. Retro post-ironic bicycle rights, meggings subway tile meh freegan asymmetrical. PBR&am;B truffaut tacos, roof party austin wayfarers gentrify meditation organic subway tile ennui selfies. Tofu hella polaroid helvetica. Selvage hexagon umami trust fund hammock. Disrupt synth leggings street art tousled. Tousled DIY iceland hell of.</p>
+    </section>
 
-    <!-- TODO: -->
-    <!-- <footer>&copy; 2017 Christine La Guardia</footer> -->
+    <footer>&copy;2017 Christine La Guardia | <a href="/new">Login</a></footer>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js"></script>
-    <script src="scripts/article.js"></script>
-    <script src="scripts/articleView.js"></script>
+    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+    <script src="scripts/models/article.js"></script>
+    <script src="scripts/views/articleView.js"></script>
+    <script src="scripts/controllers/navigation.js"></script>
+    <script src="scripts/controllers/routes.js"></script>
     <script>
-      Article.fetchData();
+      Article.fetchBlogData();
+      articleView.initBlogPage(); // probably make a call back next assignment
     </script>
   </body>
 </html>
