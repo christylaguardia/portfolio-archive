@@ -20,13 +20,14 @@
         </div>
         <div class="article-body">{{{ body }}}</div>
         <p class="read-more">read more</p>
-        <!-- TODO:  -->
+        <!-- TODO: make these do stuff -->
         <i class="fa fa-comment-o" aria-hidden="true"></i>
         <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
         <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
         <i class="fa fa-facebook" aria-hidden="true"></i>
         <i class="fa fa-twitter" aria-hidden="true"></i>
         <i class="fa fa-envelope" aria-hidden="true"></i>
+        <!-- TODO: add a comment form -->
         <!-- <form>
           <textarea irows="4" cols="20" placeholder="Write a response..." required></textarea>
         </form> -->
@@ -38,6 +39,7 @@
     <header id="top-nav">
       <nav>
         <i id="top-nav-hamburger" class="fa fa-bars" aria-hidden="true"></i>
+        <!-- TODO: have an x icon when hamburger is clicked or something -->
         <!-- <i class="fa fa-times" aria-hidden="true"></i> -->
         <ul>
           <li data-content="home"><a href="/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
@@ -70,23 +72,23 @@
     </section>
 
     <section id="about" class="tab-content">
-      <article>
-        <!-- <h1>About Me</h1> -->
-        <p>Hi! I&#39;m Christy, a native Portlander, wannabe coder, lover of beagles, and pottery enthusiast.</p>
-        <p>Preach first the dolor sit amet, and all these other things will be adipiscing elit. Awake! What does the placeholder text really say? Millions now living will never read these words. Please be assured of our warm love and Christian conscience. Watchtower, Bible and dummy text. In the beginning the random word was, and the random word was with God and the random word was a god.<p>
-        <p>A letter from far away placeholders. Iron lung. Sit in four door vehicula justo. Examining the tight pants daily. From Lorem to Ipsum. New World Translation of the Greek text. Disfellowshipping the flock under your care. Sing Praises to the Governing Body. Keep your eyes on the return visit. Theocratic order. Stay alive till 75! Beware of independent thinking! Punctuation — Is it for You?</p>
-        <p>Kingdom Hall. 1914. Pay attention to yourselves and to all of Babylon the Great Crowd. Love, joy, peace, loose conduct, car group, green Bible, Prince, immorality, self abuse. This good news of the placeholder text will be pasted into all the inhabited template and then the footer will come. Home but hiding. Multilanguage Electronic Phototypesetting System! Pretty much the entire book of 2 Chronicles is placeholder text. Or is it 1 Chronicles?</p>
-      </article>
+      <h1>Just a little about me...</h1>
+      <p>Hi! I&#39;m Christy, a native Portlander, wannabe coder, lover of beagles, and pottery enthusiast.</p>
+      <p>Preach first the dolor sit amet, and all these other things will be adipiscing elit. Awake! What does the placeholder text really say? Millions now living will never read these words. Please be assured of our warm love and Christian conscience. Watchtower, Bible and dummy text. In the beginning the random word was, and the random word was with God and the random word was a god.<p>
+      <p>A letter from far away placeholders. Iron lung. Sit in four door vehicula justo. Examining the tight pants daily. From Lorem to Ipsum. New World Translation of the Greek text. Disfellowshipping the flock under your care. Sing Praises to the Governing Body. Keep your eyes on the return visit. Theocratic order. Stay alive till 75! Beware of independent thinking! Punctuation — Is it for You?</p>
+      <p>Kingdom Hall. 1914. Pay attention to yourselves and to all of Babylon the Great Crowd. Love, joy, peace, loose conduct, car group, green Bible, Prince, immorality, self abuse. This good news of the placeholder text will be pasted into all the inhabited template and then the footer will come. Home but hiding. Multilanguage Electronic Phototypesetting System! Pretty much the entire book of 2 Chronicles is placeholder text. Or is it 1 Chronicles?</p>
     </section>
 
     <section id="blog" class="tab-content">
       <ul id="category-list">
+        <span>Topics: </span>
         <!-- categories go here -->
       </ul>
       <!-- blog articles will go here -->
     </section>
 
     <section id="new-article" class="tab-content">
+      <h1>Create New Post</h1>
       <form id="new-article-form" method="POST" action="/new">
         <!-- TODO: add all the fields req'd and make the form do stuff -->
         <input type="text" id="new-article-title" placeholder="Title" required><br>
@@ -96,6 +98,7 @@
     </section>
 
     <section id="projects" class="tab-content">
+      <h1>Student Projects</h1>
       <div id="projectContainer">
         <a href="https://christylaguardia.github.io/guessing-game/" target="_blank">Hello World<img class="project-img" src="images/Screen-Shot-Hello-World.png"/></a>
         <a href="https://christylaguardia.github.io/guessing-game/game.html" target="_blank">Guessing Game<img class="project-img" src="images/Screen-Shot-Guessing-Game.png"/></a>
@@ -106,7 +109,8 @@
     </section>
 
     <section id="hire-me" class="tab-content">
-      <h1>Hire Me Under Construction</h1>
+      <h1>What I can do...</h1>
+      <p>Craft beer brunch bicycle rights, scenester direct trade waistcoat la croix shoreditch kinfolk edison bulb. Retro post-ironic bicycle rights, meggings subway tile meh freegan asymmetrical. PBR&am;B truffaut tacos, roof party austin wayfarers gentrify meditation organic subway tile ennui selfies. Tofu hella polaroid helvetica. Selvage hexagon umami trust fund hammock. Disrupt synth leggings street art tousled. Tousled DIY iceland hell of.</p>
     </section>
 
     <footer>&copy;2017 Christine La Guardia | <a href="/new">Login</a></footer>
@@ -120,7 +124,8 @@
     <script src="scripts/controllers/navigation.js"></script>
     <script src="scripts/controllers/routes.js"></script>
     <script>
-      Article.fetchData();
+      Article.fetchBlogData();
+      articleView.initBlogPage(); // probably make a call back next assignment
     </script>
   </body>
 </html>

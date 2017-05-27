@@ -1,47 +1,7 @@
-#about, #blog, #new-article ,#projects, #hire-me {
+#about, #blog, #new-article, #projects, #hire-me {
   display: none;
-  margin-top: 5vh; /* offset the top-nav */
+  /* offset the top-nav */
+  margin-top: 5vh;
 }
 
-
-/* TODO: change home page layout when the works are on my face */
-
-/*for smaller screens*/
-@media screen and (max-width: 600px) {
-
-  /* TODO: fix this stuff */
-
-  /*#headshot {
-    margin-top: 2rem;
-    display: none;
-    background-position: left;
-  }*/
-  .tab-content:not(#home) {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  #top-nav-hamburger {
-    display: inline;
-    position: fixed;
-    text-align: right;
-    font-size: 3rem;
-    color: #212121;
-    /*color: #ffffff;*/
-  }
-
-  #top-nav ul {
-    display: none;
-  }
-    /*
-    top: 0;
-    text-align: left;
-    font-size: 1.25rem;
-  }*/
-
-  .fromMsg, .toMsg {
-    margin-right: 3%;
-    margin-left: 3%;
-    min-width: 90%;
-  }
-}
+/* QUESTION: maybe some needs to move here from modules.css */

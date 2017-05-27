@@ -1,23 +1,17 @@
 (function(module) {
-  // QUESTION: should this be in a function
-  // for smaller screens, show menu option when clicking the hambuger icon
-  $('#top-nav-hamburger').click(function() {
-    $('#top-nav li').toggle();
-  });
-
-  // hide or show content
   const articleView = {};
 
   articleView.setTeasers = function() {
+    console.log('setting the article teasers');
     // hide everything but the first paragraph
     $('.article-body *:nth-of-type(n+2)').fadeOut(600);
     // TODO: this is doing for all articles
     $('.toMsg').fadeOut(600);
     $('.fromMsg').fadeOut(600);
     $('.article-picture').fadeOut(600);
-
     $('.read-more').click(function() {
       if ($(this).text() === 'read more') {
+        // TODO: change this to show only the selexted article on 'show more'
         // show hidden blog article content
         $(this).parent().find('*').fadeIn(600);
         $(this).text('read less');
@@ -33,6 +27,7 @@
   };
 
   articleView.populateCategories = function() {
+    console.log('populating the category tags');
     Article.all.map(function(article) {
       return article.category;
     })
@@ -40,14 +35,7 @@
       if (uniqueCategories.indexOf(category) < 0) uniqueCategories.push(category);
         return uniqueCategories;
     }, [])
-    // TODO:
-    // .sort(function(a,b) {
-    //   if (a.toUpperCase() < b.toUpperCase()) {
-    //     return -1;
-    //   } else {
-    //     return 0;
-    //   }
-    // })
+    // TODO: sort
     .forEach(function(category) {
       $('#category-list').append(`<li data-category='${category}'>${category}</li>`);
     })
@@ -56,6 +44,7 @@
 
   articleView.handleCategoryFilter = function() {
     $('#category-list').on('click', 'li', function() {
+      console.log('user clicked on', this);
       // hide all the articles
       $('#blog article').hide();
       // show the articles with the category the user clicked on
@@ -65,6 +54,24 @@
       $(this).addClass('active');
     })
   };
+
+  articleView.handleTopNav = function() {
+    $('#top-nav-hamburger').click(function() {
+      $('#top-nav li').toggle();
+    });
+  }
+
+  articleView.initBlogPage = function() {
+    console.log('initializing...');
+    Article.all.forEach(function(a) {
+      $('#blog').append(a.blogDataToHtml());
+    });
+    console.log('articles added to page');
+    articleView.setTeasers();
+    articleView.populateCategories();
+    articleView.handleCategoryFilter();
+    articleView.handleTopNav();
+  }
 
   module.articleView = articleView;
 })(window);

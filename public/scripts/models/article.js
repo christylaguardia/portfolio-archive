@@ -37,19 +37,20 @@
     // articleView.loadIndexPage();
   }
 
-  Article.fetchData = function() {
+  Article.fetchBlogData = function() {
     console.log('fetching the data');
     // check if already in localStorage
     if (localStorage.blogData) {
-      console.log('Local storage already exists.');
+      console.log('local storage already exists');
       Article.loadBlogData(JSON.parse(localStorage.blogData));
     } else {
       $.getJSON('data/articleData.json', function(json) {
-        console.log('Local storage does not exist.');
+        console.log('local storage does not exist');
         localStorage.setItem('blogData', JSON.stringify(json));
-        console.log('Local storage created');
+        console.log('local storage created');
         Article.loadBlogData(json);
       });
+      console.log('article data has been fetched');
     }
   }
 

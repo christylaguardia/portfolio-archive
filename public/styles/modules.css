@@ -60,21 +60,21 @@
 }
 
 #headshot-caption {
-  font-size: 2rem;
   top: 70%;
   padding-left: 10%;
 }
 
 #headshot-caption h1 {
+  font-size: 2rem;
   margin-bottom: 0;
   color: rgba(245,245,245,.7);
 }
 
 #headshot-caption h3 {
-  color: rgba(245,245,245,.5);
-  font-family: 'Open Sans', sans-serif;
   font-size: 1.5rem;
   margin-top: 0;
+  color: rgba(245,245,245,.5);
+  font-family: 'Open Sans', sans-serif;
 }
 
 #home-nav, #headshot-caption {
@@ -213,4 +213,71 @@
 .project-img:hover {
   opacity: 1;
   box-shadow: 0 0 .5rem #bdbdbd;
+}
+
+/* TODO: still working on this
+  need to change home page layout on small screens
+  for phones 320px
+  for big phones 480px
+  for tabets 768px
+*/
+
+
+@media screen and (max-width: 480px) {
+
+  .tab-content:not(#home), #top-nav {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    position: relative;
+  }
+
+  #top-nav-hamburger {
+    display: block;
+    font-size: 2rem;
+    margin-top: 1rem;
+    text-align: right;
+  }
+
+  #top-nav ul {
+    display: block;
+    list-style-type: none;
+    background-color: rgba(255,152,221,.5);
+    clear: both;
+  }
+
+  #top-nav li {
+    display: none;
+  }
+
+  #headshot {
+    display: block;
+    top: 10vh;
+    margin: 0 auto;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 5rem;
+    box-shadow: 0 0 2rem #212121;
+    background: url("../images/christy-headshot.jpeg");
+    background-position: center;
+    background-size: contain;
+  }
+
+  #headshot-caption {
+    top: 15rem;
+    padding: 2rem;
+  }
+
+  #home-nav {
+    text-align: center;
+    top: 20rem;
+    left: 0;
+  }
+
+  #headshot-caption h1, #headshot-caption h3, .home-nav-option, .home-nav-icon {
+    display: block;
+    padding: .5rem;
+    color: #212121;
+    font-size: 1.5rem;
+    text-align: center;
+  }
 }
