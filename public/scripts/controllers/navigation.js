@@ -8,7 +8,6 @@
     $('.tab-content').hide();
     $('#home').fadeIn(600);
     $('#top-nav').hide(); // fade in has a weird ghost effect
-
   }
 
   navigation.loadAboutPage = function() {
@@ -44,6 +43,15 @@
     $('.tab-content').hide();
     $('#top-nav').fadeIn(600);
     $('#hire-me').fadeIn(600);
+  }
+
+  navigation.loadGitHubPage = function() {
+    console.log('loading the github repo page');
+    $('.tab-content').hide();
+    $('#top-nav').fadeIn(600);
+    $('#github').fadeIn(600);
+    repos.requestRepos(repoView.index);
+    console.log('github repos loaded');
   }
 
   module.navigation = navigation;

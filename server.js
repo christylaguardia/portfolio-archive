@@ -12,6 +12,8 @@ app.get('/', function(request, response) {
   response.sendFile('index.html', {root: '.'});
 });
 
+// QUESTION: do i need to add more app.get
+
 app.listen(PORT, function() {
   console.log(`started server on port: ${PORT}`);
 });
