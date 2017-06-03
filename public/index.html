@@ -41,6 +41,7 @@
       <li>
         <a href="{{html_url}}" target="_blank"><h3>{{ name }}</h3></a>
         <p>{{ description }}</p>
+        <p>{{ updated_at }}</p>
       </li>
     </script>
   </head>
@@ -112,11 +113,22 @@
     <section id="projects" class="tab-content">
       <h1>Student Projects</h1>
       <div id="projectContainer">
-        <a href="https://christylaguardia.github.io/guessing-game/" target="_blank">Hello World<img class="project-img" src="images/Screen-Shot-Hello-World.png"/></a>
-        <a href="https://christylaguardia.github.io/guessing-game/game.html" target="_blank">Guessing Game<img class="project-img" src="images/Screen-Shot-Guessing-Game.png"/></a>
-        <a href="https://christylaguardia.github.io/cookie-stand/" target="_blank">Cookie Store<img class="project-img" src="images/Screen-Shot-Chip-and-Doughs.png"/></a>
-        <a href="https://christylaguardia.github.io/market-analysis-app/" target="_blank">Vote Tracker<img class="project-img" src="images/Screen-Shot-Bus-Mall.png"/></a>
-        <a href="https://jshabani.github.io/beer-fellows/" target="_blank">Beer Fellows<img class="project-img" src="images/Screen-Shot-Beer-Fellows.png"/></a>
+        <!-- TODO: get better screen shots -->
+        <article>
+          <h3>Cookie Store</h3>
+          <a href="https://christylaguardia.github.io/cookie-stand/" target="_blank"><img class="project-img" src="images/Screen-Shot-Chip-and-Doughs.png"/></a>
+          <p>Cheesecake marshmallow tiramisu jujubes topping cupcake danish cake cake. Chupa chups jelly-o marshmallow cupcake chocolate cake jelly chocolate cake chocolate bar cheesecake. Toffee cake cake apple pie pie halvah marzipan soufflé.</p>
+        </article>
+        <article>
+          <h3>Vote Tracker</h3>
+          <a href="https://christylaguardia.github.io/market-analysis-app/" target="_blank"><img class="project-img" src="images/Screen-Shot-Bus-Mall.png"/></a>
+          <p>Tart oat cake fruitcake jelly beans ice cream tart bonbon halvah carrot cake. Chocolate bar biscuit sweet roll icing cotton candy jujubes tiramisu biscuit sugar plum. Donut cake gingerbread. Caramels muffin chocolate cake.</p>
+        </article>
+        <article>
+          <h3>Beer Fellows</h3>
+          <a href="https://jshabani.github.io/beer-fellows/" target="_blank"><img class="project-img" src="images/Screen-Shot-Beer-Fellows.png"/></a>
+          <p>Tiramisu wafer cheesecake sweet roll donut cotton candy. Topping halvah soufflé donut jelly chocolate cake bonbon cake cookie. Chupa chups gingerbread lemon drops fruitcake candy.</p>
+        </article>
       </div>
     </section>
 
@@ -142,7 +154,7 @@
     <script src="scripts/models/article.js"></script>
     <script src="scripts/views/articleView.js"></script>
 
-    <script src="scripts/models/token.js"></script>
+    <script src="scripts/models/githubToken.js"></script>
     <script src="scripts/models/repo.js"></script>
     <script src="scripts/views/repoView.js"></script>
 
