@@ -1,3 +1,3 @@
 node_modules/
 scratch-code.html
-githubToken.js
+scripts/models/githubToken.js
