@@ -9,7 +9,9 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Roboto+Slab" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Christy La Guardia | Full Stack JavaScript Developer</title>
+
     <!-- blog temlpate -->
+    <!-- TODO: should prbably change name to be blogTemplate -->
     <script id="template" type="text/x-handlebars-template">
       <article data-category="{{ category }}">
         <h2 class="article-title">{{ title }}</h2>
@@ -33,6 +35,15 @@
         </form> -->
       </article>
     </script>
+
+    <!-- github repositories template -->
+    <script id="repo-template" type="text/x-handlebars-template">
+      <li>
+        <a href="{{html_url}}" target="_blank"><h3>{{ name }}</h3></a>
+        <p>{{ description }}</p>
+        <p>{{ updated_at }}</p>
+      </li>
+    </script>
   </head>
 
   <body>
@@ -46,6 +57,7 @@
           <li data-content="about"><a href="/about">About</a></li>
           <li data-content="blog"><a href="/blog">Blog</a></li>
           <li data-content="projects"><a href="/projects">Projects</a></li>
+          <li data-content="github"><a href="/github">GitHub</a></li>
           <li data-content="hire-me"><a href="/hire-me">Hire Me</a></li>
         </ul>
       </nav>
@@ -58,6 +70,7 @@
           <a class="home-nav-option" href="/about">About</a>
           <a class="home-nav-option" href="/blog">Blog</a>
           <a class="home-nav-option" href="/projects">Projects</a>
+          <a class="home-nav-option" href="/github">GitHub</a>
           <a class="home-nav-option" href="/hire-me">Hire Me</a>
           <a class="home-nav-icon" href="mailto:christinelaguardia@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
           <a class="home-nav-icon" href="tel:5034071529"><i class="fa fa-phone" aria-hidden="true"></i></a>
@@ -100,11 +113,22 @@
     <section id="projects" class="tab-content">
       <h1>Student Projects</h1>
       <div id="projectContainer">
-        <a href="https://christylaguardia.github.io/guessing-game/" target="_blank">Hello World<img class="project-img" src="images/Screen-Shot-Hello-World.png"/></a>
-        <a href="https://christylaguardia.github.io/guessing-game/game.html" target="_blank">Guessing Game<img class="project-img" src="images/Screen-Shot-Guessing-Game.png"/></a>
-        <a href="https://christylaguardia.github.io/cookie-stand/" target="_blank">Cookie Store<img class="project-img" src="images/Screen-Shot-Chip-and-Doughs.png"/></a>
-        <a href="https://christylaguardia.github.io/market-analysis-app/" target="_blank">Vote Tracker<img class="project-img" src="images/Screen-Shot-Bus-Mall.png"/></a>
-        <a href="https://jshabani.github.io/beer-fellows/" target="_blank">Beer Fellows<img class="project-img" src="images/Screen-Shot-Beer-Fellows.png"/></a>
+        <!-- TODO: get better screen shots -->
+        <article>
+          <h3>Cookie Store</h3>
+          <a href="https://christylaguardia.github.io/cookie-stand/" target="_blank"><img class="project-img" src="images/Screen-Shot-Chip-and-Doughs.png"/></a>
+          <p>Cheesecake marshmallow tiramisu jujubes topping cupcake danish cake cake. Chupa chups jelly-o marshmallow cupcake chocolate cake jelly chocolate cake chocolate bar cheesecake. Toffee cake cake apple pie pie halvah marzipan soufflé.</p>
+        </article>
+        <article>
+          <h3>Vote Tracker</h3>
+          <a href="https://christylaguardia.github.io/market-analysis-app/" target="_blank"><img class="project-img" src="images/Screen-Shot-Bus-Mall.png"/></a>
+          <p>Tart oat cake fruitcake jelly beans ice cream tart bonbon halvah carrot cake. Chocolate bar biscuit sweet roll icing cotton candy jujubes tiramisu biscuit sugar plum. Donut cake gingerbread. Caramels muffin chocolate cake.</p>
+        </article>
+        <article>
+          <h3>Beer Fellows</h3>
+          <a href="https://jshabani.github.io/beer-fellows/" target="_blank"><img class="project-img" src="images/Screen-Shot-Beer-Fellows.png"/></a>
+          <p>Tiramisu wafer cheesecake sweet roll donut cotton candy. Topping halvah soufflé donut jelly chocolate cake bonbon cake cookie. Chupa chups gingerbread lemon drops fruitcake candy.</p>
+        </article>
       </div>
     </section>
 
@@ -113,14 +137,27 @@
       <p>Craft beer brunch bicycle rights, scenester direct trade waistcoat la croix shoreditch kinfolk edison bulb. Retro post-ironic bicycle rights, meggings subway tile meh freegan asymmetrical. PBR&am;B truffaut tacos, roof party austin wayfarers gentrify meditation organic subway tile ennui selfies. Tofu hella polaroid helvetica. Selvage hexagon umami trust fund hammock. Disrupt synth leggings street art tousled. Tousled DIY iceland hell of.</p>
     </section>
 
+    <section id="github" class="tab-content">
+      <h1>View my code...</h1>
+      <ul>
+        <!-- list of repos will go here -->
+      </ul>
+    </section>
+
     <footer>&copy;2017 Christine La Guardia | <a href="/new">Login</a></footer>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js"></script>
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+
     <script src="scripts/models/article.js"></script>
     <script src="scripts/views/articleView.js"></script>
+
+    <script src="scripts/models/githubToken.js"></script>
+    <script src="scripts/models/repo.js"></script>
+    <script src="scripts/views/repoView.js"></script>
+
     <script src="scripts/controllers/navigation.js"></script>
     <script src="scripts/controllers/routes.js"></script>
     <script>

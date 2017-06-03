@@ -1,4 +1,4 @@
-#about, #blog, #new-article, #projects, #hire-me {
+#about, #blog, #new-article, #projects, #github, #hire-me {
   display: none;
   /* offset the top-nav */
   margin-top: 5vh;
