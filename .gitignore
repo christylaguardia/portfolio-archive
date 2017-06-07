@@ -1,3 +1,5 @@
 node_modules/
 scratch-code.html
-scripts/models/githubToken.js
+*/githubToken.js
+.env
+.DS_Store

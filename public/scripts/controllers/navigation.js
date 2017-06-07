@@ -4,6 +4,8 @@
   const navigation = {};
 
   navigation.loadIndexPage = function() {
+    Article.fetchBlogData();
+    articleView.initBlogPage(); 
     console.log('loading the home page');
     $('.tab-content').hide();
     $('#home').fadeIn(600);

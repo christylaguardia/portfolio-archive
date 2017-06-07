@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="images/Iconsmind-Outline-Bird.ico">
+    <link rel="shortcut icon" href="">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
@@ -11,8 +11,7 @@
     <title>Christy La Guardia | Full Stack JavaScript Developer</title>
 
     <!-- blog temlpate -->
-    <!-- TODO: should prbably change name to be blogTemplate -->
-    <script id="template" type="text/x-handlebars-template">
+    <script id="blog-template" type="text/x-handlebars-template">
       <article data-category="{{ category }}">
         <h2 class="article-title">{{ title }}</h2>
         <time class="article-date" datetime="{{ publishedOn }}">{{{ publishStatus }}}</time>
@@ -44,6 +43,16 @@
         <p>{{ updated_at }}</p>
       </li>
     </script>
+
+    <!-- projects template -->
+    <script id="project-template" type="text/x-handlebars-template">
+      <article>
+        <h3>{{ title }}/h3>
+        <a href="{{ URL }}" target="_blank"><img class="project-img" src="{{ image }}"/></a>
+        <p>{{ description }}</p>
+      </article>
+    </script>
+
   </head>
 
   <body>
@@ -114,7 +123,7 @@
       <h1>Student Projects</h1>
       <div id="projectContainer">
         <!-- TODO: get better screen shots -->
-        <article>
+        <!-- <article>
           <h3>Cookie Store</h3>
           <a href="https://christylaguardia.github.io/cookie-stand/" target="_blank"><img class="project-img" src="images/Screen-Shot-Chip-and-Doughs.png"/></a>
           <p>Cheesecake marshmallow tiramisu jujubes topping cupcake danish cake cake. Chupa chups jelly-o marshmallow cupcake chocolate cake jelly chocolate cake chocolate bar cheesecake. Toffee cake cake apple pie pie halvah marzipan soufflé.</p>
@@ -128,7 +137,7 @@
           <h3>Beer Fellows</h3>
           <a href="https://jshabani.github.io/beer-fellows/" target="_blank"><img class="project-img" src="images/Screen-Shot-Beer-Fellows.png"/></a>
           <p>Tiramisu wafer cheesecake sweet roll donut cotton candy. Topping halvah soufflé donut jelly chocolate cake bonbon cake cookie. Chupa chups gingerbread lemon drops fruitcake candy.</p>
-        </article>
+        </article> -->
       </div>
     </section>
 
@@ -160,9 +169,9 @@
 
     <script src="scripts/controllers/navigation.js"></script>
     <script src="scripts/controllers/routes.js"></script>
-    <script>
+    <!-- <script>
       Article.fetchBlogData();
       articleView.initBlogPage(); // probably make a call back next assignment
-    </script>
+    </script> -->
   </body>
 </html>

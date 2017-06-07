@@ -1,3 +1,5 @@
+'use strict';
+
 (function(module) {
   // constructor function
   function Article(blogObject) {
@@ -13,7 +15,7 @@
   Article.all = [];
 
   Article.prototype.blogDataToHtml = function() {
-    var template = Handlebars.compile($('#template').html());
+    var template = Handlebars.compile($('#blog-template').html());
     var date = new Date(this.publishedOn);
     // TODO:  if published today, display today
     this.publishedLongDate = date.toString("dddd, MMMM d, yyyy");

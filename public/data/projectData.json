@@ -1,0 +1,18 @@
+[
+  {
+  	"title": "Cookie Store",
+  	"URL": "https://christylaguardia.github.io/cookie-stand/",
+    "image": "images/Screen-Shot-Chip-and-Doughs.png",
+  	"description": "<p>Cheesecake marshmallow tiramisu jujubes topping cupcake danish cake cake. Chupa chups jelly-o marshmallow cupcake chocolate cake jelly chocolate cake chocolate bar cheesecake. Toffee cake cake apple pie pie halvah marzipan soufflé.</p>"
+  }, {
+    "title": "Vote Tracker",
+  	"URL": "https://christylaguardia.github.io/market-analysis-app/",
+    "image": "images/Screen-Shot-Bus-Mall.png",
+  	"description": "<p>Tart oat cake fruitcake jelly beans ice cream tart bonbon halvah carrot cake. Chocolate bar biscuit sweet roll icing cotton candy jujubes tiramisu biscuit sugar plum. Donut cake gingerbread. Caramels muffin chocolate cake.</p>"
+  }, {
+    "title": "Beer Fellows",
+  	"URL": "https://jshabani.github.io/beer-fellows/",
+    "image": "images/Screen-Shot-Beer-Fellows.png",
+  	"description": "<p>Tiramisu wafer cheesecake sweet roll donut cotton candy. Topping halvah soufflé donut jelly chocolate cake bonbon cake cookie. Chupa chups gingerbread lemon drops fruitcake candy.</p>"
+  }
+]
