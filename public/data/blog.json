@@ -1,0 +1,23 @@
+[
+    {
+        "title": "Why'd you leave?",
+	    "category": "religion",
+	    "pubdate": "2016-08-02",
+        "body": "/data/articles/WhydYouLeave.md"
+    },{
+        "title": "Thanks Google for helping me find Joel!",
+        "category": "religion",
+        "pubdate": "2016-05-31",
+        "body": "/data/articles/ThanksGoogleforHelpingMeFindJoel.md"
+    },{
+        "title": "Reuniting with my sister",
+        "category": "family",
+        "pubdate": "2015-07-01",
+        "body": "/data/articles/ReunitingWithMySister.md"
+    },{
+        "title": "Compulsory Devotion",
+        "category": "religion",
+        "pubdate": "2017-01-05",
+        "body": "/data/articles/CompulsoryDevotion.md"
+    }
+]

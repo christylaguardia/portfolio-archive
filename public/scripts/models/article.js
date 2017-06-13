@@ -1,13 +1,12 @@
 'use strict';
 
 (function(module) {
+
   // constructor function
   function Article(blogObject) {
     this.title = blogObject.title;
     this.category = blogObject.category;
-    this.publishedOn = blogObject.publishedOn;
-    this.image = blogObject.image;
-    this.caption = blogObject.caption;
+    this.pubdate = blogObject.pubdate;
     this.body = blogObject.body;
   }
 
@@ -15,12 +14,34 @@
   Article.all = [];
 
   Article.prototype.blogDataToHtml = function() {
+    console.log('>>>>>>> article to html<<<<<<<<')
     var template = Handlebars.compile($('#blog-template').html());
-    var date = new Date(this.publishedOn);
-    // TODO:  if published today, display today
-    this.publishedLongDate = date.toString("dddd, MMMM d, yyyy");
-    this.daysAgo = parseInt((new Date() - date)/60/60/24/1000);
-    this.publishStatus = this.publishedOn ? `<p>${this.publishedLongDate}   <em>(${this.daysAgo} days ago</em>)</p>` : '<p>(draft)</p>';
+
+    // get body from the md file
+
+
+    // convert the markdown to html
+    this.body = marked(this.body);
+
+    // format the publish date
+    var date = new Date(this.pubdate);
+    this.status = date.toString("dddd, MMMM d, yyyy");
+
+    //calculated how many days posted
+    var daysElapsed = parseInt((new Date() - date)/60/60/24/1000);
+    if (daysElapsed < 1) { daysElapsed = "today"; }
+    else if (daysElapsed <= 1) { daysElapsed += " day ago"; }
+    else if (daysElapsed >= 1) { daysElapsed += " days ago"; }
+    // TODO: add year/month increments
+    // else if (daysElapsed >= 1 && daysElapsed < 7) { daysElapsed += " days ago"; }
+    // else if (daysElapsed >= 7 && daysElapsed < 14) { daysElapsed = "a week ago"; }
+    // else if (daysElapsed >= 14 && daysElapsed < 21) { daysElapsed = "two weeks ago"; }
+    // else if (daysElapsed >=21) { daysElapsed = "a long time ago"; }
+    this.status = this.status + ' (' + daysElapsed + ')';
+    
+    //create publish status paragraph
+    // this.publishStatus = this.publishedOn ? `<p>${this.publishedDate}   <em>(${this.daysAgo}</em>)</p>` : '<p>(draft)</p>';
+    
     return template(this);
   }
 
@@ -32,28 +53,32 @@
     rawBlogData.sort(function(a,b) {
       return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
     });
+
     // run each blog article through constructor function and add to the articles array
     rawBlogData.forEach(function(ele) {
       Article.all.push(new Article(ele));
     });
+
     // articleView.loadIndexPage();
+    articleView.initBlogPage();
   }
 
   Article.fetchBlogData = function() {
     console.log('fetching the data');
+
     // check if already in localStorage
-    if (localStorage.blogData) {
-      console.log('local storage already exists');
-      Article.loadBlogData(JSON.parse(localStorage.blogData));
-    } else {
-      $.getJSON('data/articleData.json', function(json) {
+    // if (localStorage.blogData) {
+    //   console.log('local storage already exists');
+    //   Article.loadBlogData(JSON.parse(localStorage.blogData));
+    // } else {
+      $.getJSON('data/blog.json', function(json) {
         console.log('local storage does not exist');
         localStorage.setItem('blogData', JSON.stringify(json));
         console.log('local storage created');
         Article.loadBlogData(json);
       });
       console.log('article data has been fetched');
-    }
+    // }
   }
 
   // TODO: add the etag function

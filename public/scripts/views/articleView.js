@@ -64,12 +64,12 @@
   }
 
   articleView.initBlogPage = function() {
-    console.log('initializing...');
+    console.log('initializing the blog page...');
     Article.all.forEach(function(a) {
       $('#blog').append(a.blogDataToHtml());
     });
     console.log('articles added to page');
-    articleView.setTeasers();
+    // articleView.setTeasers();
     articleView.populateCategories();
     articleView.handleCategoryFilter();
     articleView.handleTopNav();

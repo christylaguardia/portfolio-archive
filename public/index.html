@@ -1,39 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="">
+  <head lang="en">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>Christy La Guardia | Developer</title>
+    <!--<link rel="shortcut icon" href=""> -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Roboto+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Roboto+Slab" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Christy La Guardia | Full Stack JavaScript Developer</title>
 
     <!-- blog temlpate -->
     <script id="blog-template" type="text/x-handlebars-template">
       <article data-category="{{ category }}">
         <h2 class="article-title">{{ title }}</h2>
-        <time class="article-date" datetime="{{ publishedOn }}">{{{ publishStatus }}}</time>
-        <div class="article-picture">
-          <img src="{{ image }}">
-          <p class="article-caption">{{ caption }}</p>
-        </div>
+        <time class="article-date" datetime="{{ pubdate }}">{{ status }}</time>        
         <div class="article-body">{{{ body }}}</div>
-        <p class="read-more">read more</p>
-        <!-- TODO: make these do stuff -->
-        <i class="fa fa-comment-o" aria-hidden="true"></i>
-        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-        <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
-        <i class="fa fa-facebook" aria-hidden="true"></i>
-        <i class="fa fa-twitter" aria-hidden="true"></i>
-        <i class="fa fa-envelope" aria-hidden="true"></i>
-        <!-- TODO: add a comment form -->
-        <!-- <form>
-          <textarea irows="4" cols="20" placeholder="Write a response..." required></textarea>
-        </form> -->
+        <!--TODO: change this to open the article separaetly-->
+        <p class="read-more">read more</p>        
+        <!-- TODO: add share links and comment form -->        
       </article>
-    </script>
 
     <!-- github repositories template -->
     <script id="repo-template" type="text/x-handlebars-template">
@@ -122,22 +108,7 @@
     <section id="projects" class="tab-content">
       <h1>Student Projects</h1>
       <div id="projectContainer">
-        <!-- TODO: get better screen shots -->
-        <!-- <article>
-          <h3>Cookie Store</h3>
-          <a href="https://christylaguardia.github.io/cookie-stand/" target="_blank"><img class="project-img" src="images/Screen-Shot-Chip-and-Doughs.png"/></a>
-          <p>Cheesecake marshmallow tiramisu jujubes topping cupcake danish cake cake. Chupa chups jelly-o marshmallow cupcake chocolate cake jelly chocolate cake chocolate bar cheesecake. Toffee cake cake apple pie pie halvah marzipan soufflé.</p>
-        </article>
-        <article>
-          <h3>Vote Tracker</h3>
-          <a href="https://christylaguardia.github.io/market-analysis-app/" target="_blank"><img class="project-img" src="images/Screen-Shot-Bus-Mall.png"/></a>
-          <p>Tart oat cake fruitcake jelly beans ice cream tart bonbon halvah carrot cake. Chocolate bar biscuit sweet roll icing cotton candy jujubes tiramisu biscuit sugar plum. Donut cake gingerbread. Caramels muffin chocolate cake.</p>
-        </article>
-        <article>
-          <h3>Beer Fellows</h3>
-          <a href="https://jshabani.github.io/beer-fellows/" target="_blank"><img class="project-img" src="images/Screen-Shot-Beer-Fellows.png"/></a>
-          <p>Tiramisu wafer cheesecake sweet roll donut cotton candy. Topping halvah soufflé donut jelly chocolate cake bonbon cake cookie. Chupa chups gingerbread lemon drops fruitcake candy.</p>
-        </article> -->
+        <!--projects will go here-->
       </div>
     </section>
 
@@ -159,6 +130,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js"></script>
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js"></script>
 
     <script src="scripts/models/article.js"></script>
     <script src="scripts/views/articleView.js"></script>
