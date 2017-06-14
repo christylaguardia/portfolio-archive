@@ -6,52 +6,33 @@
   navigation.loadIndexPage = function() {
     Article.fetchBlogData();
     articleView.initBlogPage(); 
-    console.log('loading the home page');
     $('.tab-content').hide();
-    $('#home').fadeIn(600);
-    $('#top-nav').hide(); // fade in has a weird ghost effect
+    $('#top-nav').hide();
+    $('#home').fadeIn(1000);
   }
 
   navigation.loadAboutPage = function() {
-    console.log('loading the about section');
     $('.tab-content').hide();
-    $('#top-nav').fadeIn(600);
-    $('#about').fadeIn(600);
+    $('#top-nav').fadeIn(1000);
+    $('#about').fadeIn(1000);
   }
 
   navigation.loadBlogPage = function() {
-    console.log('loading the blog page');
     $('.tab-content').hide();
-    $('#top-nav').fadeIn(600);
-    $('#blog').fadeIn(600);
-  }
-
-  navigation.loadNewBlogPage = function() {
-    console.log('loading the new blog post page');
-    $('.tab-content').hide();
-    $('#top-nav').fadeIn(600);
-    $('#new-article').fadeIn(600);
+    $('#top-nav').fadeIn(1000);
+    $('#blog').fadeIn(1000);
   }
 
   navigation.loadProjectPage = function() {
-    console.log('loading the project page');
     $('.tab-content').hide();
-    $('#top-nav').fadeIn(600);
-    $('#projects').fadeIn(600);
-  }
-
-  navigation.loadHireMePage = function() {
-    console.log('loading the hire me page');
-    $('.tab-content').hide();
-    $('#top-nav').fadeIn(600);
-    $('#hire-me').fadeIn(600);
+    $('#top-nav').fadeIn(1000);
+    $('#projects').fadeIn(1000);
   }
 
   navigation.loadGitHubPage = function() {
-    console.log('loading the github repo page');
     $('.tab-content').hide();
-    $('#top-nav').fadeIn(600);
-    $('#github').fadeIn(600);
+    $('#top-nav').fadeIn(1000);
+    $('#github').fadeIn(1000);
     repos.requestRepos(repoView.index);
     console.log('github repos loaded');
   }

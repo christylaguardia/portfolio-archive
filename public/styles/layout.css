@@ -1,7 +1,3 @@
-#about, #blog, #new-article, #projects, #github, #hire-me {
+#blog, #projects, #github {
   display: none;
-  /* offset the top-nav */
-  margin-top: 5vh;
 }
-
-/* QUESTION: maybe some needs to move here from modules.css */

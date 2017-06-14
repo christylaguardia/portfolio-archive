@@ -1,126 +1,41 @@
+/************* HOME *************/
+
 #home {
-  max-width: 100%;
+    text-align: center;
+    height: 80vh;
+    padding-top: 15%;
 }
-
-.tab-content {
-  margin: 0 auto;
-  max-width: 960px;
-  min-height: 95vh;
-}
-
-#top-nav-hamburger {
-  display: none;
-}
-
-#top-nav {
-  display: none;
-  top: -1vh;
-  font-family: 'Roboto Slab', serif;
-  height: 5vh;
-  max-width: 960px;
-  margin: 0 auto;
-}
-
-#top-nav ul {
-  padding: 0;
-  width: 100%;
-}
-
-#top-nav li {
-  display: inline-block;
-  margin-right: 1rem;
-}
-
-#top-nav li a {
-  color: #bdbdbd;
-}
-
-#top-nav li a:hover {
-  color: #212121;
-  border-bottom: 4px solid #ff98dd;
-  transition: color .5s ease-in-out;
-}
-
-/* TODO: define the headshot for mobile size */
-/*#headshot {
-  height: 10rem;
-  border-radius: 5rem;
-  box-shadow: 0 0 2rem #212121;
-}*/
 
 #headshot {
-  position: relative;
-  background: url("../images/main/christy.jpg");
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  opacity: 1;
-  transition: opacity 6s ease-in-out;
+    margin: 1rem auto;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 5rem;
+    box-shadow: 0 0 2rem #212121;
+    background: url("../images/main/christy-headshot.jpeg");
+    background-position: center;
+    background-size: contain;
+  }
+
+/************* PROJECTS *************/
+
+#projects img {
+    max-width: 60%;
 }
 
-#headshot-caption {
-  top: 70%;
-  padding-left: 10%;
-}
 
-#headshot-caption h1 {
-  font-size: 2rem;
-  margin-bottom: 0;
-  color: rgba(245,245,245,.7);
-}
+/************* BLOG *************/
 
-#headshot-caption h3 {
-  font-size: 1.5rem;
-  margin-top: 0;
-  color: rgba(245,245,245,.5);
-  font-family: 'Open Sans', sans-serif;
-}
-
-#home-nav, #headshot-caption {
-  font-family: 'Roboto Slab', sans-serif;
-  position: absolute;
-  /*color: #ffffff;*/
-}
-
-#home-nav {
-  text-align: left;
-  top: 25%;
-  left: 60%;
-}
-
-.home-nav-option, .home-nav-icon {
-  font-size: 3rem;
-  color: rgba(245,245,245,.7);
-  padding-bottom: .75rem;
-}
-
-.home-nav-option {
-  display: block;
-}
-
-.home-nav-option:hover {
-  color: #ffffff;
-  text-decoration: underline;
-  text-decoration-color: #ff98dd;
-  transition: color .5s ease-in-out;
-  transition: text-decoration-color .5s ease-in-out;
-}
-
-.home-nav-icon {
-  display: inline;
-  padding-right: 1rem;
-}
-
-.home-nav-icon:hover {
-  color: #ff98dd;
-  transition: color .5s ease-in-out;
+#blog img {
+    max-width: 60%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0 0 1rem #212121;
 }
 
 #category-list {
-  margin: 0 auto;
   padding-left: 0;
-  width: 100%;
   list-style-type: none;
 }
 
@@ -130,6 +45,7 @@
   font-size: .8rem;
   border-radius: .5rem;
   background-color: #424242;
+  /*box-shadow: 0 0 .25rem #212121;*/
   padding: .25rem .5rem;
   padding-left: .5rem;
   margin-right: .5rem;
@@ -137,148 +53,37 @@
 
 #category-list li:hover {
   cursor: pointer;
+}
+
+#category-list li:hover, #category-list .active {
   background-color: #ff98dd;
   transition: background-color .5s ease-in-out;
 }
 
-#category-list .active {
-  background-color: #ff98dd;
-  transition: background-color .5s ease-in-out;
+/*for the code snippet word wrap*/
+pre, xmp, plaintext, listing {
+    white-space: pre-wrap;
+}
+.markdown-body pre > code {
+    white-space: pre-wrap;
+}
+.markdown-body code {
+    white-space: pre-wrap;
 }
 
-.article-title {
-  border-top: 2px solid #bdbdbd;
-  padding-top: 1rem;
-  margin-bottom: 0;
+/*format the code snippets kinda like emails
+    but only for those categories
+    because I might want actual code snippets*/
+/*#blog article[data-category='religion'] pre {*/
+#blog article pre {
+    background-color: rgba(128, 128, 128, 0.17);
+    border-radius: 5px;
+    padding: 2rem;
+    font-size: 1rem;
 }
-
-.article-picture {
-  text-align: center;
-}
-
-.article-picture img {
-  max-width: 60%;
-  border-radius: .25rem;
-}
-
-.article-caption {
-  max-width: 60%;
-  margin: 0 auto;
-  color: #424242;
-  font-style: italic;
-}
-
-.fromMsg, .toMsg {
-  display: none;
-  border: 1px solid #616161;
-  border-radius: 10px;
-  padding: 1%;
-  margin-bottom: 2%;
-  max-width: 50%;
-}
-
-.fromMsg {
-  background-color: #98ddff;
-  margin-left: 10%;
-  margin-right: 40%;
-}
-
-.toMsg {
-  background-color: #ddff98;
-  margin-left: 40%;
-  margin-right: 10%;
-}
-
-.read-more {
-  cursor: pointer;
-  font-size: .8rem;
-}
-
-.read-more:hover {
-  color: #ff98dd;
-  transition: color .5s ease-in-out;
-}
-
-/* TODO: this doesn't look very good */
-#projectContainer {
-  display: flex;
-  margin: 2rem;
-}
-
-.project-img {
-  width: 100%;
-  text-align: center;
-  opacity: .8;
-}
-
-.project-img:hover {
-  opacity: 1;
-  box-shadow: 0 0 .5rem #bdbdbd;
-}
-
-/* TODO: still working on this
-  need to change home page layout on small screens
-  for phones 320px
-  for big phones 480px
-  for tabets 768px
-*/
-
 
 @media screen and (max-width: 480px) {
-
-  .tab-content:not(#home), #top-nav {
-    padding-left: 2rem;
-    padding-right: 2rem;
-    position: relative;
-  }
-
-  #top-nav-hamburger {
-    display: block;
-    font-size: 2rem;
-    margin-top: 1rem;
-    text-align: right;
-  }
-
-  #top-nav ul {
-    display: block;
-    list-style-type: none;
-    background-color: rgba(255,152,221,.5);
-    clear: both;
-  }
-
-  #top-nav li {
-    display: none;
-  }
-
-  #headshot {
-    display: block;
-    top: 10vh;
-    margin: 0 auto;
-    height: 10rem;
-    width: 10rem;
-    border-radius: 5rem;
-    box-shadow: 0 0 2rem #212121;
-    background: url("../images/christy-headshot.jpeg");
-    background-position: center;
-    background-size: contain;
-  }
-
-  #headshot-caption {
-    top: 15rem;
-    padding: 2rem;
-  }
-
-  #home-nav {
-    text-align: center;
-    top: 20rem;
-    left: 0;
-  }
-
-  #headshot-caption h1, #headshot-caption h3, .home-nav-option, .home-nav-icon {
-    display: block;
-    padding: .5rem;
-    color: #212121;
-    font-size: 1.5rem;
-    text-align: center;
-  }
+    #blog img {
+        max-width: 100%;
+    }
 }

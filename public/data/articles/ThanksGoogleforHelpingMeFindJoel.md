@@ -1,13 +1,15 @@
+#### 5/31/2016
 # Thanks Google for Helping Me Find Joel!
-5/31/2016
 
-![Skipping service and hanging out with my new apostate buddy](images/me-and-joel.jpeg)
+![](images/blog/me-and-joel.jpeg)
+
+*Skipping service and hanging out with my new apostate buddy*
 
 One night while I was secretly investigating Jehovah's Witnesses on the web, I decided to read about what ex-Jehovah's Witnesses had to say.
 
-I already trudged through exhausting amounts of reading and research from Watchtower publications. But to make a well informed decision to leave my religion, I needed to hear what both sides had to say. I realized this would be directly seeking out ""apostates,"" but I reasoned that all I would do is just see what they had to say then make up my own mind.
+I already trudged through exhausting amounts of reading and research from Watchtower publications. But to make a well informed decision to leave my religion, I needed to hear what both sides had to say. I realized this would be directly seeking out "apostates," but I reasoned that all I would do is just see what they had to say then make up my own mind.
 
-Much of what I found, seemed drenched with anger and sarcasm and that's not what I was looking for. Then I came across [Joel's blog](”http://exjehovahswitnessportland.blogspot.com/”). The fact that it was made by and for people from my hometown peeked my curiosity and made it easier for me to connect with (plus ""Gunz"" sounded familiar).
+Much of what I found, seemed drenched with anger and sarcasm and that's not what I was looking for. Then I came across [Joel's blog](”http://exjehovahswitnessportland.blogspot.com/”). The fact that it was made by and for people from my hometown peeked my curiosity and made it easier for me to connect with (plus "Gunz" sounded familiar).
 
 So with an open mind, I read every word of his blog. Then I read it again. Although I was very interested in the content of the blog, what struck me most what Joel's obnoxious optimism. At that time, I was very depressed. Stuck in a monotonous life of self-denial and servitude. I knew I needed out, but I was raised and brainwashed to believe that this meant I was a rebelling against the almighty and would die in Armageddon (which will be any day now).
 
@@ -51,7 +53,7 @@ Best,
 Joel
 ```
 
-After quickly recovering from the initial shock of ""OMG! he actually replied! That must mean he IS real,"" I though, ""damn, he's right."" I was at a crossroads. Despite digging my heals in the ground to prevent arriving there. I realized that I couldn't sit on the fence forever.
+After quickly recovering from the initial shock of "OMG! he actually replied! That must mean he IS real," I though, "damn, he's right." I was at a crossroads. Despite digging my heals in the ground to prevent arriving there. I realized that I couldn't sit on the fence forever.
 
 ```
 From: Christy

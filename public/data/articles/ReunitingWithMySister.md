@@ -1,5 +1,5 @@
+#### 7/1/2015
 # Reuniting With My Sister
-7/1/2015
 
 ![](../../images/blog/me-and-missy.jpeg)
 
@@ -41,7 +41,7 @@ I haven't told mom or dad yet and I'm dreading it. I want to be open and honest 
 
 It's taken me a while to realize that the main reason why we are not close anymore is because I chose my religion over family. I don't expect you to forgive me, but please know that I am deeply and truly sorry for shutting you out for all these years. I'm your sister and I should have been there for you. I'm sorry that it's taken me this long to realize it but we're not old yet, and maybe we can make up for lost time.
 
-Please excuse my ignorance but what is a ""spanish-swedish-shoshone medicine woman""? Are you still in the Portland area? What kind of plants do you grow?
+Please excuse my ignorance but what is a "spanish-swedish-shoshone medicine woman"? Are you still in the Portland area? What kind of plants do you grow?
 
 You can text me if you want
 
