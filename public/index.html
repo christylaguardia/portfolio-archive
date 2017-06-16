@@ -6,9 +6,9 @@
     <title>Christy La Guardia </title>
     <link href="https://fonts.googleapis.com/css?family=Poppins|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/layout.css">
-    <link rel="stylesheet" href="styles/modules.css">
+    <link rel="stylesheet" type="text/css" href="styles/base.css">
+    <link rel="stylesheet" type="text/css" href="styles/layout.css">
+    <link rel="stylesheet" type="text/css" href="styles/modules.css">
 
     <!-- blog temlpate -->
     <script id="blog-template" type="text/x-handlebars-template">
@@ -21,54 +21,72 @@
 </head>
 
 <body>
-    <header>
-        <nav id="#top-nav">
-            <a id="#top-nav-hamburger" href=""><i class="fa fa-bars" aria-hidden="true"></i></a>
-            <li><a href="/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-            <li><a href="/projects">Projects</a></li>
-            <li><a href="/blog">Blog</a></li>
+    <!--<header>
+        <nav id="menu">
+            <div id="menu-icon">
+                <i id="hamburger" class="fa fa-bars" aria-hidden="true"></i><i id="times" class="fa fa-times" aria-hidden="true"></i>
+            </div>
+            <ul>
+                <li><a href="/"><i class="fa fa-home" aria-hidden="true"></i> HOME</a></li>
+                <li><a href="/projects"><i class="fa fa-code" aria-hidden="true"></i> PROJECTS</a></li>
+                <li><a href="/blog"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> BLOG</a></li>
+                <li><a href="/github"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a></li>
+            </ul>
         </nav>
-    </header>
+    </header>-->
 
-    <section id="home" class="tab-content">
-        <div id="headshot"></div>
-        <div>
-            <h1>Christy La Guardia</h1>
-            <h3>Software Development student at <a href="http://www.codefellowspdx.com/">Code Fellows</a></h3>
-            <h3><a href="/projects">Wannabe coder</a>, beagle lover, pottery enthusiast, <a href="/blog">cult survivor</a>.</h3>
-            <p><i class="fa fa-map-marker" aria-hidden="true"></i> Portland, Oregon</p>
-            <p><a class="home-nav-icon" href="mailto:christinelaguardia@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i> Email</a></p>
-            <p><a class="home-nav-icon" href="https://github.com/christylaguardia/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a></p>
-            <p><a class="home-nav-icon" href="https://www.linkedin.com/in/christine-la-guardia/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</a></p>
-        </div>
-    </section>
+    <div id="side-nav">
+        <span id="close-nav"><i class="fa fa-times" aria-hidden="true"></i></span>
+        <a href="/"><i class="fa fa-home" aria-hidden="true"></i> HOME</a>
+        <a href="/projects"><i class="fa fa-code" aria-hidden="true"></i> PROJECTS</a>
+        <a href="/blog"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> BLOG</a>
+        <a href="/github"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
+    </div>
 
-    <section id="blog" class="tab-content">
-        <ul id="category-list"></ul>
-    </section>
+    <div id="main">
+        <span id="open-nav"><i class="fa fa-bars" aria-hidden="true"></i></span>
 
-    <section id="projects" class="tab-content">
-        <h1>Projects</h1>
-        <div id="projectContainer">
+        <section id="home" class="tab-content">
+            <div id="headshot"></div>
             <div>
-                <h3><a href="https://garagefellows.herokuapp.com/">Garage Fellows</a></h3>
-                <img src="/images/projects/garagefellows.png">
-                <p>Tiramisu wafer cheesecake sweet roll donut cotton candy. Topping halvah soufflé donut jelly chocolate cake
-                    bonbon cake cookie. Chupa chups gingerbread lemon drops fruitcake candy.</p>
+                <h1>Christy La Guardia</h1>
+                <h3>Software Development student at <a href="http://www.codefellowspdx.com/" target="_blank">Code Fellows</a></h3>
+                <h3><a href="/projects">Wannabe coder</a>, beagle lover, pottery enthusiast, <a href="/blog">cult survivor</a>.</h3>
+                <p><i class="fa fa-map-marker" aria-hidden="true"></i> Portland, Oregon</p>
+                <p><a class="home-nav-icon" href="mailto:christinelaguardia@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i> Email</a></p>
+                <p><a class="home-nav-icon" href="https://github.com/christylaguardia/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a></p>
+                <p><a class="home-nav-icon" href="https://www.linkedin.com/in/christine-la-guardia/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</a></p>
             </div>
-            <div>
-                <h3><a href="https://jshabani.github.io/beer-fellows/">Beer Fellows</a></h3>
-                <img src="/images/projects/beerfellows.png">
-                <p>Tiramisu wafer cheesecake sweet roll donut cotton candy. Topping halvah soufflé donut jelly chocolate cake
-                    bonbon cake cookie. Chupa chups gingerbread lemon drops fruitcake candy.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="github" class="tab-content">
-        <h1>View my code...</h1>
-        <ul></ul>
-    </section>
+        <section id="blog" class="tab-content">
+            <ul id="category-list"></ul>
+        </section>
+
+        <section id="projects" class="tab-content">
+            <h1>Projects</h1>
+            <div id="projectContainer">
+                <div>
+                    <h3><a href="https://garagefellows.herokuapp.com/">Garage Fellows</a></h3>
+                    <img src="/images/projects/garagefellows.png">
+                    <p>Tiramisu wafer cheesecake sweet roll donut cotton candy. Topping halvah soufflé donut jelly chocolate cake
+                        bonbon cake cookie. Chupa chups gingerbread lemon drops fruitcake candy.</p>
+                </div>
+                <div>
+                    <h3><a href="https://jshabani.github.io/beer-fellows/">Beer Fellows</a></h3>
+                    <img src="/images/projects/beerfellows.png">
+                    <p>Tiramisu wafer cheesecake sweet roll donut cotton candy. Topping halvah soufflé donut jelly chocolate cake
+                        bonbon cake cookie. Chupa chups gingerbread lemon drops fruitcake candy.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="github" class="tab-content">
+            <h1>View my code...</h1>
+            <ul></ul>
+        </section>
+
+    </div>
 
     <footer>
         <p>&copy;2017 Christine La Guardia</p>
@@ -84,13 +102,15 @@
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js"></script>
 
+
     <script src="scripts/models/article.js"></script>
     <script src="scripts/views/articleView.js"></script>
 
-    <script src="scripts/models/githubToken.js"></script>
+    <!--<script src="scripts/models/githubToken.js"></script>
     <script src="scripts/models/repo.js"></script>
-    <script src="scripts/views/repoView.js"></script>
+    <script src="scripts/views/repoView.js"></script>-->
 
+    <script src="scripts/views/indexView.js"></script>
     <script src="scripts/controllers/navigation.js"></script>
     <script src="scripts/controllers/routes.js"></script>
 </body>
