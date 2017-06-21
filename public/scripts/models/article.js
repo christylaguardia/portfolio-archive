@@ -15,7 +15,8 @@
     var template = Handlebars.compile($('#blog-template').html());
 
     // convert the markdown to html
-    this.body = marked(Article.getMarkdownFile(this.body));
+    console.log('converting article to markdown', this.title)
+    // this.body = marked(Article.getMarkdownFile(this.body));
     
     return template(this);
   }
@@ -26,7 +27,7 @@
       url: url,
       type: 'get',
       dataType: 'html',
-      async: false,
+      // async: false,
       success: function(data) { result = data; }
       }
     );
@@ -55,10 +56,10 @@
     console.log('fetching the data');
 
     // check if already in localStorage
-    // if (localStorage.blogData) {
-    //   console.log('local storage already exists');
-    //   Article.loadBlogData(JSON.parse(localStorage.blogData));
-    // } else {
+    if (localStorage.blogData) {
+      console.log('local storage already exists');
+      Article.loadBlogData(JSON.parse(localStorage.blogData));
+    } else {
       $.getJSON('data/blog.json', function(json) {
         console.log('local storage does not exist');
         localStorage.setItem('blogData', JSON.stringify(json));
@@ -66,7 +67,7 @@
         Article.loadBlogData(json);
       });
       console.log('article data has been fetched');
-    // }
+    }
   }
 
   // TODO: add the etag function

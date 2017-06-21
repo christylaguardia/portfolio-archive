@@ -3,15 +3,20 @@
 (function(module) {
   const repoView = {};
 
-  const ui = function() {
-    let $github = $('#github');
-    $github.find('ul').empty();
-  };
+  // const ui = function() {
+  //   let $github = repoView.index;
+  //   $github.find('ul').empty();
+  // };
 
-  var render = Handlebars.compile($('#repo-template').html());
 
-  repoView.index = function() {
-    ui();
+  repoView.initRepoPage = function() {
+    // ui();
+    console.log('initializing the git hub page...');
+    
+    var render = Handlebars.compile($('#repo-template').html());
+
+    repoView.index.find('ul').empty();
+    
     $('#github ul').append(repos.with('name').map(render));
   };
 
