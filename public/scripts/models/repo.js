@@ -2,24 +2,32 @@
 
 (function(module) {
   const repos = {};
+  
   repos.all = [];
+
+
   repos.requestRepos = function(callback) {
-    $.ajax({
-      url: 'https://api.github.com/user/repos?type=owner',
-      method: 'GET',
-      headers: {
-        'Authorization': `token ${githubToken}`
-      }
+    // $.ajax({
+    //   url: 'https://api.github.com/user/repos?type=owner',
+    //   method: 'GET',
+    //   headers: {
+    //     'Authorization': `token ${envGITHUB_TOKEN}`
+    //   }
+    // })
+    // .then(
+    //   data => {
+    //     repos.all = data;
+    //     callback();
+    //   },
+    //   error => {
+    //     console.log(error);
+    //   }
+    // )
+
+    $.get('/github', function(data) {
+      repos.all = data;
+      callback();
     })
-    .then(
-      data => {
-        repos.all = data;
-        callback();
-      },
-      error => {
-        console.log(error);
-      }
-    )
   };
 
   // filter repos for ones that have a description
