@@ -1,6 +1,6 @@
 /*
 typography
-font-family: 'Roboto Slab', serif;
+font-family: 'Poppins', sans-serif;
 font-family: 'Open Sans', sans-serif;
 
 color pallet
@@ -16,43 +16,58 @@ blue        #98ddff
 */
 
 body {
-  display: block;
-  margin: 0 auto;
+  margin: 0 auto;  
   min-width: 320px;
+  max-width: 940px;
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.0625rem;
-  /*opacity: 1;*/
-  /*transition: 1s opacity;*/
-  background-color: #fafafa;
+  /*background-color: #f5f5f5;*/
+  color: #212121;
 }
 
-footer {
-  text-align: center;
-  font-family: 'Open Sans', sans-serif;
-  font-size: .8rem;
+section {
   padding: 2rem;
 }
 
+/*section, header, footer {
+  background-color: #ffffff;
+  border-left: 1px solid #bdbdbd;
+  border-right: 1px solid #bdbdbd;
+}*/
+
+h1 {
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+h4 {
+  margin-bottom: 0;
+}
+
 h1, h2, h3, h4 {
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 a {
+  font-family: 'Poppins', sans-serif;
   text-decoration: none;
+  color: #616161;
 }
 
-label {
-  display: inline-block;
+a:hover {
+  color: #ff98dd;
+  transition: color .5s ease-in-out;
 }
 
-time {
-  font-size: .75rem;
+article {
+    border-bottom: 1px solid #616161;
 }
 
-input[type="text"], textarea {
-  width: 100%;
-  display: inline;
-  font-size: 2rem;
-  border: 1px solid #bdbdbd;
-  margin: 2rem;
+footer {
+  height: 10vh;
+  text-align: center;
+}
+
+footer p {
+  margin: 0 auto;
+  font-size: .8rem;
 }

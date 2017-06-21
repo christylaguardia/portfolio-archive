@@ -1,25 +1,37 @@
+'use strict';
+
 (function(module) {
-  // constructor function
+
   function Article(blogObject) {
     this.title = blogObject.title;
     this.category = blogObject.category;
-    this.publishedOn = blogObject.publishedOn;
-    this.image = blogObject.image;
-    this.caption = blogObject.caption;
+    this.pubdate = blogObject.pubdate;
     this.body = blogObject.body;
   }
 
-  // array that will hold all the blog article objects
   Article.all = [];
 
   Article.prototype.blogDataToHtml = function() {
-    var template = Handlebars.compile($('#template').html());
-    var date = new Date(this.publishedOn);
-    // TODO:  if published today, display today
-    this.publishedLongDate = date.toString("dddd, MMMM d, yyyy");
-    this.daysAgo = parseInt((new Date() - date)/60/60/24/1000);
-    this.publishStatus = this.publishedOn ? `<p>${this.publishedLongDate}   <em>(${this.daysAgo} days ago</em>)</p>` : '<p>(draft)</p>';
+    var template = Handlebars.compile($('#blog-template').html());
+
+    // convert the markdown to html
+    console.log('converting article to markdown', this.title)
+    // this.body = marked(Article.getMarkdownFile(this.body));
+    
     return template(this);
+  }
+
+  Article.getMarkdownFile = function(url) {
+    var result = null;
+    $.ajax( {
+      url: url,
+      type: 'get',
+      dataType: 'html',
+      // async: false,
+      success: function(data) { result = data; }
+      }
+    );
+    return result;
   }
 
   // output to console to get valid json
@@ -30,21 +42,25 @@
     rawBlogData.sort(function(a,b) {
       return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
     });
+
     // run each blog article through constructor function and add to the articles array
     rawBlogData.forEach(function(ele) {
       Article.all.push(new Article(ele));
     });
+
     // articleView.loadIndexPage();
+    articleView.initBlogPage();
   }
 
   Article.fetchBlogData = function() {
     console.log('fetching the data');
+
     // check if already in localStorage
     if (localStorage.blogData) {
       console.log('local storage already exists');
       Article.loadBlogData(JSON.parse(localStorage.blogData));
     } else {
-      $.getJSON('data/articleData.json', function(json) {
+      $.getJSON('data/blog.json', function(json) {
         console.log('local storage does not exist');
         localStorage.setItem('blogData', JSON.stringify(json));
         console.log('local storage created');

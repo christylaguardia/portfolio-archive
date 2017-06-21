@@ -1,168 +1,119 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="images/Iconsmind-Outline-Bird.ico">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/layout.css">
-    <link rel="stylesheet" href="styles/modules.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Roboto+Slab" rel="stylesheet">
+
+<head lang="en">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>Christy La Guardia </title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Christy La Guardia | Full Stack JavaScript Developer</title>
+    <link rel="stylesheet" type="text/css" href="styles/base.css">
+    <link rel="stylesheet" type="text/css" href="styles/layout.css">
+    <link rel="stylesheet" type="text/css" href="styles/modules.css">
 
     <!-- blog temlpate -->
-    <!-- TODO: should prbably change name to be blogTemplate -->
-    <script id="template" type="text/x-handlebars-template">
-      <article data-category="{{ category }}">
-        <h2 class="article-title">{{ title }}</h2>
-        <time class="article-date" datetime="{{ publishedOn }}">{{{ publishStatus }}}</time>
-        <div class="article-picture">
-          <img src="{{ image }}">
-          <p class="article-caption">{{ caption }}</p>
-        </div>
-        <div class="article-body">{{{ body }}}</div>
-        <p class="read-more">read more</p>
-        <!-- TODO: make these do stuff -->
-        <i class="fa fa-comment-o" aria-hidden="true"></i>
-        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-        <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
-        <i class="fa fa-facebook" aria-hidden="true"></i>
-        <i class="fa fa-twitter" aria-hidden="true"></i>
-        <i class="fa fa-envelope" aria-hidden="true"></i>
-        <!-- TODO: add a comment form -->
-        <!-- <form>
-          <textarea irows="4" cols="20" placeholder="Write a response..." required></textarea>
-        </form> -->
-      </article>
+    <script id="blog-template" type="text/x-handlebars-template">
+        <article data-category="{{ category }}">
+            <div class="article-body">{{{ body }}}</div>
+            <p class="read-more"><a href="">read more</a></p>
+        </article>
     </script>
 
-    <!-- github repositories template -->
-    <script id="repo-template" type="text/x-handlebars-template">
-      <li>
-        <a href="{{html_url}}" target="_blank"><h3>{{ name }}</h3></a>
-        <p>{{ description }}</p>
-        <p>{{ updated_at }}</p>
-      </li>
-    </script>
-  </head>
+</head>
 
-  <body>
-    <header id="top-nav">
-      <nav>
-        <i id="top-nav-hamburger" class="fa fa-bars" aria-hidden="true"></i>
-        <!-- TODO: have an x icon when hamburger is clicked or something -->
-        <!-- <i class="fa fa-times" aria-hidden="true"></i> -->
-        <ul>
-          <li data-content="home"><a href="/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-          <li data-content="about"><a href="/about">About</a></li>
-          <li data-content="blog"><a href="/blog">Blog</a></li>
-          <li data-content="projects"><a href="/projects">Projects</a></li>
-          <li data-content="github"><a href="/github">GitHub</a></li>
-          <li data-content="hire-me"><a href="/hire-me">Hire Me</a></li>
-        </ul>
-      </nav>
-    </header>
+<body>
+    <!--<header>
+        <nav id="menu">
+            <div id="menu-icon">
+                <i id="hamburger" class="fa fa-bars" aria-hidden="true"></i><i id="times" class="fa fa-times" aria-hidden="true"></i>
+            </div>
+            <ul>
+                <li><a href="/"><i class="fa fa-home" aria-hidden="true"></i> HOME</a></li>
+                <li><a href="/projects"><i class="fa fa-code" aria-hidden="true"></i> PROJECTS</a></li>
+                <li><a href="/blog"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> BLOG</a></li>
+                <li><a href="/github"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a></li>
+            </ul>
+        </nav>
+    </header>-->
 
-    <section id="home" class="tab-content">
-      <div id="headshot">
-        </div>
-        <div id="home-nav">
-          <a class="home-nav-option" href="/about">About</a>
-          <a class="home-nav-option" href="/blog">Blog</a>
-          <a class="home-nav-option" href="/projects">Projects</a>
-          <a class="home-nav-option" href="/github">GitHub</a>
-          <a class="home-nav-option" href="/hire-me">Hire Me</a>
-          <a class="home-nav-icon" href="mailto:christinelaguardia@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-          <a class="home-nav-icon" href="tel:5034071529"><i class="fa fa-phone" aria-hidden="true"></i></a>
-          <a class="home-nav-icon" href="https://github.com/christylaguardia/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-          <a class="home-nav-icon" href="https://www.linkedin.com/in/christine-la-guardia/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-        </div>
-        <div id="headshot-caption">
-          <h1>Christy La Guardia</h1>
-          <h3>Full Stack JavaScript Developer</h3>
-        </div>
-      </div>
-    </section>
+    <div id="side-nav">
+        <span id="close-nav"><i class="fa fa-times" aria-hidden="true"></i></span>
+        <a href="/home"><i class="fa fa-home" aria-hidden="true"></i> HOME</a>
+        <a href="/projects"><i class="fa fa-code" aria-hidden="true"></i> PROJECTS</a>
+        <a href="/blog"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> BLOG</a>
+        <a href="/gh"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
+    </div>
 
-    <section id="about" class="tab-content">
-      <h1>Just a little about me...</h1>
-      <p>Hi! I&#39;m Christy, a native Portlander, wannabe coder, lover of beagles, and pottery enthusiast.</p>
-      <p>Preach first the dolor sit amet, and all these other things will be adipiscing elit. Awake! What does the placeholder text really say? Millions now living will never read these words. Please be assured of our warm love and Christian conscience. Watchtower, Bible and dummy text. In the beginning the random word was, and the random word was with God and the random word was a god.<p>
-      <p>A letter from far away placeholders. Iron lung. Sit in four door vehicula justo. Examining the tight pants daily. From Lorem to Ipsum. New World Translation of the Greek text. Disfellowshipping the flock under your care. Sing Praises to the Governing Body. Keep your eyes on the return visit. Theocratic order. Stay alive till 75! Beware of independent thinking! Punctuation — Is it for You?</p>
-      <p>Kingdom Hall. 1914. Pay attention to yourselves and to all of Babylon the Great Crowd. Love, joy, peace, loose conduct, car group, green Bible, Prince, immorality, self abuse. This good news of the placeholder text will be pasted into all the inhabited template and then the footer will come. Home but hiding. Multilanguage Electronic Phototypesetting System! Pretty much the entire book of 2 Chronicles is placeholder text. Or is it 1 Chronicles?</p>
-    </section>
+    <div id="main">
+        <span id="open-nav"><i class="fa fa-bars" aria-hidden="true"></i></span>
 
-    <section id="blog" class="tab-content">
-      <ul id="category-list">
-        <span>Topics: </span>
-        <!-- categories go here -->
-      </ul>
-      <!-- blog articles will go here -->
-    </section>
+        <section id="home" class="tab-content">
+            <div id="headshot"></div>
+            <div>
+                <h1>Christy La Guardia</h1>
+                <h3>Software Development student at <a href="http://www.codefellowspdx.com/" target="_blank">Code Fellows</a></h3>
+                <h3><a href="/projects">Wannabe coder</a>, beagle lover, pottery enthusiast, <a href="/blog">cult survivor</a>.</h3>
+                <p><i class="fa fa-map-marker" aria-hidden="true"></i> Portland, Oregon</p>
+                <p><a class="home-nav-icon" href="mailto:christinelaguardia@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i> Email</a></p>
+                <p><a class="home-nav-icon" href="https://github.com/christylaguardia/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a></p>
+                <p><a class="home-nav-icon" href="https://www.linkedin.com/in/christine-la-guardia/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</a></p>
+            </div>
+        </section>
 
-    <section id="new-article" class="tab-content">
-      <h1>Create New Post</h1>
-      <form id="new-article-form" method="POST" action="/new">
-        <!-- TODO: add all the fields req'd and make the form do stuff -->
-        <input type="text" id="new-article-title" placeholder="Title" required><br>
-        <input type="text" id="new-article-category" placeholder="Category" required><br>
-        <textarea id="new-article-body" rows="8" cols="40" placeholder="Once upon a time..." required></textarea>
-      </form>
-    </section>
+        <section id="blog" class="tab-content">
+            <ul id="category-list"></ul>
+        </section>
 
-    <section id="projects" class="tab-content">
-      <h1>Student Projects</h1>
-      <div id="projectContainer">
-        <!-- TODO: get better screen shots -->
-        <article>
-          <h3>Cookie Store</h3>
-          <a href="https://christylaguardia.github.io/cookie-stand/" target="_blank"><img class="project-img" src="images/Screen-Shot-Chip-and-Doughs.png"/></a>
-          <p>Cheesecake marshmallow tiramisu jujubes topping cupcake danish cake cake. Chupa chups jelly-o marshmallow cupcake chocolate cake jelly chocolate cake chocolate bar cheesecake. Toffee cake cake apple pie pie halvah marzipan soufflé.</p>
-        </article>
-        <article>
-          <h3>Vote Tracker</h3>
-          <a href="https://christylaguardia.github.io/market-analysis-app/" target="_blank"><img class="project-img" src="images/Screen-Shot-Bus-Mall.png"/></a>
-          <p>Tart oat cake fruitcake jelly beans ice cream tart bonbon halvah carrot cake. Chocolate bar biscuit sweet roll icing cotton candy jujubes tiramisu biscuit sugar plum. Donut cake gingerbread. Caramels muffin chocolate cake.</p>
-        </article>
-        <article>
-          <h3>Beer Fellows</h3>
-          <a href="https://jshabani.github.io/beer-fellows/" target="_blank"><img class="project-img" src="images/Screen-Shot-Beer-Fellows.png"/></a>
-          <p>Tiramisu wafer cheesecake sweet roll donut cotton candy. Topping halvah soufflé donut jelly chocolate cake bonbon cake cookie. Chupa chups gingerbread lemon drops fruitcake candy.</p>
-        </article>
-      </div>
-    </section>
+        <section id="projects" class="tab-content">
+            <h1>Projects</h1>
+            <div id="projectContainer">
+                <div>
+                    <h3><a href="https://garagefellows.herokuapp.com/">Garage Fellows</a></h3>
+                    <img src="/images/projects/garagefellows.png">
+                    <p>Tiramisu wafer cheesecake sweet roll donut cotton candy. Topping halvah soufflé donut jelly chocolate cake
+                        bonbon cake cookie. Chupa chups gingerbread lemon drops fruitcake candy.</p>
+                </div>
+                <div>
+                    <h3><a href="https://jshabani.github.io/beer-fellows/">Beer Fellows</a></h3>
+                    <img src="/images/projects/beerfellows.png">
+                    <p>Tiramisu wafer cheesecake sweet roll donut cotton candy. Topping halvah soufflé donut jelly chocolate cake
+                        bonbon cake cookie. Chupa chups gingerbread lemon drops fruitcake candy.</p>
+                </div>
+            </div>
+        </section>
 
-    <section id="hire-me" class="tab-content">
-      <h1>What I can do...</h1>
-      <p>Craft beer brunch bicycle rights, scenester direct trade waistcoat la croix shoreditch kinfolk edison bulb. Retro post-ironic bicycle rights, meggings subway tile meh freegan asymmetrical. PBR&am;B truffaut tacos, roof party austin wayfarers gentrify meditation organic subway tile ennui selfies. Tofu hella polaroid helvetica. Selvage hexagon umami trust fund hammock. Disrupt synth leggings street art tousled. Tousled DIY iceland hell of.</p>
-    </section>
+        <section id="github" class="tab-content">
+            <h1>View my code...</h1>
+            <ul></ul>
+        </section>
 
-    <section id="github" class="tab-content">
-      <h1>View my code...</h1>
-      <ul>
-        <!-- list of repos will go here -->
-      </ul>
-    </section>
+    </div>
 
-    <footer>&copy;2017 Christine La Guardia | <a href="/new">Login</a></footer>
+    <footer>
+        <p>&copy;2017 Christine La Guardia</p>
+        <a class="home-nav-icon" href="mailto:christinelaguardia@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+        <a class="home-nav-icon" href="https://github.com/christylaguardia/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+        <a class="home-nav-icon" href="https://www.linkedin.com/in/christine-la-guardia/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+    </footer>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js"></script>
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js"></script>
+
 
     <script src="scripts/models/article.js"></script>
     <script src="scripts/views/articleView.js"></script>
 
-    <script src="scripts/models/githubToken.js"></script>
+    <!--<script src="scripts/models/githubToken.js"></script>-->
     <script src="scripts/models/repo.js"></script>
     <script src="scripts/views/repoView.js"></script>
 
+    <script src="scripts/views/indexView.js"></script>
+
     <script src="scripts/controllers/navigation.js"></script>
     <script src="scripts/controllers/routes.js"></script>
-    <script>
-      Article.fetchBlogData();
-      articleView.initBlogPage(); // probably make a call back next assignment
-    </script>
-  </body>
+</body>
+
 </html>

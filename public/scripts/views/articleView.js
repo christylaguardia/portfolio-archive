@@ -1,25 +1,31 @@
+'use strict';
+
 (function(module) {
   const articleView = {};
 
   articleView.setTeasers = function() {
-    console.log('setting the article teasers');
+    // TODO: this is not working right
+    
     // hide everything but the first paragraph
     $('.article-body *:nth-of-type(n+2)').fadeOut(600);
     // TODO: this is doing for all articles
-    $('.toMsg').fadeOut(600);
-    $('.fromMsg').fadeOut(600);
+    // $('.toMsg').fadeOut(600);
+    // $('.fromMsg').fadeOut(600);
     $('.article-picture').fadeOut(600);
+    
     $('.read-more').click(function() {
       if ($(this).text() === 'read more') {
         // TODO: change this to show only the selexted article on 'show more'
         // show hidden blog article content
-        $(this).parent().find('*').fadeIn(600);
+        $('#blog article').hide();
+        $(this).parent().find('*').fadeIn(1000);
         $(this).text('read less');
       } else {
         // hide some blog article content
         $('.article-body *:nth-of-type(n+2)').fadeOut(600);
-        $('.toMsg').fadeOut(600);
-        $('.fromMsg').fadeOut(600);
+        $(this).parent().find('article').fadeIn(1000)
+        // $('.toMsg').fadeOut(600);
+        // $('.fromMsg').fadeOut(600);
         $('.article-picture').fadeOut(600);
         $(this).text('read less');
       }
@@ -27,7 +33,6 @@
   };
 
   articleView.populateCategories = function() {
-    console.log('populating the category tags');
     Article.all.map(function(article) {
       return article.category;
     })
@@ -62,12 +67,12 @@
   }
 
   articleView.initBlogPage = function() {
-    console.log('initializing...');
+    console.log('initializing the blog page...');
     Article.all.forEach(function(a) {
       $('#blog').append(a.blogDataToHtml());
     });
     console.log('articles added to page');
-    articleView.setTeasers();
+    //articleView.setTeasers();
     articleView.populateCategories();
     articleView.handleCategoryFilter();
     articleView.handleTopNav();
