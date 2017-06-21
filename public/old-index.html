@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>Christy La Guardia | Developer</title>
+    <!--<link rel="shortcut icon" href=""> -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Roboto+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--<link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/modules.css">-->
+
+    <!-- blog temlpate -->
+    <script id="blog-template" type="text/x-handlebars-template">
+      <article data-category="{{ category }}">
+        <h2 class="article-title">{{ title }}</h2>
+        <time class="article-date" datetime="{{ pubdate }}">{{ status }}</time>        
+        <div class="article-body"><a href="{{ body }}">Link</a></div>
+        <!--TODO: change this to open the article separaetly-->
+        <p class="read-more">read more</p>        
+        <!-- TODO: add share links and comment form -->        
+      </article>
+
+    <!-- github repositories template -->
+    <script id="repo-template" type="text/x-handlebars-template">
+      <li>
+        <a href="{{html_url}}" target="_blank"><h3>{{ name }}</h3></a>
+        <p>{{ description }}</p>
+        <p>{{ updated_at }}</p>
+      </li>
+    </script>
+
+    <!-- projects template -->
+    <script id="project-template" type="text/x-handlebars-template">
+      <article>
+        <h3>{{ title }}/h3>
+        <a href="{{ URL }}" target="_blank"><img class="project-img" src="{{ image }}"/></a>
+        <p>{{ description }}</p>
+      </article>
+    </script>
+
+  </head>
+
+  <body>
+    <header id="top-nav">
+      <nav>
+        <i id="top-nav-hamburger" class="fa fa-bars" aria-hidden="true"></i>
+        <!-- TODO: have an x icon when hamburger is clicked or something -->
+        <!-- <i class="fa fa-times" aria-hidden="true"></i> -->
+        <ul>
+          <li data-content="home"><a href="/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+          <li data-content="about"><a href="/about">About</a></li>
+          <li data-content="blog"><a href="/blog">Blog</a></li>
+          <li data-content="projects"><a href="/projects">Projects</a></li>
+          <!--<li data-content="github"><a href="/github">GitHub</a></li>-->
+        </ul>
+      </nav>
+    </header>
+
+    <section id="home" class="tab-content">
+      <div id="headshot"></div>
+      <div id="home-nav">
+        <a class="home-nav-option" href="/about">About</a>
+        <a class="home-nav-option" href="/blog">Blog</a>
+        <a class="home-nav-option" href="/projects">Projects</a>
+        <a class="home-nav-option" href="/github">GitHub</a>
+        <a class="home-nav-icon" href="mailto:christinelaguardia@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+        <a class="home-nav-icon" href="https://github.com/christylaguardia/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+        <a class="home-nav-icon" href="https://www.linkedin.com/in/christine-la-guardia/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+      </div>
+      <div id="headshot-caption">
+        <h1>Christy La Guardia</h1>
+        <!--<h3>Full Stack JavaScript Developer</h3>-->
+      </div>
+      </div>
+    </section>
+
+    <section id="about" class="tab-content">
+      <h1>Just a little about me...</h1>
+      <p>Hi! I&#39;m Christy, a native Portlander, wannabe coder, lover of beagles, and pottery enthusiast.</p>
+      <p>Currently a student at <a href="http://codefellowspdx.com/">Code Fellows</a>.</p>
+      <ul>
+        <li>
+          <a href="mailto:christinelaguardia@gmail.com">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            christinelaguardia@gmail.com
+          </a>
+        </li>
+        <li>
+          <a href="tel:5034071529">
+            <i class="fa fa-phone" aria-hidden="true"></i>
+            503.407.1529
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/christylaguardia/" target="_blank">
+          <i class="fa fa-github" aria-hidden="true"></i>
+
+          </a>
+
+        </li>
+      </ul>
+      <a class="home-nav-icon" href="https://www.linkedin"></a>
+    </section>
+
+    <section id="blog" class="tab-content">
+      <ul id="category-list">
+        <span>Topics: </span>
+        <!-- categories go here -->
+      </ul>
+      <!-- blog articles will go here -->
+    </section>
+
+    <!--<section id="new-article" class="tab-content">
+      <h1>Create New Post</h1>
+      <form id="new-article-form" method="POST" action="/new">
+         TODO: add all the fields req'd and make the form do stuff 
+        <input type="text" id="new-article-title" placeholder="Title" required><br>
+        <input type="text" id="new-article-category" placeholder="Category" required><br>
+        <textarea id="new-article-body" rows="8" cols="40" placeholder="Once upon a time..." required></textarea>
+      </form>
+    </section>-->
+
+    <section id="projects" class="tab-content">
+      <h1>Student Projects</h1>
+      <div id="projectContainer">
+        <!--projects will go here-->
+      </div>
+    </section>
+
+    <section id="github" class="tab-content">
+      <h1>View my code...</h1>
+      <ul>
+        <!-- list of repos will go here -->
+      </ul>
+    </section>
+
+    <footer>&copy;2017 Christine La Guardia | <a href="/new">Login</a></footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js"></script>
+    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js"></script>
+
+    <script src="scripts/models/article.js"></script>
+    <script src="scripts/views/articleView.js"></script>
+
+    <script src="scripts/models/githubToken.js"></script>
+    <script src="scripts/models/repo.js"></script>
+    <script src="scripts/views/repoView.js"></script>
+
+    <script src="scripts/controllers/navigation.js"></script>
+    <script src="scripts/controllers/routes.js"></script>
+    <!-- <script>
+      Article.fetchBlogData();
+      articleView.initBlogPage(); // probably make a call back next assignment
+    </script> -->
+  </body>
+</html>
