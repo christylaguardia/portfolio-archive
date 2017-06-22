@@ -1,10 +1,9 @@
-#### 8/2/2016
 # Why'd You Leave?
 
 ![](../../images/blog/pioneer-cards.jpeg)
 
 *I was totally a legit Pioneer and I have the business cards to prove it*
- 
+
 I've been asked many times "Why did you leave your religion?" from both ex-JWs and non-ex-JWs. My default answer has usually been something related to the false doctrine I uncovered or the controlling nature of religion or the scandalous lies told by the leaders, etc., etc., etc.
 
 Ok, sure, I can "prove by references" the faulty teachings and lies of Jehovah's Witnesses. But although all of that is true and without a doubt legitimate reasons for leaving, **the fact that _I wasn't happy_ should've been enough**.

@@ -1,4 +1,3 @@
-#### 1/5/2017
 # Compulsory Devotion
 
 ![](../../images/blog/family-at-woodburn.jpeg)

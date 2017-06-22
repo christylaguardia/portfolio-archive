@@ -12,38 +12,39 @@
 
     <!-- blog temlpate -->
     <script id="blog-template" type="text/x-handlebars-template">
-        <article data-category="{{ category }}">
+        <!--<article data-identifier="{{ id }}" data-category="{{ category }}">
+            <div class="article-preview">
+                <h1>{{ title }}</h1>
+                <img src="../{{ image }}">
+            </div>
             <div class="article-body">{{{ body }}}</div>
             <p class="read-more"><a href="">read more</a></p>
+        </article>-->
+        <article>
+            <div class="article-preview">
+                <h2>{{ title }}</h2>
+                <h3>{{ pubdate }}</h3>
+                <p class="read-more"><a href="">read more</a></p>
+            </di>
+            <div class="article-body">{{{ body }}}</div>
         </article>
+
+
     </script>
 
 </head>
 
 <body>
-    <!--<header>
-        <nav id="menu">
-            <div id="menu-icon">
-                <i id="hamburger" class="fa fa-bars" aria-hidden="true"></i><i id="times" class="fa fa-times" aria-hidden="true"></i>
-            </div>
-            <ul>
-                <li><a href="/"><i class="fa fa-home" aria-hidden="true"></i> HOME</a></li>
-                <li><a href="/projects"><i class="fa fa-code" aria-hidden="true"></i> PROJECTS</a></li>
-                <li><a href="/blog"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> BLOG</a></li>
-                <li><a href="/github"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a></li>
-            </ul>
-        </nav>
-    </header>-->
 
     <div id="side-nav">
         <span id="close-nav"><i class="fa fa-times" aria-hidden="true"></i></span>
-        <a href="/home"><i class="fa fa-home" aria-hidden="true"></i> HOME</a>
+        <a href="/"><i class="fa fa-home" aria-hidden="true"></i> HOME</a>
         <a href="/projects"><i class="fa fa-code" aria-hidden="true"></i> PROJECTS</a>
         <a href="/blog"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> BLOG</a>
-        <a href="/gh"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
     </div>
 
     <div id="main">
+
         <span id="open-nav"><i class="fa fa-bars" aria-hidden="true"></i></span>
 
         <section id="home" class="tab-content">
@@ -81,11 +82,6 @@
             </div>
         </section>
 
-        <section id="github" class="tab-content">
-            <h1>View my code...</h1>
-            <ul></ul>
-        </section>
-
     </div>
 
     <footer>
@@ -101,17 +97,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js"></script>
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js"></script>
-
-
     <script src="scripts/models/article.js"></script>
     <script src="scripts/views/articleView.js"></script>
-
-    <!--<script src="scripts/models/githubToken.js"></script>-->
-    <script src="scripts/models/repo.js"></script>
-    <script src="scripts/views/repoView.js"></script>
-
     <script src="scripts/views/indexView.js"></script>
-
     <script src="scripts/controllers/navigation.js"></script>
     <script src="scripts/controllers/routes.js"></script>
 </body>

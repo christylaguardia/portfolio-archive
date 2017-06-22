@@ -1,7 +1,6 @@
-#### 5/31/2016
 # Thanks Google for Helping Me Find Joel!
 
-![](images/blog/me-and-joel.jpeg)
+![](../../images/blog/me-and-joel.jpeg)
 
 *Skipping service and hanging out with my new apostate buddy*
 
