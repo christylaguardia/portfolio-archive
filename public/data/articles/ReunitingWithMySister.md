@@ -1,4 +1,3 @@
-#### 7/1/2015
 # Reuniting With My Sister
 
 ![](../../images/blog/me-and-missy.jpeg)

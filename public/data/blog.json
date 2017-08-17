@@ -1,27 +1,38 @@
 [
     {
+        "id": 1,
         "title": "Why'd you leave?",
 	    "category": "religion",
+        "image": "../images/blog/pioneer-cards.jpeg",
 	    "pubdate": "2016-08-02",
         "body": "/data/articles/WhydYouLeave.md"
-    },{
+    },
+    {
+        "id": 2,
         "title": "Thanks Google for helping me find Joel!",
         "category": "religion",
+        "image": "../images/blog/me-and-joel.jpeg",
         "pubdate": "2016-05-31",
         "body": "/data/articles/ThanksGoogleforHelpingMeFindJoel.md"
     },{
+        "id": 3,
         "title": "Reuniting with my sister",
         "category": "family",
+        "image": "../images/blog/me-and-missy.jpeg",
         "pubdate": "2015-07-01",
         "body": "/data/articles/ReunitingWithMySister.md"
     },{
+        "id": 4,
         "title": "Compulsory Devotion",
         "category": "religion",
+        "image": "../images/blog/family-at-woodburn.jpeg",
         "pubdate": "2017-01-05",
         "body": "/data/articles/CompulsoryDevotion.md"
     },{
+        "id": 5,
         "title": "Use Your 'Perceptive Powers' On These!",
         "category": "religion",
+        "image": "",
         "pubdate": "2017-05-12",
         "body": "/data/articles/ApostateLinks.md"
     }

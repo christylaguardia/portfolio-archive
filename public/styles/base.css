@@ -63,8 +63,10 @@ article {
 }
 
 footer {
+  color: #bdbdbd;
   height: 10vh;
   text-align: center;
+  /*margin-top: 2rem;*/
 }
 
 footer p {

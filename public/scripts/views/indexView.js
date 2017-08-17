@@ -5,19 +5,19 @@
 
     indexView.openSideNav = function() {
         $('#open-nav').click(function() {
-            $('#side-nav').width('250px');
-            // $('#main').css('marginLeft', '250px');
-            $('body').css('backgroundColor', "rgba(33,33,33,0.4)");
-            // $('#open-nav').hide();
+            $('#top-nav').css('backgroundColor', '#f5f5f5');
+            $('#close-nav').show();
+            $('#top-nav ul').css('display', 'inline-block');
+            $('#open-nav').hide();
         });
     }
 
     indexView.closeSideNav = function() {
         $('#close-nav').click(function() {
-            $('#side-nav').width('0');
-            // $('#main').css('marginLeft', '0');
-            $('body').css('backgroundColor', "white");
-            // $('#open-nav').show();
+            $('#top-nav').css('backgroundColor', 'white');
+            $('#close-nav').hide();
+            $('#top-nav ul').hide();
+            $('#open-nav').show();
         });
     }
 

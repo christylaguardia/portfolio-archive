@@ -3,34 +3,22 @@
 (function(module) {
   const articleView = {};
 
-  articleView.setTeasers = function() {
-    // TODO: this is not working right
-    
-    // hide everything but the first paragraph
-    $('.article-body *:nth-of-type(n+2)').fadeOut(600);
-    // TODO: this is doing for all articles
-    // $('.toMsg').fadeOut(600);
-    // $('.fromMsg').fadeOut(600);
-    $('.article-picture').fadeOut(600);
-    
+
+  // articleView.setTeasers = function() {
+  //   $('.article-body').fadeOut(600);
+
+  //   $('.read-more').click(function() {
+  //     $(this).fadeOut(600);
+  //     $(this).parent().find('.article-preview').fadeOut(600);
+  //     $(this).parent().find('.article-body').show();
+  //   })
+  // };
+
+  articleView.handleReadMore = function() {
     $('.read-more').click(function() {
-      if ($(this).text() === 'read more') {
-        // TODO: change this to show only the selexted article on 'show more'
-        // show hidden blog article content
-        $('#blog article').hide();
-        $(this).parent().find('*').fadeIn(1000);
-        $(this).text('read less');
-      } else {
-        // hide some blog article content
-        $('.article-body *:nth-of-type(n+2)').fadeOut(600);
-        $(this).parent().find('article').fadeIn(1000)
-        // $('.toMsg').fadeOut(600);
-        // $('.fromMsg').fadeOut(600);
-        $('.article-picture').fadeOut(600);
-        $(this).text('read less');
-      }
+      
     });
-  };
+  }
 
   articleView.populateCategories = function() {
     Article.all.map(function(article) {
@@ -60,19 +48,19 @@
     })
   };
 
-  articleView.handleTopNav = function() {
-    $('#top-nav-hamburger').click(function() {
-      $('#top-nav li').toggle();
-    });
-  }
+  // articleView.handleTopNav = function() {
+  //   $('#top-nav-hamburger').click(function() {
+  //     $('#top-nav li').toggle();
+  //   });
+  // }
 
   articleView.initBlogPage = function() {
     console.log('initializing the blog page...');
     Article.all.forEach(function(a) {
-      $('#blog').append(a.blogDataToHtml());
+      $('#blog table').append(a.toHtml());
     });
     console.log('articles added to page');
-    //articleView.setTeasers();
+    // articleView.setTeasers();
     articleView.populateCategories();
     articleView.handleCategoryFilter();
     articleView.handleTopNav();

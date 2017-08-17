@@ -1,4 +1,3 @@
-#### 5/12/2017
 # Use Your 'Perceptive Powers' On These!
 
 ## My Favs
