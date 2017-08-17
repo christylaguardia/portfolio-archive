@@ -1,3 +1,5 @@
+# _UNDER CONSTRUCTION_
+
 # Christy La Guardia's Portfolio
 
 ## AUTHOR
@@ -5,11 +7,6 @@ Christine La Guardia
 
 ## DESCRIPTION
 Started from Code Fellows 301 portfolio assignment featuring a blog, this is my personal site to show off all the cool stuff I've made ;)
-
-## CONTRIBUTORS
-Andrew Bodey
-Erdem Koral
-
 
 ## RESOURCES
 https://www.w3schools.com/howto/howto_js_off-canvas.asp
