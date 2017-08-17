@@ -4,15 +4,21 @@
   const articleView = {};
 
 
-  articleView.setTeasers = function() {
-    $('.article-body').fadeOut(600);
+  // articleView.setTeasers = function() {
+  //   $('.article-body').fadeOut(600);
 
+  //   $('.read-more').click(function() {
+  //     $(this).fadeOut(600);
+  //     $(this).parent().find('.article-preview').fadeOut(600);
+  //     $(this).parent().find('.article-body').show();
+  //   })
+  // };
+
+  articleView.handleReadMore = function() {
     $('.read-more').click(function() {
-      $(this).fadeOut(600);
-      $(this).parent().find('.article-preview').fadeOut(600);
-      $(this).parent().find('.article-body').show();
-    })
-  };
+      
+    });
+  }
 
   articleView.populateCategories = function() {
     Article.all.map(function(article) {
@@ -42,19 +48,19 @@
     })
   };
 
-  articleView.handleTopNav = function() {
-    $('#top-nav-hamburger').click(function() {
-      $('#top-nav li').toggle();
-    });
-  }
+  // articleView.handleTopNav = function() {
+  //   $('#top-nav-hamburger').click(function() {
+  //     $('#top-nav li').toggle();
+  //   });
+  // }
 
   articleView.initBlogPage = function() {
     console.log('initializing the blog page...');
     Article.all.forEach(function(a) {
-      $('#blog').append(a.toHtml());
+      $('#blog table').append(a.toHtml());
     });
     console.log('articles added to page');
-    articleView.setTeasers();
+    // articleView.setTeasers();
     articleView.populateCategories();
     articleView.handleCategoryFilter();
     articleView.handleTopNav();

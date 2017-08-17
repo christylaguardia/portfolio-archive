@@ -15,6 +15,7 @@
 
   Article.prototype.toHtml = function() {
     var template = Handlebars.compile($('#blog-template').html());
+    this.pubdate = this.pubdate.toString('dddd, MMMM d, yyyy');
     this.body = Article.getMarkdownContents(this.body);
     return template(this);
   }
