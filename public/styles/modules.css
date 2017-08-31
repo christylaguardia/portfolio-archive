@@ -1,18 +1,36 @@
 #home {
-    margin: 0 auto;
-    min-height: 80vh;
-    max-width: 940px;
-    text-align: center;
-    padding-top: 15vh;
+    /* margin: 0 auto; */
+    /* min-height: 80vh; */
+    /* max-width: 940px; */
+    /* text-align: center; */
+    /* padding-top: 15vh;
+    padding-right: 0;
+    padding-left: 0; */
 }
 
+/* #home h1 & h3 {
+    display: inline;
+} */
+#headshot, #about-me-text {
+
+    /* display: inline; */
+}
 #headshot {
-    margin: 1rem auto;
-    height: 10rem;
-    width: 10rem;
+    width: 10vh;
+    float: left;
+}
+#about-me-text {
+    margin-left: 160px;
+}
+
+#headshot img {
+    /* margin: 1rem auto; */
+    /* display: inline; */
+    height: 160px;
+    width: 160px;
     box-shadow: 0 0 .5rem #212121;
-    border-radius: 5rem;
-    background: url("../images/main/christy-headshot.jpeg");
+    border-radius: 1rem;
+    /* background: url("../images/main/christy-headshot.jpeg"); */
     background-position: center;
     background-size: contain;
     opacity: .85;
@@ -22,6 +40,12 @@
     border-top: .75rem solid white;
     border-right: .75rem solid white;
     border-left: .75rem solid white; */
+}
+
+#about-me {
+    background-color: #f7f7f7;
+    /* padding: 5vh 10vh 5vh 40vh; */
+    padding: 1vh;
 }
 
 .button {
@@ -49,9 +73,8 @@
 
 .project-detail {
     background-color: #f7f7f7;
-    padding: 2rem;
+    padding: 3rem;
     min-height: 100vh;
-    /* margin-top: 5rem; */
     margin-bottom: 5rem;
 }
 
@@ -62,12 +85,15 @@
 }
 
 .project-detail h1 {
-    display: inline-block;
-    padding-top: 1rem;
+    margin-top: 2rem;
 }
-
+/*
 .nav-up {
     float: right;
+} */
+
+.nav-down {
+    float: bottom;
 }
 
 .tags {
