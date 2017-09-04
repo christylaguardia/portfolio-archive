@@ -1,12 +1,10 @@
 {
-  "name": "cfpdx-301-portfolio",
+  "name": "portfolio",
   "version": "1.0.0",
   "description": "## AUTHOR Christine La Guardia",
   "main": "server.js",
   "dependencies": {
-    "body-parser": "^1.17.1",
-    "express": "^4.15.2",
-    "node-fs": "^0.1.7"
+    "express": "^4.15.2"
   },
   "devDependencies": {},
   "scripts": {
@@ -15,12 +13,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/christylaguardia/cfpdx-301-portfolio.git"
+    "url": "git+https://github.com/christylaguardia/portfolio.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/christylaguardia/cfpdx-301-portfolio/issues"
+    "url": "https://github.com/christylaguardia/portfolio/issues"
   },
-  "homepage": "https://github.com/christylaguardia/cfpdx-301-portfolio#readme"
+  "homepage": "https://www.christylaguardia.com"
 }
