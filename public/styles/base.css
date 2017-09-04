@@ -1,5 +1,6 @@
 /*
-blue        #8b9dc3	(139,157,195)
+blue        rgb(100, 175, 218)
+blue-grey   #7b7b7b
 light-blue  #dfe3ee	(223,227,238)
 light-grey  #f7f7f7	(247,247,247)
 grey        #212121
@@ -8,36 +9,42 @@ grey        #212121
 body {
   margin: 0 auto;  
   min-width: 320px;
-  /* max-width: 940px; */
+  color: #000;
   font-family: 'Open Sans', sans-serif;
-  /* color: #212121; */
-  /* background-color: #f7f7f7; */
-}
-
-section {
-  padding: 2rem;
-}
-
-h1 {
-  font-size: 2rem;
-  margin: 0 auto;
-}
-
-h4 {
-  margin-bottom: 0;
 }
 
 h1, h2, h3, h4 {
   font-family: 'Poppins', sans-serif;
 }
 
+h1 {
+  font-size: 2rem;
+  margin: 0 auto;
+  color: rgb(100, 175, 218);
+}
+
+h2 {
+  color: #7b7b7b;
+}
+
 a {
-  color: #8b9dc3;
+  font-family: 'Poppins', sans-serif;
+  color: #7b7b7b;
   text-decoration: none;
+  /* padding: .5rem 1rem .5rem 0; */
+}
+
+a:hover {
+  color: rgb(100, 175, 218);
+  transition: color .2s ease-in-out;
+}
+
+h1 a {
+  color: rgba(100, 175, 218, .6);
 }
 
 footer {
-  color: #8b9dc3;
+  color: #7b7b7b;
   height: 10vh;
   text-align: center;
 }
