@@ -31,7 +31,6 @@ a {
   font-family: 'Poppins', sans-serif;
   color: #7b7b7b;
   text-decoration: none;
-  /* padding: .5rem 1rem .5rem 0; */
 }
 
 a:hover {
@@ -43,7 +42,12 @@ h1 a {
   color: rgba(100, 175, 218, .6);
 }
 
+section, div, footer {
+  display: block;
+}
+
 footer {
+  margin-top: 2rem;
   color: #7b7b7b;
   height: 10vh;
   text-align: center;
