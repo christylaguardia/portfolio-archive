@@ -2,6 +2,7 @@ Hi! I'm a Full Stack JavaScript developer located in Portland, Oregon.
 Trained in software engineering, my professional background includes mechanical engineering, HVAC-R drafting and products, and lots of SQL development and data managment.
 When I'm not coding I'm usually hitting the trails with my beagle, Charlie, making pottery or eating ice cream.
             
+---
 
 I'm a builder who loves solving problems.
 
@@ -9,8 +10,7 @@ I happen to do that writing JavaScript code as a Full-Stack Developer.
 
 I like taking complex challenges and coming up with simple solutions to them.
 
-
-
+---
 
 I'm a builder who loves finding simple solutions to complex problems. I happen to do that in JavaScript, as a Full-Stack Developer.
 
@@ -18,7 +18,12 @@ I'm a builder who loves finding simple solutions to complex problems. I happen t
 
 {}
 
+---
 
 A responsive single page application with a PostgreSql database.
 
 Wrote an authentication security solution for implementation in server side of NodeJS web apps.
+
+---
+
+I love finding simple solutions to complex problems. That’s why I’m living the dream as a full stack JavaScript developer. After hours, you might find me on a trail with my beagle, Charlie, making pottery or exploring Portland’s many delicious and unique ice creameries.

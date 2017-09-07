@@ -1,10 +1,20 @@
+.tab-content {
+    min-height: 100vh;
+}
+
+#profile-container {
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 #home {
     margin: 0 auto;
-    min-height: 100vh;
-    max-width: 800px;
     text-align: center;
-    padding: 2rem;
+    max-width: 600px;
+    padding: 1rem;
 }
 
 #home p {
@@ -16,7 +26,6 @@
 }
 
 #profile {
-    padding-top: 20%;
     padding-bottom: 2rem;
     margin-bottom: 2rem;
     border-bottom: 2px solid #f7f7f7;
@@ -38,9 +47,9 @@
 }
 
 #projects {
+    display: none;
     margin: 0 auto;
     padding: 2rem;
-    min-height: 100vh;
     max-width: 940px;
 }
 
@@ -83,4 +92,30 @@
 
 .button a:hover {
     color: #000;
+}
+
+@media only screen and (max-width: 940px) {
+    
+    #profile-container {
+        top: 0%;
+        left: 0%;
+        transform: translate(0%, 0%);
+        position: relative;
+    }
+
+    #headshot-caption {
+        text-align: center;
+    }
+
+    .profile {
+        padding: 2rem;
+    }
+
+    .logo {
+        margin: 2rem;
+    }
+
+    #home p {
+        padding: .5rem;
+    }
 }
