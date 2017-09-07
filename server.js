@@ -7,16 +7,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('./public'));
 
-app.get('/', function(request, response) {
-  response.sendFile('index.html', { root: '.' });
+app.get('/', function(req, res) {
+  res.sendFile('index.html', { root: '.' });
 });
 
-app.get('/projects', function(request, response) {
-  response.sendFile('index.html', { root: '.' });
-});
-
-app.get('*', function(request, response) {
-  response.sendFile('index.html', { root: '.' });
+app.get('*', function(req, res) {
+  res.redirect('/');
 });
 
 app.listen(PORT, function() {

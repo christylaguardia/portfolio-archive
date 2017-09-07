@@ -1,7 +1,7 @@
 {
-  "name": "portfolio",
+  "name": "Portfolio",
   "version": "1.0.0",
-  "description": "## AUTHOR Christine La Guardia",
+  "description": "Christy La Guardia Portfolio Site",
   "main": "server.js",
   "dependencies": {
     "body-parser": "^1.17.2",
@@ -17,10 +17,10 @@
     "type": "git",
     "url": "git+https://github.com/christylaguardia/portfolio.git"
   },
-  "author": "",
+  "author": "Christy La Guardia",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/christylaguardia/portfolio/issues"
   },
-  "homepage": "https://www.christylaguardia.com"
+  "homepage": "https://www.laguardia.io/"
 }
