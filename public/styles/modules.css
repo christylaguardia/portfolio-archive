@@ -55,6 +55,12 @@
 
 .project-container {
     margin-bottom: 2rem;
+    min-height: 90vh;
+}
+
+.project-container h1 {
+    padding-top: 1rem;
+    border-bottom: 1px solid #333;
 }
 
 .tags {
@@ -70,6 +76,16 @@
     color: #333;
     background-color: #f7f7f7;
     border-radius: .2rem;
+}
+
+.image-container {
+    text-align: center;
+    max-height: 60vh;
+}
+
+.image-container img {
+    max-height: 50vh;
+    padding: 1rem;
 }
 
 .button {
