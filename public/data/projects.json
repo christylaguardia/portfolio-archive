@@ -1,0 +1,78 @@
+[
+  {
+    "name": "Varcity Network",
+    "github": "https://github.com/varcity-network",
+    "url": "https://varcity-network.herokuapp.com/",
+    "description": "A social network platform for student athletes. Built for a local startup.",
+    "tags": [
+        "JavaScript",
+        "NodeJS",
+        "ExpressJS",
+        "React",
+        "Redux",
+        "TDD",
+        "Jest",
+        "MocahJS",
+        "ChaiJS",
+        "Bulma",
+        "MongoDB",
+        "Mongoose"
+    ],
+    "image": "/images/projects/varcity.png"
+  },{
+	  "name": "Secure Login",
+    "github": "https://github.com/ACL-CMS-P1/carret",
+    "url": "https://carret.herokuapp.com/",
+    "description": "An authentication security solution for implementation on server side of NodeJS web apps.",
+    "tags": [
+      "JavaScript",
+      "NodeJS",
+      "ExpressJS",
+      "TDD",
+      "Jest",
+      "Mocah",
+      "Chai",
+      "MongoDB",
+      "Mongoose"
+    ]    
+  },{
+    "name": "Data Processing for Johnstone Supply",
+    "description": "Wrote an ETL process for comparing over 1 million database records from a supplier's FTP, to Johnstone's current database. Created SQL queries for outputting files for database import.",
+    "tags": [
+      "PostgreSQL",
+      "SQL Server"
+    ],
+    "image": "/images/projects/johnstone.png"
+  },{
+    "name": "Garage Fellows",
+    "github": "https://github.com/christylaguardia/garage-fellows",
+    "url": "https://garagefellows.herokuapp.com/",
+    "description": "A responsive single page application with a RESTful API service.",
+    "tags": [
+      "JavaScript",
+      "NodeJS",
+      "ExpressJS",
+      "Functional Programming",
+      "Responsive Web Design",
+      "PostgreSQL",
+      "jQuery",
+      "HTML5",
+      "CSS3"
+    ],
+    "image": "/images/projects/garagefellows.png"
+  },{
+    "name": "Beer Fellows",
+    "github": "https://github.com/jshabani/beer-fellows",
+    "url": "https://jshabani.github.io/beer-fellows/",
+    "description": "A single page app with a thrid-party API service.",
+    "tags": [
+      "JavaScript",
+      "NodeJS",
+      "ExpressJS",
+      "jQuery",
+      "HTML5",
+      "CSS3"
+    ],
+    "image": "/images/projects/beerfellows.png"
+  }
+]

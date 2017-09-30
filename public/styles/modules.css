@@ -46,7 +46,7 @@
     border-radius: 50%;
 }
 
-#projects {
+#projects-container {
     display: none;
     margin: 0 auto;
     padding: 2rem;
