@@ -11,17 +11,21 @@
   <link rel="stylesheet" href="styles/modules.css" type="text/css">
 
   <script id="template" type="text/x-handlebars-template">
-    <div id="#{{name}}" class="project-container">
-      <h1>{{title}}</h1>
-      <p>
-      {{#if github}}
-        <a href="{{this}}" target="_blank">
-        <i class="fa fa-github fa-lg" aria-hidden="true"></i> Source Code</a>
-      {{/if}}
-      {{#if url}}
-        <a href="{{this}}" target="_blank">
-          <i class="fa fa-external-link fa-lg" aria-hidden="true"></i> View App</a>
-      {{/if}}
+    <div id="{{name}}" class="project-container">
+      <!-- <p class="next-link"><a href="#{{name}}">
+        <i class="fa fa-angle-down fa-lg" aria-hidden="true"></i> Next</a>
+      </p> -->
+      <div class="project-head">
+        <h1>{{title}}</h1>
+        {{#if github}}
+          <a href="{{this}}" target="_blank">
+          <i class="fa fa-github fa-lg" aria-hidden="true"></i> Source Code</a>
+        {{/if}}
+        {{#if url}}
+          <a href="{{this}}" target="_blank">
+            <i class="fa fa-external-link fa-lg" aria-hidden="true"></i> View App</a>
+        {{/if}}
+      </div>
       </p>
       <p>{{description}}</p>
       <ul class="tags">
@@ -41,7 +45,7 @@
   <section id="home" class="tab-content">
     <div id="profile-container">
       <div id="profile">
-        <img class="logo" src="/images/main/paper-plane-blue-120px.jpg" alt="I believe in powerful simple solutions."/>
+        <img id="logo" src="/images/main/paper-plane-blue-120px.jpg" alt="I believe in powerful simple solutions."/>
         <div id="headshot-caption">
           <h1>Christy La Guardia</h1>
           <h2>Software Engineer</h2>
@@ -66,7 +70,7 @@
       </div>
       <div id="intro">
         <p>I love finding simple solutions to complex problems. That’s why I’m living the dream as a full stack JavaScript developer. After hours, you might find me on a trail with my beagle, Charlie, making pottery or exploring Portland’s many delicious and unique ice creameries.</p>
-        <h3 class="button">
+        <h3 id="projects-button">
           <a href="/projects">
             <i class="fa fa-code" aria-hidden="true"></i>
             Projects
@@ -82,7 +86,7 @@
 
   <footer>
     <p>Christine La Guardia &copy;2017</p>
-    <a class="home-nav-icon" href="mailto:christinelaguardia@gmail.com">
+    <a class="home-nav-icon" href="mailto:christy@laguardia.io">
       <i class="fa fa-envelope" aria-hidden="true"></i>
     </a>
     <a class="home-nav-icon" href="https://github.com/christylaguardia/" target="_blank">

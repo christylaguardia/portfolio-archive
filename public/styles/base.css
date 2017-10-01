@@ -38,9 +38,9 @@ a:hover {
   transition: color .2s ease-in-out;
 }
 
-h1 a {
+/* h1 a {
   color: rgba(100, 175, 218, .6);
-}
+} */
 
 section, div, footer {
   display: block;

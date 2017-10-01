@@ -4,13 +4,13 @@
   const navigation = {};
 
   navigation.loadIndexPage = function() {
-    $('#projects').hide();
+    $('#projects-container').hide();
     $('#home').fadeIn(1000);
   }
 
   navigation.loadProjectsPage = function() {
     $('#home').hide();
-    $('#projects').fadeIn(1000);
+    $('#projects-container').fadeIn(1000);
   }
 
   module.navigation = navigation;
