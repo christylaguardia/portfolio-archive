@@ -11,21 +11,29 @@
   <link rel="stylesheet" href="styles/modules.css" type="text/css">
 
   <script id="template" type="text/x-handlebars-template">
-    <div class="project-container">
-      <h1>{{ name }}</h1>
+    <div id="#{{name}}" class="project-container">
+      <h1>{{title}}</h1>
       <p>
-        <a href="{{ github }}" target="_blank">
-          <i class="fa fa-github" aria-hidden="true"></i> Source Code</a>
+      {{#if github}}
+        <a href="{{this}}" target="_blank">
+        <i class="fa fa-github fa-lg" aria-hidden="true"></i> Source Code</a>
+      {{/if}}
+      {{#if url}}
+        <a href="{{this}}" target="_blank">
+          <i class="fa fa-external-link fa-lg" aria-hidden="true"></i> View App</a>
+      {{/if}}
       </p>
-      <p>
-        <a href="{{ url }}" target="_blank">
-          <i class="fa fa-external-link" aria-hidden="true"></i> View App</a>
-      </p>
-      <p>{{ description }}</p>
-      <ul class="tags">{{{ tags }}}</ul>
+      <p>{{description}}</p>
+      <ul class="tags">
+        {{#each tags}}
+        <li>{{this}}</li>
+        {{/each}}
+      </ul>
+      {{#if image}}
       <div class="image-container">
-        <img src="{{ image }}" alt="{{ name }}" />
+        <img src="{{image}}" alt="{{name}}" />
       </div>
+      {{/if}}
     </div>
   </script>
 </head>
@@ -85,15 +93,14 @@
     </a>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.js"
-    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
   <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
   <script src="/scripts/navigation.js"></script>
   <script src="/scripts/routes.js"></script>
   <script src="/scripts/projects.js"></script>
   <script>
-    Project.fetchData()
+    Project.fetch()
   </script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

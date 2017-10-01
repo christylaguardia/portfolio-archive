@@ -3,7 +3,8 @@
 (function(module) {
 
   function Project(obj) {
-    this.name = obj.name;
+    this.name = obj.title.replace(/\s/g, '-');
+    this.title = obj.title;
     this.github = obj.github;
     this.url = obj.url;
     this.description = obj.description;
@@ -11,24 +12,23 @@
     this.image = obj.image;
   }
 
-  Project.toHtml = () => {
+  Project.prototype.toHtml = function() {
     var template = Handlebars.compile($('#template').html());
     return template(this);
   }
 
-  Project.load = (projects) => {
-    projects.forEach(project => {
-      project.tags = project.tags.map(tag => `<li>${tag}</li>`)
-      $('projects-container').append(project.toHtml());
+  Project.load = function(projects) {
+    const all = [];
+    projects.forEach(p => {
+      const project = new Project(p);
+      const html = project.toHtml();
+      $('#projects-container').append(html);
     })
-    console.log('projects loaded');
   }
 
-  Project.fetchData = () => {
+  Project.fetch = function() {
     $.getJSON('data/projects.json', (json) => {
-      console.log('data fetched', json);
-      // Project.loadAll(json);
-      return json;
+      Project.load(json);
     });
   }
 

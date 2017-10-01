@@ -63,6 +63,10 @@
     border-bottom: 1px solid #333;
 }
 
+.project-container a {
+    padding-right: .5rem;
+}
+
 .tags {
     padding-left: 0;
 }
@@ -70,12 +74,12 @@
 .tags li {
     display: inline-block;
     margin: .1rem;
-    padding: .2rem;
+    padding: 4px 8px;
     font-size: .8rem;
     font-family: 'Poppins', sans-serif;
-    color: #333;
-    background-color: #f7f7f7;
-    border-radius: .2rem;
+    color: #5d5d5d;
+    background-color: rgba(100, 175, 218, .2);
+    border-radius: 2px;
 }
 
 .image-container {
@@ -85,6 +89,7 @@
 
 .image-container img {
     max-height: 50vh;
+    max-width: 100%;
     padding: 1rem;
 }
 
