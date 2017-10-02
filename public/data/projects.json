@@ -18,7 +18,7 @@
           "MongoDB",
           "Mongoose"
     ],
-    "image": "/images/projects/varcity.png"
+    "image": "/images/varcity.png"
   },{
 	  "title": "Secure Login",
     "github": "https://github.com/ACL-CMS-P1/carret",
@@ -42,7 +42,7 @@
         "PostgreSQL",
         "SQL Server"
     ],
-    "image": "/images/projects/johnstone.png"
+    "image": "/images/johnstone.png"
   },{
     "title": "Garage Fellows",
     "github": "https://github.com/christylaguardia/garage-fellows",
@@ -59,7 +59,7 @@
         "HTML5",
         "CSS3"
     ],
-    "image": "/images/projects/garagefellows.png"
+    "image": "/images/garagefellows.png"
   },{
     "title": "Beer Fellows",
     "github": "https://github.com/jshabani/beer-fellows",
@@ -73,6 +73,6 @@
         "HTML5",
         "CSS3"
     ],
-    "image": "/images/projects/beerfellows.png"
+    "image": "/images/beerfellows.png"
   }
 ]

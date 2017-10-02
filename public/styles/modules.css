@@ -42,15 +42,10 @@
 }
 
 #logo {
+    height: 120px;
     margin-right: 2rem;
     border-radius: 50%;
 }
-
-/* #logo:hover {
-    position: absolute;
-    animation: slide 0.5s forwards;
-    animation-delay: 2s;
-} */
 
 #projects-container {
     display: none;
@@ -63,11 +58,6 @@
     margin-bottom: 2rem;
     min-height: 90vh;
 }
-
-/* .project-container h1 {
-    padding-top: 1rem;
-    border-bottom: 1px solid #333;
-} */
 
 .project-container a {
     padding-right: .5rem;
@@ -110,9 +100,7 @@
 .image-container img {
     max-height: 50vh;
     max-width: 100%;
-    padding: 1rem;
 }
-
 
 #intro #projects-button {
     cursor: pointer;

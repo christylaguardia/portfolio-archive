@@ -4,7 +4,7 @@
   <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-site-verification" content="yPXq3mSbUF8zsKqQAIrM91Pi9YU-SZKpwSOZbAZnM9U" />
   <title>Christy La Guardia | Software Engineer</title>
-  <link rel="shortcut icon" href="/images/main/Paper-Plane-icon-32x32.png">
+  <link rel="shortcut icon" href="/images/logo.png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins|Open+Sans">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="styles/base.css" type="text/css">
@@ -12,9 +12,6 @@
 
   <script id="template" type="text/x-handlebars-template">
     <div id="{{name}}" class="project-container">
-      <!-- <p class="next-link"><a href="#{{name}}">
-        <i class="fa fa-angle-down fa-lg" aria-hidden="true"></i> Next</a>
-      </p> -->
       <div class="project-head">
         <h1>{{title}}</h1>
         {{#if github}}
@@ -27,7 +24,7 @@
         {{/if}}
       </div>
       </p>
-      <p>{{description}}</p>
+      <p>{{{description}}}</p>
       <ul class="tags">
         {{#each tags}}
         <li>{{this}}</li>
@@ -45,7 +42,7 @@
   <section id="home" class="tab-content">
     <div id="profile-container">
       <div id="profile">
-        <img id="logo" src="/images/main/paper-plane-blue-120px.jpg" alt="I believe in powerful simple solutions."/>
+        <img id="logo" src="/images/logo.png" alt="I believe in powerful simple solutions."/>
         <div id="headshot-caption">
           <h1>Christy La Guardia</h1>
           <h2>Software Engineer</h2>
