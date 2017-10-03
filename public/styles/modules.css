@@ -59,10 +59,6 @@
     min-height: 80vh;
 }
 
-.project-container a {
-    padding-right: .5rem;
-}
-
 .project-head {
     padding-top: 1rem;
     border-bottom: 1px solid #333;
@@ -88,7 +84,7 @@
     font-size: .8rem;
     font-family: 'Poppins', sans-serif;
     color: #5d5d5d;
-    background-image: linear-gradient(to bottom,#fff 0,#dfe3ee 100%);
+    background-color: rgba(223, 227, 238, .5);
     border-radius: 2px;
 }
 
