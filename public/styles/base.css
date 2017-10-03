@@ -1,5 +1,5 @@
 /*
-blue        rgb(100, 175, 218)
+blue        #64AFDA (100, 175, 218)
 blue-grey   #7b7b7b
 light-blue  #dfe3ee	(223,227,238)
 light-grey  #f7f7f7	(247,247,247)
@@ -20,7 +20,7 @@ h1, h2, h3, h4 {
 h1 {
   font-size: 2rem;
   margin: 0 auto;
-  color: rgb(100, 175, 218);
+  color: #64AFDA;
 }
 
 h2 {
@@ -34,12 +34,8 @@ a {
 }
 
 a:hover {
-  color: rgb(100, 175, 218);
+  color: #64AFDA;
   transition: color .2s ease-in-out;
-}
-
-h1 a {
-  color: rgba(100, 175, 218, .6);
 }
 
 section, div, footer {
