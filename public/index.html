@@ -15,15 +15,14 @@
       <div class="project-head">
         <h1>{{title}}</h1>
         {{#if github}}
-          <a href="{{this}}" target="_blank">
+          <a href="{{github}}" target="_blank">
           <i class="fa fa-github fa-lg" aria-hidden="true"></i> Source Code</a>
         {{/if}}
         {{#if url}}
-          <a href="{{this}}" target="_blank">
+          <a href="{{url}}" target="_blank">
             <i class="fa fa-external-link fa-lg" aria-hidden="true"></i> View App</a>
         {{/if}}
       </div>
-      </p>
       <p>{{{description}}}</p>
       <ul class="tags">
         {{#each tags}}
