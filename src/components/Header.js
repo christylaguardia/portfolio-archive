@@ -11,7 +11,7 @@ class NavBar extends Component {
 
   render() {
     return (
-      <nav className="navbar is-transparent is-fixed-top">
+      <nav className="navbar is-fixed-top">
         <div className="navbar-brand">
           <Link className="navbar-item" to="/">Christy La Guardia</Link>
           <button data-target="nom-nom-burger"
@@ -24,6 +24,7 @@ class NavBar extends Component {
         </div>
         <div id="nom-nom-burger"
           className={`navbar-menu ${this.state.open ? 'is-active' : ''}`}
+          style={{ opacity: 0.9 }}
           onClick={this.toggleMenu} >
           <div className="navbar-end">
             <Link className="navbar-item" to="/about">About</Link>

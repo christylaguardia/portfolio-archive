@@ -2,7 +2,7 @@ import React from 'react';
 import { IconLink, EmailLink } from './Links';
 
 const Footer = () => (
-  <nav className="tabs">
+  <nav className="tabs is-fullwidth">
     <div className="container">
       <ul>
         <EmailLink />

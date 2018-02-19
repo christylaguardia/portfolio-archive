@@ -1,16 +1,12 @@
 import React, { Component } from 'react';
-import Loading from './Loading';
+import { Link } from 'react-router-dom';
+// import Loading from './Loading';
 import { IconTextLink } from './Links';
 import projectData from '../data/projects.json';
 
 const Project = ({ project }) => (
-  <div>
+  <div className="content">
     <h2>{project.title}</h2>
-
-    <div className="buttons">
-      {project.url && <IconTextLink title="View App" url={project.ref} icon="external-link" />}
-      <IconTextLink title="GitHub" url={project.github} icon="external-link" />
-    </div>
 
     {project.image &&
       <p>
@@ -21,39 +17,51 @@ const Project = ({ project }) => (
 
     <p>{project.description}</p>
 
+    <p className="tags">
+      {project.tags.map((t, i) => <span key={i} className="tag">{t}</span>)}
+    </p>
+
+    {project.url && <IconTextLink title="View App" url={project.ref} icon="external-link" />}
+    <IconTextLink title="GitHub" url={project.github} icon="external-link" />
   </div>
 );
 
+// class Projects extends Component {
+
+//   render() {
+//     const { project } = this.props.match.params;
+//     console.log('project', project);
+//     let proj = null;
+
+//     if (!project) proj = projectData[0];
+//     else proj = projectData.filter(p => p.name === project)
+
+//     return (
+//       <div className="columns is-centered">
+//         <div className="column is-two-thirds">
+//           <div className="content">
+//             <Project project={proj} />)}
+//           </div>
+//         </div>
+//       </div>
+//     );
+//   }
+// }
+
+
 class Projects extends Component {
 
-  // state = {
-  //   loading: true,
-  //   data: []
-  // }
-
-  // componentWillMount() {
-  //   projectsRef.once('value')
-  //     .then(snapshot => {
-  //       const data = snapshot.val().reverse();
-  //       console.log('fetched data', data);
-  //       this.setState({
-  //         loading: false,
-  //         data
-  //       })
-  //     });
-  // }
+  state = {
+    projects: projectData.reverse()
+  }
 
   render() {
-    // const { title } = this.props.match.params;
-    // console.log('project', title);
-
     return (
-      <div className="columns is-centered">
-        <div className="column is-two-thirds">
-          <div className="content">
-            {projectData.map((proj, index) => <Project key={index} project={proj} />)}
-          </div>
-        </div>
+      // <ul>
+      //   {this.state.projects.map(p => <li><Link to={`/projects/${p.name}`}>{p.title}</Link></li>)}
+      // </ul>
+      <div>
+        {this.state.projects.map((p, i) => <Project project={p}/>)}
       </div>
     );
   }

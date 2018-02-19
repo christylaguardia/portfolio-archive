@@ -31,17 +31,6 @@ class Chat extends Component {
       user: message
     });
 
-    // this.setState({
-    //   typing: true,
-    //   messages: [
-    //     ...this.state.messages,
-    //     {
-    //       source: 'user',
-    //       speech: message
-    //     }
-    //   ]
-    // });
-
     client.textRequest(message)
       .then(this.handleResponse)
       .catch(this.handleError);
@@ -53,15 +42,6 @@ class Chat extends Component {
       this.setState({
         typing: false,
         bot: response.result.fulfillment.speech
-        // messages: [
-        //   ...this.state.messages,
-        //   {
-        //     sessionId: response.sessionId,
-        //     timestamp: response.timestamp,
-        //     source: response.result.source,
-        //     speech: response.result.fulfillment.speech,
-        //   }
-        // ]
       });
     }, 1000);
   }
@@ -78,8 +58,6 @@ class Chat extends Component {
     ];
 
     const { typing, user, bot } = this.state;
-    // let botMsg;
-    // if (bot.result) botMsg = bot.result.fulfillment.speech;
 
     return (
 

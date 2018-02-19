@@ -10,17 +10,21 @@ class App extends Component {
     return (
       <Router>
         <section className="hero is-fullheight">
+        
           <div className="hero-head is-primary">
             <Header />
           </div>
+
           <div className="hero-body is-light">
             <div className="container has-text-centered">
               <Routes />
             </div>
           </div>
+
           <div className="hero-foot is-primary">
             <Footer />
           </div>
+
         </section>
       </Router>
     );
