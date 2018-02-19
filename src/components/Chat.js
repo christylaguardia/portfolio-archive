@@ -7,7 +7,8 @@ class Chat extends Component {
 
   state = {
     typing: false,
-    messages: []
+    user: '',
+    bot: ''
   }
 
   componentDidMount() {
@@ -27,14 +28,19 @@ class Chat extends Component {
 
     this.setState({
       typing: true,
-      messages: [
-        ...this.state.messages,
-        {
-          source: 'user',
-          speech: message
-        }
-      ]
+      user: message
     });
+
+    // this.setState({
+    //   typing: true,
+    //   messages: [
+    //     ...this.state.messages,
+    //     {
+    //       source: 'user',
+    //       speech: message
+    //     }
+    //   ]
+    // });
 
     client.textRequest(message)
       .then(this.handleResponse)
@@ -46,15 +52,16 @@ class Chat extends Component {
     setTimeout(() => {
       this.setState({
         typing: false,
-        messages: [
-          ...this.state.messages,
-          {
-            sessionId: response.sessionId,
-            timestamp: response.timestamp,
-            source: response.result.source,
-            speech: response.result.fulfillment.speech,
-          }
-        ]
+        bot: response.result.fulfillment.speech
+        // messages: [
+        //   ...this.state.messages,
+        //   {
+        //     sessionId: response.sessionId,
+        //     timestamp: response.timestamp,
+        //     source: response.result.source,
+        //     speech: response.result.fulfillment.speech,
+        //   }
+        // ]
       });
     }, 1000);
   }
@@ -64,37 +71,61 @@ class Chat extends Component {
   }
 
   render() {
-    console.log('messages', this.state.messages);
+    const samples = [
+      'what do you do?',
+      'tell me about yourself',
+      'show me your portfolio'
+    ];
+
+    const { typing, user, bot } = this.state;
+    // let botMsg;
+    // if (bot.result) botMsg = bot.result.fulfillment.speech;
+
     return (
-      <section className="section">
-        <div className="container">
 
-          {this.state.messages.length > 0 &&
-            this.state.messages.map((msg, i) => {
-              return (
-                <p key={i}>
-                  <span className={`tag is-medium ${msg.source === 'user' ? 'is-primary  is-right' : 'is-info is-left'}`}>
-                    {msg.speech}
-                  </span>
-                </p>
-              );
-            })}
-            
-            {this.state.typing && <p><span className="tag is-medium is-info">...</span></p>}
+      <div className="columns is-centered">
+        <div className="column is-half is-narrow">
 
-            <form onSubmit={event => {
-                event.preventDefault();
-                const { message } = event.target.elements;
-                this.sendMessage(message.value);
-                event.target.reset();
-            }}>
-              <div className="control">
-              <input className="input" name="message" type="text" placeholder="Ask me anything." autoComplete="off" required/>
+          <section className="section">
+
+            {user !== '' && <p>
+              <span className="tag is-medium is-primary">
+                {user}
+              </span>
+            </p>}
+
+            {bot !== '' && <p>
+              <span className="tag is-medium is-info">
+                {bot}
+              </span>
+            </p>}
+              
+              {typing && <p><span className="tag is-medium is-info">...</span></p>}
+            </section>
+
+            <section className="section">
+              <form onSubmit={event => {
+                  event.preventDefault();
+                  const { message } = event.target.elements;
+                  this.sendMessage(message.value);
+                  event.target.reset();
+              }}>
+                <div className="control">
+                <input className="input" name="message" type="text" placeholder="Ask me anything." autoComplete="off" required/>
+                </div>
+              </form>
+            </section>
+
+            <section className="section">
+              <p>Can't think of anything to say?</p>
+              <div className="buttons is-centered">
+                {samples.map((s, i) =>
+                  <span className="button is-small is-rounded is-primary-inverted" onClick={() => this.sendMessage(s)}>{s}</span> )}
               </div>
-            </form>
-            
+            </section>
+
         </div>
-      </section>
+      </div>
     )
   }
 }

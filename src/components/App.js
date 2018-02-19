@@ -9,16 +9,16 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <section className="hero is-primary is-fullheight">
-          <div className="hero-head">
+        <section className="hero is-fullheight">
+          <div className="hero-head is-primary">
             <Header />
           </div>
-          <div className="hero-body">
+          <div className="hero-body is-light">
             <div className="container has-text-centered">
               <Routes />
             </div>
           </div>
-          <div className="hero-foot">
+          <div className="hero-foot is-primary">
             <Footer />
           </div>
         </section>

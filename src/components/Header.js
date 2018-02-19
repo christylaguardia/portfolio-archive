@@ -10,28 +10,22 @@ class NavBar extends Component {
   toggleMenu = () => this.setState(state => ({ open: !state.open }))
 
   render() {
-    const { user, logout } = this.props;
     return (
-      <nav className="navbar is-transparent">
+      <nav className="navbar is-transparent is-fixed-top">
         <div className="navbar-brand">
-          <div className="navbar-item">
-            <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo" />
-            <span>Christy La Guardia</span>
-          </div>
-          <button
+          <Link className="navbar-item" to="/">Christy La Guardia</Link>
+          <button data-target="nom-nom-burger"
             className={`navbar-burger burger ${this.state.open ? 'is-active' : ''}`}
-            data-target="burger-options" onClick={this.toggleMenu}>
+            onClick={this.toggleMenu} >
             <span></span>
             <span></span>
             <span></span>
           </button>
         </div>
-
-        <div id="burger-options"
+        <div id="nom-nom-burger"
           className={`navbar-menu ${this.state.open ? 'is-active' : ''}`}
           onClick={this.toggleMenu} >
           <div className="navbar-end">
-            <Link className="navbar-item" to="/">Chat</Link>
             <Link className="navbar-item" to="/about">About</Link>
             <Link className="navbar-item" to="/projects">Projects</Link>
           </div>

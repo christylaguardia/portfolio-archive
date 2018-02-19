@@ -14,6 +14,7 @@ $family-serif: "Martel", "Georgia", serif;
 
 // derived variables
 $primary: $blue;
+$light: $light-blue;
 $family-primary: $family-serif;
 
 @import "../../node_modules/font-awesome/css/font-awesome.min.css";
@@ -34,4 +35,8 @@ $family-primary: $family-serif;
 .is-vertical-center {
   display: flex;
   align-items: center;
+}
+
+@keyframes slide {
+  100% { left: 0; }
 }
