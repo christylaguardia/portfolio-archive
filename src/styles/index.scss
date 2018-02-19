@@ -1,49 +1,37 @@
-@import "../sass/utilities/initial-variables";
-@import "../sass/utilities/functions";
+// paper plane by Chameleon Design from the Noun Project
+
+@import "../../node_modules/bulma/sass/utilities/initial-variables.sass";
+@import "../../node_modules/bulma/sass/utilities/functions.sass";
 @import url('https://fonts.googleapis.com/css?family=Martel|Open+Sans');
 
-// custom colors
+// initial variables
 $blue: #64AFDA;
-$blue-grey: #7b7b7b;
+$link: #7b7b7b;
 $light-blue: #dfe3ee;
 $light-grey: #f7f7f7;
 $grey: #212121;
-
-// 2. Set your own initial variables
-// Update blue
-$blue: #72d0eb;
-// Add pink and its invert
-$pink: #ffb3b3;
-$pink-invert: #fff;
-// Add a serif family
 $family-serif: "Martel", "Georgia", serif;
-$family-serif: "Merriweather", "Georgia", serif;
 
-// 3. Set the derived variables
-// Use the new pink as the primary color
-$primary: $pink;
-$primary-invert: $pink-invert;
-// Use the existing orange as the danger color
-$danger: $orange;
-// Use the new serif family
+// derived variables
+$primary: $blue;
 $family-primary: $family-serif;
 
-// // 4. Setup your Custom Colors
-// $linkedin: #0077b5;
-// $linkedin-invert: findColorInvert($linkedin);
-// $twitter: #55acee;
-// $twitter-invert: findColorInvert($twitter);
-// $github: #333;
-// $github-invert: findColorInvert($github);
+@import "../../node_modules/font-awesome/css/font-awesome.min.css";
+@import "../../node_modules/bulma/bulma.sass";
 
-// // 5. Add new color variables to the color map.
-// @import "../sass/utilities/derived-variables.sass";
-// $addColors: (
-//   "twitter":($twitter, $twitter-invert),
-//   "linkedin": ($linkedin, $linkedin-invert),
-//   "github": ($github, $github-invert)
-// );
-// $colors: map-merge($colors, $addColors);
+.is-full-screen {
+  height: 100vh;
+}
 
-// 6. Import the rest of Bulma
-@import "../bulma";
+.is-max-height {
+  height: 100%;
+}
+
+.is-max-width {
+  width: 100%;
+}
+
+.is-vertical-center {
+  display: flex;
+  align-items: center;
+}

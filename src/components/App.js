@@ -1,22 +1,28 @@
 import React, { Component } from 'react';
-import About from './About';
-import 'bulma/css/bulma.css';
-import 'font-awesome/css/font-awesome.min.css';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Header from './Header';
+import Routes from './Routes';
+import Footer from './Footer';
 
 class App extends Component {
+
   render() {
     return (
-      <div>
-        <div className="columns">
-          <div className="column is-half">
-            <About />
+      <Router>
+        <section className="hero is-primary is-fullheight">
+          <div className="hero-head">
+            <Header />
           </div>
-          <div className="column is-half">
-            Second column
+          <div className="hero-body">
+            <div className="container has-text-centered">
+              <Routes />
+            </div>
           </div>
-        </div>
-
-      </div>
+          <div className="hero-foot">
+            <Footer />
+          </div>
+        </section>
+      </Router>
     );
   }
 }
