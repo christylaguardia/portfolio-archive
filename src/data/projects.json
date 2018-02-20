@@ -12,10 +12,11 @@
       "jQuery",
       "HTML5/CSS3"
     ],
+    "summary": "Swap meet for car parts.",
     "title": "Garage Fellows",
     "url": "https://garagefellows.herokuapp.com/"
   },{
-    "description": "Secure App is an authentication security solution for implementation on the back-end of NodeJS web apps. Utilizing the extensive knowledge base provided through the <a href='https://www.sqreen.io/developers.html'>Sqreen API service,</a> this app finds potential security risks during authentication and blocks threats. Signup or signin attempts from known or custom blacklists are tracked. Email and IP addresses implicated are saved in meaningful event logging.",
+    "description": "Secure App is an authentication security solution for implementation on the back-end of NodeJS web apps. Utilizing the extensive knowledge base provided through a third party screening service, this app finds potential security risks during authentication and blocks threats. Signup or signin attempts from known or custom blacklists are tracked. Email and IP addresses implicated are saved in meaningful event logging.",
     "github": "https://github.com/ACL-CMS-P1/carret",
     "name": "secure",
     "tags": [
@@ -25,9 +26,10 @@
       "TDD",
       "MongoDB"
     ],
+    "summary": "User credentials security screening.",
     "title": "Secure App"
   },{
-    "description": "A social network platform for student athletes. Built for a local startup. Our client wanted to create a social media application that would connect high school and college athletes with recruiters and other professional contacts. Think of it as a LinkedIn for student athletes. My team and I created a proof of concept for our client to gain approval to a startup incubator program.",
+    "description": "Built for a local startup. Our client wanted to create a social media application that would connect high school and college athletes with recruiters and other professional contacts. Think of it as a LinkedIn for student athletes. My team and I created a proof of concept for our client to gain approval to a startup incubator program.",
     "github": "https://github.com/varcity-network",
     "image": "varcity.png",
     "name": "varcity",
@@ -41,6 +43,7 @@
       "Bulma",
       "MongoDB"
     ],
+    "summary": "A social network platform for student athletes.",
     "title": "Varcity Network",
     "url": "https://varcity-network.herokuapp.com/"
   }

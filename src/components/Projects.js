@@ -1,53 +1,51 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-// import Loading from './Loading';
 import { IconTextLink } from './Links';
 import projectData from '../data/projects.json';
 
-const Project = ({ project }) => (
-  <div className="content">
-    <h2>{project.title}</h2>
 
-    {project.image &&
-      <p>
-        <img src={`/images/${project.image}`}
-          alt={project.title}
-          style={{ maxHeight: '50vh' }} />
-      </p>}
-
-    <p>{project.description}</p>
-
-    <p className="tags">
-      {project.tags.map((t, i) => <span key={i} className="tag">{t}</span>)}
-    </p>
-
-    {project.url && <IconTextLink title="View App" url={project.ref} icon="external-link" />}
-    <IconTextLink title="GitHub" url={project.github} icon="external-link" />
-  </div>
+export const Button = ({ title, url, icon }) => (
+  <a href={url}
+    target="_blank"
+    rel="noopener noreferrer">
+    <span className="icon">
+      <i className={`fa fa-${icon}`} aria-hidden="true"></i>
+    </span>
+    <span>{title}</span>
+  </a>
 );
 
-// class Projects extends Component {
+const Project = ({ project }) => (
+  <section className="section">
+    <div className="columns is-centered">
+      <div className="column is-two-thirds">
+        <div className="content">
+          <h2 className="title">{project.title}</h2>
+          <h3 className="subtitle">{project.summary}</h3>
 
-//   render() {
-//     const { project } = this.props.match.params;
-//     console.log('project', project);
-//     let proj = null;
+          <div className="buttons has-addons">
+            {project.url && <Button title="View App" url={project.ref} icon="external-link" />}
+            <Button title="GitHub" url={project.github} icon="github" />
+          </div>
 
-//     if (!project) proj = projectData[0];
-//     else proj = projectData.filter(p => p.name === project)
+          {project.image &&
+            <p>
+              <img src={`/images/${project.image}`}
+                alt={project.title}
+                style={{ maxHeight: '50vh' }} />
+            </p>}
 
-//     return (
-//       <div className="columns is-centered">
-//         <div className="column is-two-thirds">
-//           <div className="content">
-//             <Project project={proj} />)}
-//           </div>
-//         </div>
-//       </div>
-//     );
-//   }
-// }
+          <p>{project.description}</p>
 
+          <p className="tags">
+            {project.tags.map((t, i) => <span key={i} className="tag is-primary">{t}</span>)}
+          </p>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+);
 
 class Projects extends Component {
 
@@ -57,11 +55,8 @@ class Projects extends Component {
 
   render() {
     return (
-      // <ul>
-      //   {this.state.projects.map(p => <li><Link to={`/projects/${p.name}`}>{p.title}</Link></li>)}
-      // </ul>
-      <div>
-        {this.state.projects.map((p, i) => <Project project={p}/>)}
+      <div className="content">
+        {this.state.projects.map((p, i) => <Project key={i} project={p}/>)}
       </div>
     );
   }

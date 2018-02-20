@@ -9,21 +9,22 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <section className="hero is-fullheight">
+        <section className="section is-full-screen">
         
-          <div className="hero-head is-primary">
+          <header>
             <Header />
-          </div>
+          </header>
 
-          <div className="hero-body is-light">
-            <div className="container has-text-centered">
+          <main style={{ minHeight: '100%'}}>
+            {/* <section className="section"> */}
+            {/* <div className="container has-text-centered"> */}
               <Routes />
-            </div>
-          </div>
+            {/* </section> */}
+          </main>
 
-          <div className="hero-foot is-primary">
+          {/* <footer> */}
             <Footer />
-          </div>
+          {/* </footer> */}
 
         </section>
       </Router>

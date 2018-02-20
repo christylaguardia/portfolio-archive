@@ -60,47 +60,48 @@ class Chat extends Component {
     const { typing, user, bot } = this.state;
 
     return (
-
-      <div className="columns is-centered">
+      <div className="columns is-centered is-max-height">
         <div className="column is-half is-narrow">
 
-          <section className="section">
+          {user !== '' && <p>
+            <span className="tag is-medium is-primary">
+              {user}
+            </span>
+          </p>}
 
-            {user !== '' && <p>
-              <span className="tag is-medium is-primary">
-                {user}
-              </span>
-            </p>}
+          {bot !== '' && <p>
+            <span className="tag is-medium is-info">
+              {bot}
+            </span>
+          </p>}
 
-            {bot !== '' && <p>
-              <span className="tag is-medium is-info">
-                {bot}
-              </span>
-            </p>}
-              
-              {typing && <p><span className="tag is-medium is-info">...</span></p>}
-            </section>
+          {typing && <p><span className="tag is-medium is-info">...</span></p>}
 
-            <section className="section">
-              <form onSubmit={event => {
-                  event.preventDefault();
-                  const { message } = event.target.elements;
-                  this.sendMessage(message.value);
-                  event.target.reset();
-              }}>
-                <div className="control">
-                <input className="input" name="message" type="text" placeholder="Ask me anything." autoComplete="off" required/>
-                </div>
-              </form>
-            </section>
+          <form onSubmit={event => {
+            event.preventDefault();
+            const { message } = event.target.elements;
+            this.sendMessage(message.value);
+            event.target.reset();
+          }}>
+            <div className="control">
+              <input className="input"
+                name="message"
+                type="text"
+                placeholder="Ask me anything about myself."
+                autoComplete="off"
+                required />
+            </div>
+          </form>
 
-            <section className="section">
-              <p>Can't think of anything to say?</p>
-              <div className="buttons is-centered">
-                {samples.map((s, i) =>
-                  <span className="button is-small is-rounded is-primary-inverted" onClick={() => this.sendMessage(s)}>{s}</span> )}
-              </div>
-            </section>
+          <p>Can&#39;t think of anything to say?</p>
+          <div className="buttons is-centered">
+            {samples.map((s, i) =>
+              <span key={i}
+                className="button is-small is-rounded is-primary-inverted"
+                onClick={() => this.sendMessage(s)}>
+                {s}
+              </span>)}
+          </div>
 
         </div>
       </div>
