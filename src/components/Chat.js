@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ApiAiClient } from 'api-ai-javascript';
+import { ApiAiClient } from '../vendor/api-ai-javascript';
 
 const client = new ApiAiClient({ accessToken: process.env.REACT_APP_CLIENT_ACCESS_TOKEN });
 
