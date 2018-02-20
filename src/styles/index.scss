@@ -1,0 +1,42 @@
+// paper plane by Chameleon Design from the Noun Project
+
+@import "../../node_modules/bulma/sass/utilities/initial-variables.sass";
+@import "../../node_modules/bulma/sass/utilities/functions.sass";
+@import url('https://fonts.googleapis.com/css?family=Martel|Open+Sans');
+
+// initial variables
+$blue: #64AFDA;
+$link: #7b7b7b;
+$light-blue: #dfe3ee;
+$light-grey: #f7f7f7;
+$grey: #212121;
+$family-serif: "Martel", "Georgia", serif;
+
+// derived variables
+$primary: $blue;
+$light: $light-blue;
+$family-primary: $family-serif;
+
+@import "../../node_modules/font-awesome/css/font-awesome.min.css";
+@import "../../node_modules/bulma/bulma.sass";
+
+.is-full-screen {
+  height: 100vh;
+}
+
+.is-max-height {
+  height: 100%;
+}
+
+.is-max-width {
+  width: 100%;
+}
+
+.is-vertical-center {
+  display: flex;
+  align-items: center;
+}
+
+@keyframes slide {
+  100% { left: 0; }
+}
