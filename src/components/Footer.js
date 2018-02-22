@@ -1,5 +1,4 @@
 import React from 'react';
-// import { IconLink, EmailLink } from './Links';
 
 const NavLink = ({ icon, url }) => (
   <a className="navbar-item"
@@ -12,7 +11,7 @@ const NavLink = ({ icon, url }) => (
 
 const EmailLink = () => (
   <a className="navbar-item"
-    href="mailto:christy@laguardia.io" target="_blank" rel="noopener noreferrer">
+    href="mailto:christy@laguardia.io" rel="noopener noreferrer">
     <span className="icon">
       <i className="fa fa-envelope fa-lg" aria-hidden="true"></i>
     </span>
@@ -20,15 +19,14 @@ const EmailLink = () => (
 );
 
 const Footer = () => (
-  <nav className="navbar is-fullwidth">
+  <nav className="navbar is-primary is-fixed-bottom is-fullwidth">
     <div className="navbar-brand">
       <EmailLink />
-      <NavLink icon="github" url="https://github.com/christylaguardia/" />
       <NavLink icon="linkedin" url="https://www.linkedin.com/in/christy-la-guardia/" />
-      <NavLink icon="medium" url="https://medium.com/@christylaguardia/" />
-      <NavLink icon="twitter" url="https://twitter.com/c_la_guardia" />
+      <NavLink icon="github" url="https://github.com/christylaguardia/" />
       <NavLink icon="codepen" url="https://codepen.io/christylaguardia/" />
-      <NavLink icon="code" url="https://www.codewars.com/users/christylaguardia" />
+      <NavLink icon="twitter" url="https://twitter.com/c_la_guardia" />
+      <NavLink icon="medium" url="https://medium.com/@christylaguardia/" />
     </div>
   </nav>
 );

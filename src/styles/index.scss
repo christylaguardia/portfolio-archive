@@ -5,17 +5,20 @@
 @import url('https://fonts.googleapis.com/css?family=Martel|Open+Sans');
 
 // initial variables
-$blue: #64AFDA;
-$link: #7b7b7b;
-$light-blue: #dfe3ee;
-$light-grey: #f7f7f7;
-$grey: #212121;
+$christy-dark: #090605;
+$christy-grey: #676566;
+$christy-white: #b4b2b3;
+$christy-light: #a4bfd9;
+$christy-blue: #5b92cb;
 $family-serif: "Martel", "Georgia", serif;
+$family-sans-serif: "Open Sans", "Helvetica", sans-serif;
 
 // derived variables
-$primary: $blue;
-$light: $light-blue;
-$family-primary: $family-serif;
+$primary: $christy-blue;
+$light: $christy-light;
+$dark: $christy-dark;
+$white: $christy-white;
+$family-primary: $family-sans-serif;
 
 @import "../../node_modules/font-awesome/css/font-awesome.min.css";
 @import "../../node_modules/bulma/bulma.sass";
@@ -37,6 +40,51 @@ $family-primary: $family-serif;
   align-items: center;
 }
 
-@keyframes slide {
-  100% { left: 0; }
+.input-underlined {
+  @extend .title;
+  outline: none;
+  background-color: transparent;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid $christy-grey;
+
+  &:focus {
+    outline:none;
+  }
 }
+
+#wave {
+	margin-left: auto;
+	margin-right: auto;
+	.dot {
+		display: inline-block;
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		margin-right: 3px;
+		background: $white;
+		animation: wave 1.3s linear infinite;
+
+		&:nth-child(2) {
+			animation-delay: -2s;
+		}
+
+		&:nth-child(3) {
+			animation-delay: -0.9s;
+		}
+	}
+}
+
+@keyframes wave {
+	0%, 60%, 100% {
+		transform: initial;
+	}
+
+	30% {
+		transform: translateY(-15px);
+	}
+}
+
+// @keyframes slide {
+//   100% { left: 0; }
+// }

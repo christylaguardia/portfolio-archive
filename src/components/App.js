@@ -9,24 +9,11 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <section className="section is-full-screen">
-        
-          <header>
-            <Header />
-          </header>
-
-          <main style={{ minHeight: '100%'}}>
-            {/* <section className="section"> */}
-            {/* <div className="container has-text-centered"> */}
-              <Routes />
-            {/* </section> */}
-          </main>
-
-          {/* <footer> */}
-            <Footer />
-          {/* </footer> */}
-
-        </section>
+        <div className="is-full-screen">
+          <Header />
+          <Routes />
+          <Footer />
+        </div>
       </Router>
     );
   }

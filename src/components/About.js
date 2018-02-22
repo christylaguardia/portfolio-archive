@@ -1,17 +1,18 @@
 import React from 'react';
-import { TextLink } from './Links';
+
+const TextLink = ({ title, url }) => (
+  <a className="button is-text" href={url} target="_blank" rel="noopener noreferrer">
+    <span>{title}</span>
+  </a>
+);
 
 const About = () => (
   <section className="section">
     <div className="columns is-centered">
       <div className="column is-two-thirds">
         <div className="content">
-          <h2 className="title">
-            <span>Christy La&nbsp;Guardia</span>
-          </h2>
-          <h3 className="subtitle">
-            Software Engineer
-          </h3>
+          <p className="title">Christy La&nbsp;Guardia</p>
+          <p className="subtitle">Software Engineer</p>
           <p>
             I love finding simple solutions to complex problems.
           </p>

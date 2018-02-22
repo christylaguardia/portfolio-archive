@@ -11,14 +11,13 @@ class NavBar extends Component {
 
   render() {
     return (
-      <nav className="navbar is-fixed-top"
-        style={{ opacity: 0.8 }} >
+      <nav className="navbar is-primary is-fixed-top">
         <div className="navbar-brand">
           <Link className="navbar-item" to="/">
             <span className="icon">
-              <i className="fa fa-paper-plane" aria-hidden="true"></i>
+              <i className="fa fa-paper-plane fa-lg" aria-hidden="true"></i>
             </span>
-            <span> Christy La&nbsp;Guardia</span>
+            {/* <span> Christy La&nbsp;Guardia</span> */}
           </Link>
           <div data-target="nom-nom-burger"
             className={`navbar-burger burger ${this.state.open ? 'is-active' : ''}`}
@@ -30,7 +29,7 @@ class NavBar extends Component {
         </div>
         <div id="nom-nom-burger"
           className={`navbar-menu ${this.state.open ? 'is-active' : ''}`}
-          style={{ opacity: 0.8 }}
+          
           onClick={this.toggleMenu} >
           <div className="navbar-end">
             <Link className="navbar-item" to="/about">About</Link>

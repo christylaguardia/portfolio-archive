@@ -1,7 +1,16 @@
 import React, { Component } from 'react';
+import Typist from 'react-typist';
 import { ApiAiClient } from '../vendor/api-ai-javascript';
 
 const client = new ApiAiClient({ accessToken: process.env.REACT_APP_CLIENT_ACCESS_TOKEN });
+
+const Dots = () => (
+  <div id="wave">
+    <span className="dot"></span>
+    <span className="dot"></span>
+    <span className="dot"></span>
+  </div>
+);
 
 class Chat extends Component {
 
@@ -12,20 +21,10 @@ class Chat extends Component {
   }
 
   componentDidMount() {
-    // this.sendInitialMessage();
-  }
-
-  sendInitialMessage = () => {
-    console.log('sendInitialMessage');
-    this.sendMessage('hello');
-    // client.textRequest('Hello!')
-    //   .then(response => this.handleResponse(response))
-    //   .catch(error => console.log(error));
+    // this.sendMessage('hello');
   }
 
   sendMessage = (message) => {
-    console.log('message', message);
-
     this.setState({
       typing: true,
       user: message
@@ -37,7 +36,6 @@ class Chat extends Component {
   }
 
   handleResponse = (response) => {
-    console.log('response', response);
     setTimeout(() => {
       this.setState({
         typing: false,
@@ -51,62 +49,60 @@ class Chat extends Component {
   }
 
   render() {
-    const samples = [
-      'what do you do?',
-      'tell me about yourself',
-      'show me your portfolio'
-    ];
-
-    const { typing, user, bot } = this.state;
+    const { typing, bot } = this.state;
 
     return (
-      <div className="columns is-centered is-max-height">
-        <div className="column is-half is-narrow">
+      <section className="hero is-primary is-fullheight">
+        <div className="hero-body">
+          <div className="container">
 
-          {user !== '' && <p>
-            <span className="tag is-medium is-primary">
-              {user}
-            </span>
-          </p>}
+            <div className="columns is-vcentered">
+              <div className="column is-half is-right">
+                <p id="message" className="title">
+                  {typing
+                    ? <Dots />
+                    : bot ? <Typist>{bot}</Typist> : 'Ask me anything.'}
+                </p>
+              </div>
 
-          {bot !== '' && <p>
-            <span className="tag is-medium is-info">
-              {bot}
-            </span>
-          </p>}
+              <div className="column">
+                <form onSubmit={event => {
+                  event.preventDefault();
+                  const { message } = event.target.elements;
+                  this.sendMessage(message.value);
+                  event.target.reset();
+                }}>
+                  <input class="input-underlined"
+                    name="message"
+                    type="text"
+                    placeholder="type something"
+                    autoComplete="off"
+                    required />
+                </form>
+              </div>
 
-          {typing && <p><span className="tag is-medium is-info">...</span></p>}
-
-          <form onSubmit={event => {
-            event.preventDefault();
-            const { message } = event.target.elements;
-            this.sendMessage(message.value);
-            event.target.reset();
-          }}>
-            <div className="control">
-              <input className="input"
-                name="message"
-                type="text"
-                placeholder="Ask me anything about myself."
-                autoComplete="off"
-                required />
             </div>
-          </form>
-
-          <p>Can&#39;t think of anything to say?</p>
-          <div className="buttons is-centered">
-            {samples.map((s, i) =>
-              <span key={i}
-                className="button is-small is-rounded is-primary-inverted"
-                onClick={() => this.sendMessage(s)}>
-                {s}
-              </span>)}
           </div>
-
         </div>
-      </div>
+      </section>
     )
   }
 }
 
 export default Chat;
+
+// const samples = [
+//   'what do you do?',
+//   'tell me about yourself',
+//   'show me your portfolio'
+// ];
+
+// {/* <p>Can&#39;t think of anything to say?</p>
+// <div className="buttons is-centered">
+//   {samples.map((s, i) =>
+//     <span key={i}
+//       className="button is-small is-rounded is-primary-inverted"
+//       onClick={() => this.sendMessage(s)}>
+//       {s}
+//     </span>)}
+// </div> */}
