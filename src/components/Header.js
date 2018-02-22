@@ -11,7 +11,8 @@ class NavBar extends Component {
 
   render() {
     return (
-      <nav className="navbar is-primary is-fixed-top">
+      <nav className="navbar is-transparent is-fixed-top"
+        style={{ backgroundColor: 'transparent' }}>
         <div className="navbar-brand">
           <Link className="navbar-item" to="/">
             <span className="icon">

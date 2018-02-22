@@ -19,7 +19,8 @@ const EmailLink = () => (
 );
 
 const Footer = () => (
-  <nav className="navbar is-primary is-fixed-bottom is-fullwidth">
+  <nav className="navbar is-transparent is-fixed-bottom is-fullwidth"
+    style={{ backgroundColor: 'transparent' }}>
     <div className="navbar-brand">
       <EmailLink />
       <NavLink icon="linkedin" url="https://www.linkedin.com/in/christy-la-guardia/" />
