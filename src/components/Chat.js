@@ -58,11 +58,11 @@ class Chat extends Component {
 
             <div className="columns is-vcentered">
               <div className="column is-half is-right">
-                <p id="message" className="title">
+                <div id="message" className="title">
                   {typing
                     ? <Dots />
-                    : bot ? <Typist>{bot}</Typist> : 'Ask me anything.'}
-                </p>
+                    : <Typist>{bot ? bot : 'Ask me anything.'}</Typist>}
+                </div>
               </div>
 
               <div className="column">
@@ -72,7 +72,8 @@ class Chat extends Component {
                   this.sendMessage(message.value);
                   event.target.reset();
                 }}>
-                  <input class="input-underlined"
+                  <input className="input-underlined"
+                    style={{ visibility: typing ? 'hidden' : 'visible' }}
                     name="message"
                     type="text"
                     placeholder="type something"

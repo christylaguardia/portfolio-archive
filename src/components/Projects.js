@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import projectData from '../data/projects.json';
 
 const Buttons = ({ url, github }) => (
@@ -34,25 +35,39 @@ const Tags = ({ tags }) => (
 );
 
 const Project = ({ project }) => (
-  <section className="section">
-    <div className="container">
-      <Title project={project} />
-      <Tags tags={project.tags} />
-      {project.image &&
-        <p>
-          <img src={`/images/${project.image}`}
-            alt={project.title}
-            style={{ maxHeight: '50vh' }} />
-        </p>}
-      <p>{project.description}</p>
+  <div className="content">
+    <Title project={project} />
+    <Tags tags={project.tags} />
+    {project.image &&
+      <p>
+        <img src={`/images/${project.image}`}
+          alt={project.title}
+          style={{ maxHeight: '50vh' }} />
+      </p>}
+    <p>{project.description}</p>
+  </div>
+);
+
+const Projects = () => (
+  <section className="section" >
+    <div className="container is-fluid">
+      {projectData.map((p, i) => <Project key={i} project={p} />)}
     </div>
   </section>
 );
 
-const Projects = () => (
-  <div className="content">
-    {projectData.map((p, i) => <Project key={i} project={p} />)}
-  </div>
-);
+
+// const Projects = () => (
+//   <div className="content">
+//     <div className="has-text-centered">
+//       {projectData.map((p, i) => 
+//         <p  key={i} className="field">
+//           <Link className="button is-large is-primary">{p.title}</Link>
+//         </p>
+//       )}
+//     </div>
+    
+//   </div>
+// );
 
 export default Projects;

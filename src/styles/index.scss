@@ -46,11 +46,18 @@ $family-primary: $family-sans-serif;
   background-color: transparent;
   box-sizing: border-box;
   border: none;
-  border-bottom: 2px solid $christy-grey;
+	border-bottom: 2px solid $christy-grey;
+
+	position: absolute;
+	display: inline;
+	width: auto;
 
   &:focus {
-    outline:none;
-  }
+		outline:none;
+	}
+	
+	// visibility: visible;
+	// transition: visibility 2s;
 }
 
 #wave {
