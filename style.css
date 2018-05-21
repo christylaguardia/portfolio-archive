@@ -1,0 +1,55 @@
+/*
+blue        #64AFDA (100, 175, 218)
+blue-grey   #7b7b7b
+light-blue  #dfe3ee	(223,227,238)
+light-grey  #f7f7f7	(247,247,247)
+grey        #212121
+*/
+
+body {
+  margin: 0 auto;  
+  min-width: 320px;
+  color: #000;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0 auto;
+  color: #64AFDA;
+}
+
+h2 {
+  color: #7b7b7b;
+}
+
+a {
+  font-family: 'Poppins', sans-serif;
+  color: #7b7b7b;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #64AFDA;
+  transition: color .2s ease-in-out;
+}
+
+section, div, footer {
+  display: block;
+}
+
+footer {
+  margin-top: 2rem;
+  color: #7b7b7b;
+  height: 10vh;
+  text-align: center;
+}
+
+footer p {
+  margin: 0 auto;
+  font-size: .8rem;
+}
