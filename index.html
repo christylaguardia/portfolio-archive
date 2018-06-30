@@ -1,36 +1,135 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Christy La Guardia | Software Engineer</title>
-  <link rel="stylesheet" href="/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Christy La Guardia</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200|Open+Sans:300|Anonymous+Pro">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <h1>Christy La Guardia</h1>
-  <h3>Software Engineer</h3>
-  <p>
-    <a href="mailto:christy@laguardia.io">
-      <i class="fas fa-envelope"></i>
-    </a>
-    <a href="https://github.com/christylaguardia/" target="_blank">
-      <i class="fab fa-github"></i>
-    </a>
-    <a href="https://codepen.io/christylaguardia/" target="_blank">
-      <i class="fab fa-codepen"></i>
-    </a>
-    <a href="https://www.linkedin.com/in/christy-la-guardia/" target="_blank">
-      <i class="fab fa-linkedin-in"></i>
-    </a>
-    <a href="https://medium.com/@christylaguardia/" target="_blank">
-      <i class="fab fa-medium"></i>
-    </a>
-    <a href="https://twitter.com/c_la_guardia" target="_blank">
-      <i class="fab fa-twitter-square"></i>
-    </a>
-  </p>
-</body>
+  <main>
 
+    <section id="home" class="hero gradient-background">
+      <div class="hero-body hero-background">
+        <div class="hero-body-content">
+          <h1>
+          Christy La&nbsp;Guardia
+          </h1>
+          <h2>
+            Software Engineer
+          </h2>
+          <div id="links"></div>
+          <p>
+            <a href="#about">About me. </a>
+            <a href="#projects">See what I do.</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="hero">
+      <div class="hero-body">
+        <div class="hero-body-content">
+          <h1 class="title-gradient">
+            Hi, I'm Christy.
+          </h1>
+          <p>
+            I love finding simple solutions to complex problems.
+          </p>
+          <p>
+            That’s why I’m living my dream as a developer. Currently, I'm a front end engineer at <a href="http://www.modop.com/" target="_blank" rel="noopener noreferrer">ModOp</a>, building cool web applications with React.
+          </p>
+          <p class="text-gray">
+            <span class="icon">
+              <i class="fab fa-js-square fa-3x"></i>
+            </span>
+            <span class="icon">
+              <i class="fab fa-node fa-3x"></i>
+            </span>
+            <span class="icon">
+              <i class="fab fa-react fa-3x"></i>
+            </span>
+            <span class="icon">
+              <i class="fab fa-html5 fa-3x"></i>
+            </span>
+            <span class="icon">
+              <i class="fab fa-css3 fa-3x"></i>
+            </span>
+            <span class="icon">
+              <i class="fab fa-sass fa-3x"></i>
+            </span>
+          </p>
+          <br />
+          <p class="text-right">
+            <a href="#contact">Contact me.</a>
+          </p>
+        </div>
+      </div>
+      <div class="hero-foot"></div>
+    </section>
+    
+    <hr />
+
+    <section id="contact" class="hero">
+      <div class="hero-body">
+        <div class="hero-body-content">
+          <h1 class="title-gradient">
+            Let's talk.
+          </h1>
+          <form action="https://formspree.io/christy@laguardia.io" method="POST">
+            <label class="label" aria-hidden="true">Name</label>
+            <input name="name" class="input" type="text" placeholder="Name" required>
+            <label class="label" aria-hidden="true">Email</label>
+            <input name="_replyto" class="input" type="email" placeholder="Email" required>
+            <label class="label" aria-hidden="true">Message</label>
+            <textarea name="message" class="textarea" placeholder="Message" required></textarea>
+            <button type="submit" class="button is-link">Send</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    
+    <hr />
+
+    <section id="projects" class="hero">
+      <div class="hero-body">
+        <div class="hero-body-content">
+          <h1 class="title-gradient">
+            Projects
+          </h1>
+          <div id="projects-menu" class="grid-container"></div>
+        </div>
+      </div>
+      <div class="hero-foot"></div>
+    </section>
+
+    <hr />
+
+    <a href="#home" class="nav-button button">
+      <span class="icon">
+        <i class="fas fa-chevron-up"></i>
+      </span>
+    </a>
+
+  </main>
+
+  <footer class="footer">
+    <p>Christy La&nbsp;Guardia &copy; 2018</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    view.init();
+
+    $(document).ready(function () {
+      console.log('ready!');
+      $('body').show();
+    });
+  </script>
+</body>
 </html>

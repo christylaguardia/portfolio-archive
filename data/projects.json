@@ -1,0 +1,134 @@
+[
+  {
+    "title": "Garage Fellows",
+    "image": "GarageFellows.png",
+    "role": "Full-Stack Web Development",
+    "body": "<p>Student Project</p><p><a href='https://garagefellows.herokuapp.com/' target='_blank'>View the app</a></p>",
+    "tags": [
+      {
+        "icon": "fas fa-dollar-sign",
+        "text": "jQuery"
+      },
+      {
+        "icon": "fas fa-database",
+        "text": "PostgreSQL"
+      },
+      {
+        "icon": "fab fa-node",
+        "text": "Node"
+      }
+    ]
+  },
+  {
+    "title": "Caret API",
+    "image": "Caret.png",
+    "role": "Full-Stack Web Development",
+    "body": "<p>Student Project</p><p><a href='https://github.com/ACL-CMS-P1/carret/' target='_blank'>View the code</a></p>",
+    "tags": [
+      {
+        "icon": "fas fa-database",
+        "text": "MongoDB"
+      },
+      {
+        "icon": "fas fa-flask",
+        "text": "TDD"
+      }
+    ]
+  },
+  {
+    "title": "Varcity Network",
+    "image": "Varcity.png",
+    "role": "Full-Stack Web Development",
+    "body": "<p>A social network platform for student athletes. Built for a local startup.</p><p>My team and I created a proof of concept <span class='icon'><i class='fab fa-react'></i></span> React App for our client to gain approval to a startup incubator program.</p><p><a'https://varcity-network.herokuapp.com/' target='_blank'>View the app</a></p>",
+    "tags": [
+      {
+        "icon": "fab fa-react",
+        "text": "React"
+      },
+      {
+        "icon": "fab fa-sass",
+        "text": "Sass"
+      },
+      {
+        "icon": "fas fa-database",
+        "text": "MongoDB"
+      }
+    ]
+  },
+  {
+    "title": "RPSLP",
+    "image": "RPSLP.png",
+    "role": "Front End Web Development",
+    "body": "<p>Rock Paper Scissors Lizard Spock</p><p>If you know what this is, you've watched too much of the Big Bang Theory. It's ok, I understand.</p><p><a href='https://rpslp.herokuapp.com/' _target='blank'>Play the game</a></p>",
+    "tags": [
+      {
+        "icon": "fab fa-react",
+        "text": "React"
+      },
+      {
+        "icon": "fab fa-sass",
+        "text": "Sass"
+      }
+    ]
+  },
+  {
+    "title": "ebay Chat Bot",
+    "fa-icon": "fas fa-comments",
+    "role": "Full-Stack Web Development",
+    "body": "<p>A simple NodeJS chat bot for searching eBay products.<p><p><a href='https://ebay-chat-bot.herokuapp.com/' target='_blank'>Talk to the bot.</a></p>",
+    "tags": [
+      {
+        "icon": "fab fa-node-js",
+        "text": "Node"
+      },
+      {
+        "icon": "fab fa-sass",
+        "text": "Sass"
+      },
+      {
+        "icon": "fab fa-ebay",
+        "text": "API"
+      }
+    ]
+  },
+  {
+    "title": "Jimmy Dorsey Real Estate",
+    "image": "JDRE.png",
+    "role": "Full-Stack Web Development",
+    "body": "<p>Real estate as a service.</p><p><a href='https://play.google.com/store/apps/details?id=com.JDRE.android' taraget='_blank'>Get the app on Google Play Store</a></p>",
+    "tags": [
+      {
+        "icon": "fab fa-react",
+        "text": "React"
+      },
+      {
+        "icon": "fas fa-database",
+        "text": "MongoDB"
+      },
+      {
+        "icon": "fab fa-cc-stripe",
+        "text": "Stripe API"
+      }
+    ]
+  },
+  {
+    "title": "NikeConnect",
+    "image": "nikeconnect.jpg",
+    "body": "<p>Added UI features to the <a href='https://www.nike.com/us/en_us/c/nba/jerseys' target='_blank'>NikeConnect App</a>.</p>",
+    "role": "Front End Development",
+    "tags": [
+      {
+        "icon": "fab fa-react",
+        "text": "React"
+      },
+      {
+        "icon": "fas fa-database",
+        "text": "MongoDB"
+      },
+      {
+        "icon": "fas fa-flask",
+        "text": "Unit Testing"
+      }
+    ]
+  }
+]

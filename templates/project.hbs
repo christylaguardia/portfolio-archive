@@ -1,0 +1,26 @@
+<div class="project grid-row">
+  <div onClick="view.openModal(event)">
+    <img src="/img/{{ image }}" alt="{{ title }}" />
+  </div>
+  <div class="overlay hero-body">
+    <div class="hero-body-content hero-background">
+      <div class="centered">
+        <img src="/img/{{ image }}" alt="{{ title }}" />
+        <h1>{{ title }}</h1>
+        <h3>{{ role }}</h3>
+        {{#if tags.length}}
+          {{#each tags}}
+            <span class="tag">
+              <span class="icon">
+                <i class="{{ icon }} fa-lg"></i>
+              </span>
+              <span>{{ text }}</span>
+            </span>
+          {{/each}}
+        {{/if}}
+        {{{ body }}}
+        <button class="button-close" onClick="view.closeModal()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
