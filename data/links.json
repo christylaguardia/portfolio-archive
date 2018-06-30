@@ -1,0 +1,22 @@
+[
+  {
+    "url": "https://github.com/christylaguardia/",
+    "icon": "fab fa-github fa-2x"
+  },
+  {
+    "url": "https://codepen.io/christylaguardia/",
+    "icon": "fab fa-codepen fa-2x"
+  },
+  {
+    "url": "https://www.linkedin.com/in/christy-la-guardia/",
+    "icon": "fab fa-linkedin fa-2x"
+  },
+  {
+    "url": "https://medium.com/@christylaguardia/",
+    "icon": "fab fa-medium fa-2x"
+  },
+  {
+    "url": "https://twitter.com/c_la_guardia",
+    "icon": "fab fa-twitter fa-2x"
+  }
+]
