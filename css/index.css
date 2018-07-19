@@ -34,14 +34,18 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1;
   margin-top: 0;
   margin-bottom: 0;
-  padding-bottom: 0.5rem;
+  padding: 0.5rem;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 h2 {
+  font-size: 2rem;
+}
+
+h3 {
   font-size: 1.5rem;
 }
 
@@ -62,6 +66,13 @@ a {
 
 a:hover {
   color: #3f5da0;
+  /* font-style: italic; */
+  -webkit-transition: color 200ms;
+  -o-transition: color 200ms;
+  transition: color 200ms;
+  /* -webkit-transition: font-style 500ms;
+  -o-transition: font-style 500ms;
+  transition: font-style 500ms; */
 }
 
 footer {
@@ -196,6 +207,44 @@ hr {
   text-align: center;
 }
 
+.tool-tip {
+  display: inline-block;
+  position: relative;
+}
+
+.tool-tip .tool-tip-text{
+  background-color: #c9daff;
+  border-radius: 4px;
+  color: #3f5da0;
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 0.8rem;
+  left: 50%; 
+  position: absolute;
+  margin-left: -50%; 
+  margin-top: 6px;
+  min-width: 40px;
+  /* padding: 0.4rem; */
+  padding: 0.2rem 0.4rem;
+  text-align: center;
+  top: 100%;
+  visibility: hidden;
+}
+
+/* .tool-tip .tool-tip-text::after {
+  bottom: 100%;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #c9daff transparent;
+  content: " ";
+  left: 30%;
+  margin-left: -5px;
+  position: absolute;
+} */
+
+.tool-tip:hover .tool-tip-text {
+  visibility: visible;
+}
+
 /***** Home *****/
 
 #home {
@@ -281,10 +330,12 @@ hr {
 }
 
 .tag {
-  background-color: #e3fdff;
+  color: #3f5da0;
+  background-color: #c9daff;
   border-radius: 4px;
   display: inline-block;
   font-family: 'Anonymous Pro', monospace;
+  font-size: 0.8rem;
   margin: 0.25rem;
   padding: 0.2rem 0.6rem;
 }
@@ -327,6 +378,18 @@ hr {
 
 .overlay-content {
   padding: 2rem;
+}
+
+.overlay-close {
+  /* color: #3f5da0; */
+  color: #ccc;
+  position: absolute;
+  right: 5%;
+  top: 2%;
+}
+
+.overlay-button a {
+  color: #fff;
 }
 
 /***** Other *****/
@@ -395,8 +458,14 @@ hr {
 /***** iPad *****/
 
 @media (min-width: 768px) {
-  .overlay > .hero-body-content h1 {
-    margin-bottom: 2rem;
+  .overlay > .hero-body-content {
+    max-width: 768px;
+    padding: 1rem 2rem;
+    width: auto;
+  }
+
+  .hero-body-content h1 {
+    margin-top: 1rem;
   }
 }
 
@@ -420,7 +489,9 @@ hr {
   }
 
   .overlay > .hero-body-content {
-    max-width: 768px;
-    width: auto;
+    /* max-width: 768px; */
+    padding: 1rem 2rem;
+    width: 768px;
+    /* width: auto; */
   }
 }

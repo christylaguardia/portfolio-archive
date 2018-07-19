@@ -1,26 +1,38 @@
 <div class="project grid-row">
+  
   <div onClick="view.openModal(event)">
     <img src="/img/{{ image }}" alt="{{ title }}" />
   </div>
-  <div class="overlay hero-body">
+
+  <div class="overlay hero-body" onClick="view.closeModal()">
     <div class="hero-body-content hero-background">
+      <div class="overlay-close" onClick="view.closeModal()">
+        <i class="fas fa-times fa-2x"></i>
+      </div>
       <div class="centered">
-        <img src="/img/{{ image }}" alt="{{ title }}" />
-        <h1>{{ title }}</h1>
+        <h1>{{ name }}</h1>
         <h3>{{ role }}</h3>
-        {{#if tags.length}}
-          {{#each tags}}
-            <span class="tag">
-              <span class="icon">
-                <i class="{{ icon }} fa-lg"></i>
-              </span>
-              <span>{{ text }}</span>
-            </span>
+        
+        {{#if icons.length}}
+        <div class="text-gray">
+          {{#each icons}}
+              <div class="tag tool-tip">
+                {{#if this.icon}}
+                  <span class="icon">
+                    <i class="{{ this.icon }} fa-lg"></i>
+                  </span>
+                {{/if}}
+                <span>{{ this.tag }}</span>
+          </div>
           {{/each}}
+        </div>
         {{/if}}
-        {{{ body }}}
-        <button class="button-close" onClick="view.closeModal()">Close</button>
+        
+        <p>{{ description }}</p>
+
+        <p class="button overlay-button"><a href="{{ url }}" target="_blank">{{ cta }}</a></p>
       </div>
     </div>
   </div>
+
 </div>

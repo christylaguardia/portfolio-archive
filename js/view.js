@@ -2,32 +2,7 @@
 
 (function (module) {
   module.view = {
-
-    getLinks: function () {
-      $.get('/templates/link.hbs', function (source) {
-        const template = Handlebars.compile(source);
-
-        $.getJSON('/data/links.json', function (links) {
-          $.each(links, function (key, link) {
-            $('#links').append(template(link));
-          });
-        });
-      });
-    },
-
-    getProjects: function () {
-      $.get('/templates/project.hbs', function (source) {
-        const template = Handlebars.compile(source);
-
-        $.getJSON('/data/projects.json', function (projects) {
-          projects.reverse();
-          $.each(projects, function (key, project) {
-            $('#projects-menu').append(template(project));
-          });
-        });
-      });
-    },
-
+    
     smoothScroll: function () {
       $('a').on('click', function (event){
         if (this.hash !== '') {
@@ -75,8 +50,6 @@
     },
 
     init: function () {
-      this.getLinks();
-      this.getProjects();
       this.smoothScroll();
       this.onScrollOrResize();
       $('.overlay').click(this.closeModal);
