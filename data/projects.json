@@ -157,7 +157,7 @@
       "Dialog Flow API"
     ],
     "url": "https://ebay-chat-bot.herokuapp.com/",
-    "cta": "Chat with the bot",
+    "cta": "Talk to the bot",
     "image": "ebay-cat-bot.png",
     "visible": true
   },
