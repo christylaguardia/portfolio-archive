@@ -58,7 +58,7 @@ dark-blue: #5b86e5
     padding-top: 0;
     padding-bottom: 0;
     border-bottom: none;
-    background-color: transparent;
+    /* background-color: transparent; */
     transition: background-color 0.3s ease-in-out;
   }
   #mainNav .navbar-brand {
@@ -301,6 +301,7 @@ dark-blue: #5b86e5
 }
 
 body {
+  display: none;
   font-family: 'Open Sans', sans-serif;
   letter-spacing: 0.0625em;
 }
