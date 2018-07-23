@@ -41,11 +41,15 @@ dark-blue: #5b86e5
   background-color: transparent;
 }
 
-#mainNav.navbar-shrink .navbar-brand, #mainNav.navbar-shrink .nav-link {
+#mainNav .navbar-shrink .navbar-brand, #mainNav .navbar-shrink {
   color: rgba(255, 255, 255, 0.5);
 }
 
-#mainNav.navbar-shrink {
+#mainNav .nav-link {
+  color: #36d1dc;
+}
+
+#mainNav .navbar-shrink {
   background-color: #000;
 }
 
@@ -54,7 +58,7 @@ dark-blue: #5b86e5
     padding-top: 0;
     padding-bottom: 0;
     border-bottom: none;
-    background-color: transparent;
+    /* background-color: transparent; */
     transition: background-color 0.3s ease-in-out;
   }
   #mainNav .navbar-brand {
@@ -193,19 +197,27 @@ dark-blue: #5b86e5
   padding: 2rem;
 }
 
+.projects-section {
+  padding: 3rem 0;
+  font-size: 90%;
+}
+
+.project-text {
+  padding: 3rem;
+  text-align: center
+}
+
+@media (min-width: 768px) {
+  .project-text {
+    padding: 3rem 6rem;
+  }
+}
+
 @media (min-width: 992px) {
   .projects-section .featured-text {
     padding: 0 0 0 2rem;
     border-left: 0.5rem solid #36d1dc;
   }
-}
-
-.projects-section .project-text {
-  padding: 3rem;
-  font-size: 90%;
-}
-
-@media (min-width: 992px) {
   .projects-section .project-text {
     padding: 5rem;
   }
@@ -289,6 +301,7 @@ dark-blue: #5b86e5
 }
 
 body {
+  display: none;
   font-family: 'Open Sans', sans-serif;
   letter-spacing: 0.0625em;
 }
@@ -319,21 +332,34 @@ footer {
 }
 
 
-/* CUSTOM */
+/***** CUSTOM *****/
 
-.custom-icon {
-  position: inherit;
+.code-section {
+  margin: 6rem 0 8rem 0;
 }
 
-.custom-icon > div {
-  margin: 0;
-  position: inherit;
-  padding: 40px 0;
+.code-projects-section h1 {
+  font-family: 'Poppins', sans-serif;
+}
+
+.custom-icon {
+  display: none;
+}
+
+.carousel-item {
+  height: 400px;
+}
+
+@media (min-width: 768px) {
+  .carousel-item {
+    height: 300px;
+  }
 }
 
 @media (min-width: 992px) {
 
   .custom-icon {
+    display: block;
     position: relative;
   }
 
@@ -342,7 +368,17 @@ footer {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     padding: 0;
+  }
+
+  .carousel-item {
+    height: 380px;
+  }
+
+  .carousel-control-prev i, .carousel-control-next i {
+    color: rgba(0, 0, 0, 0.5);
   }
 }
