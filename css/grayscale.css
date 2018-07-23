@@ -1,3 +1,5 @@
+/* STYLES HAVE BEEN MODIFIED FROM THE ORIGINAL GRAYSCALE THEME */
+
 /* 
 font-family: 'Poppins', sans-serif;
 font-family: 'Open Sans', sans-serif;
@@ -7,7 +9,7 @@ dark-blue: #5b86e5
 
 #mainNav {
   min-height: 56px;
-  background-color: #fff;
+  background-color: #000;
 }
 
 #mainNav .navbar-toggler {
@@ -22,7 +24,8 @@ dark-blue: #5b86e5
 }
 
 #mainNav .navbar-brand {
-  color: #161616;
+  /* color: #161616; */
+  color: rgba(255, 255, 255, 0.5);
   font-weight: 700;
   padding: .9rem 0;
 }
@@ -36,6 +39,14 @@ dark-blue: #5b86e5
 #mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
   outline: none;
   background-color: transparent;
+}
+
+#mainNav.navbar-shrink .navbar-brand, #mainNav.navbar-shrink .nav-link {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#mainNav.navbar-shrink {
+  background-color: #000;
 }
 
 @media (min-width: 992px) {
@@ -61,14 +72,15 @@ dark-blue: #5b86e5
   #mainNav .nav-link:active {
     color: white;
   }
-  #mainNav.navbar-shrink {
-    background-color: #fff;
+  /* #mainNav.navbar-shrink {
+    background-color: #000;
   }
   #mainNav.navbar-shrink .navbar-brand {
-    color: #161616;
-  }
+    color: rgba(255, 255, 255, 0.5);
+  } */
   #mainNav.navbar-shrink .nav-link {
-    color: #161616;
+    /* color: #161616; */
+    color: rgba(255, 255, 255, 0.5);
     padding: 1.5rem 1.5rem 1.25rem;
     border-bottom: 0.25rem solid transparent;
   }
@@ -110,7 +122,8 @@ dark-blue: #5b86e5
 
 .masthead h2 {
   max-width: 20rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
+  /* font-size: 1rem; */
 }
 
 @media (min-width: 768px) {
@@ -203,17 +216,17 @@ dark-blue: #5b86e5
   }
 }
 
-.signup-section {
+.contact-section {
   padding: 10rem 0;
-  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/bg-signup.jpg");
-  background-position: center;
+  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/bg-contact.jpg");
+  background-position: left;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
 }
 
-.signup-section .form-group input,
-  .signup-section .form-group textarea  {
+.contact-section .form-group input,
+  .contact-section .form-group textarea  {
   box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
   padding: 1.25rem 2rem;
   font-family: 'Poppins', sans-serif;
@@ -223,7 +236,7 @@ dark-blue: #5b86e5
   border: 0;
 }
 
-.signup-section .form-group textarea:focus {
+.contact-section .form-group textarea:focus {
   outline: none;
 }
 
@@ -231,29 +244,29 @@ dark-blue: #5b86e5
   padding: 5rem 0 0;
 }
 
-.contact-section .card {
+.info-section .card {
   border: 0;
   border-bottom: 0.25rem solid #36d1dc;
 }
 
-.contact-section .card h4 {
+.info-section .card h4 {
   font-size: 0.8rem;
   font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.15rem;
 }
 
-.contact-section .card hr {
+.info-section .card hr {
   border-color: #36d1dc;
   border-width: 0.25rem;
   width: 3rem;
 }
 
-.contact-section .social {
+.info-section .social {
   margin-top: 5rem;
 }
 
-.contact-section .social a {
+.info-section .social a {
   text-align: center;
   height: 3rem;
   width: 3rem;
@@ -263,12 +276,16 @@ dark-blue: #5b86e5
   color: rgba(255, 255, 255, 0.3);
 }
 
-.contact-section .social a:hover {
+.info-section .social a:hover {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.contact-section .social a:active {
+.info-section .social a:active {
   color: #fff;
+}
+
+.info-section {
+  padding: 10rem 0;
 }
 
 body {
@@ -299,4 +316,33 @@ a:focus, a:hover {
 
 footer {
   padding: 5rem 0;
+}
+
+
+/* CUSTOM */
+
+.custom-icon {
+  position: inherit;
+}
+
+.custom-icon > div {
+  margin: 0;
+  position: inherit;
+  padding: 40px 0;
+}
+
+@media (min-width: 992px) {
+
+  .custom-icon {
+    position: relative;
+  }
+
+  .custom-icon > div {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+  }
 }
