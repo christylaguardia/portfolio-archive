@@ -41,11 +41,15 @@ dark-blue: #5b86e5
   background-color: transparent;
 }
 
-#mainNav.navbar-shrink .navbar-brand, #mainNav.navbar-shrink .nav-link {
+#mainNav .navbar-shrink .navbar-brand, #mainNav .navbar-shrink {
   color: rgba(255, 255, 255, 0.5);
 }
 
-#mainNav.navbar-shrink {
+#mainNav .nav-link {
+  color: #36d1dc;
+}
+
+#mainNav .navbar-shrink {
   background-color: #000;
 }
 
@@ -327,29 +331,28 @@ footer {
 }
 
 
-/* CUSTOM */
+/***** CUSTOM *****/
+
+.code-section {
+  margin: 6rem 0 8rem 0;
+}
+
+.code-projects-section h1 {
+  font-family: 'Poppins', sans-serif;
+}
 
 .custom-icon {
   display: none;
-  /* position: inherit; */
-}
-
-.custom-icon img {
-  opacity: 0.5;
-}
-
-.custom-icon > div {
-  /* margin: 0;
-  position: inherit; */
-  /* padding: 20px 0; */
-}
-
-.carousel-control-prev i, .carousel-control-next i {
-  color: #fff;
 }
 
 .carousel-item {
-  height: 60vh;
+  height: 400px;
+}
+
+@media (min-width: 768px) {
+  .carousel-item {
+    height: 300px;
+  }
 }
 
 @media (min-width: 992px) {
