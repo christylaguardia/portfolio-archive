@@ -8,6 +8,4 @@ See my latest work on [my portfolio.](http://www.laguardia.io)
 
 ## Contact
 
-[LinkedIn](https://www.linkedin.com/in/christy-la-guardia/)
-
-christy@laguardia.io
+Feel free to email me at christy@laguardia.io or connect with me on [LinkedIn](https://www.linkedin.com/in/christy-la-guardia/).
