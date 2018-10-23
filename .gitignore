@@ -1,3 +1,3 @@
 *.old*
 *.wip*
-.vscode
+.vscode/settings.json
