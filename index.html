@@ -16,146 +16,117 @@
     gtag('config', 'UA-122657192-1');
   </script>
   <link href="favicon.ico" rel="icon" type="image/x-icon" />
-  <link rel="stylesheet" href="src/css/bulma.min.css" />
   <link rel="stylesheet" href="src/css/styles.css" />
-  <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap" rel="stylesheet">
-  <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet"
-    integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto+Mono&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
-  <section class="hero is-medium">
-    <div class="hero-body">
-      <div class="container">
-        <h1 class="title is-size-2-mobile is-uppercase portfolio-title">
-          Hi, I'm Christy.
-        </h1>
-        <p id="header-email" class="is-size-2 is-size-6-mobile is-uppercase"></p>
-        <div id="header-links"></div>
-        <p id="header-links" class="is-size-2 is-size-6-mobile is-uppercase">
-          <a href="https://www.linkedin.com/in/christy-la-guardia/" target="_blank" rel="noopener noreferrer">
-            LinkedIn
-          </a>
-        </p>
-        <p class="is-size-2 is-size-6-mobile is-uppercase">
-          <a href="https://github.com/christylaguardia/" target="_blank" rel="noopener noreferrer">
-            GitHub
-          </a>
-        </p>
-        <div class="columns">
-          <div class="column is-two-thirds is-offset-one-third">
-            <p id="about-headline" class="is-size-2 is-size-3-mobile">
-              I'm a builder with a head for business.
-            </p>
-            <p class="is-size-3 is-size-4-mobile">
-              For the past 12 years, I’ve been shipping software that aims for practical value, building real things for real people to use in the real world. From whipping out an MVP to designing and executing a global app at scale, I’m in. Currently, I’m way deep into React/Javascript.
-            </p>
-            <p class="is-size-3 is-size-4-mobile"><a href="#problems-solved">Check out my work.</a> </p>
-          </div>
-        </div>
-      </div>
-  </section>
-  <section class="portfolio-highlight section is-medium">
-    <div class="container">
-      <h2 class="title is-size-1 is-size-3-mobile is-uppercase">
-        What you need to know about me.
-      </h2>
-    </div>
-    <div class="container">
-      <div class="columns portfolio-motto-container">
-        <div class="column portfolio-motto">
-          <p class="is-size-4 is-size-4-mobile">
-            I’m passionate about building tools that have a <strong>positive impact</strong> on the business and creating a pleasant experience for the end user.
-          </p>
-          </div>
-          <div class="column portfolio-motto">
-            <p class="is-size-4 is-size-4-mobile">
-              I believe working in tech isn’t just about solving complex problems and building scalable software, <strong>it’s about helping people.</strong>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="problems-solved" class="section is-medium">
-    <div class="container">
-      <h2 class="title is-size-1 is-size-3-mobile is-uppercase">
-        Challenges I've met.
-      </h2>
-      <div id="portfolio-projects"></div>
-    </div>
-  </section>
-  <section class="section is-medium portfolio-highlight">
-    <div class="container">
-      <h2 class="title is-size-1 is-size-3-mobile is-uppercase">
-        My continuously expanding toolkit.
-      </h2>
-      <div id="portfolio-skills" class="tags"></div>
-    </div>
-  </section>
-  <section class="section is-medium">
-    <div class="container has-text-right">
-      <h2 class="title is-size-1 is-size-3-mobile is-uppercase">
-        Let's chat.
-      </h2>
-    </div>
-    <div class="container has-text-right">
-      <p id="footer-email" class="is-size-2 is-size-6-mobile is-uppercase"></p>
-      <p class="is-size-2 is-size-6-mobile is-uppercase">
-        <a href="https://www.linkedin.com/in/christy-la-guardia/" target="_blank" rel="noopener noreferrer">
-          LinkedIn
-        </a>
-        <span> | </span>
-        <a href="https://github.com/christylaguardia/" target="_blank" rel="noopener noreferrer">
-          GitHub
-        </a>
-        <span> | </span>
-        <a href="https://codepen.io/christylaguardia/" target="_blank" rel="noopener noreferrer">
-          Codepen
-        </a>
-        <span> | </span>
-        <a href="https://twitter.com/christylga" target="_blank" rel="noopener noreferrer">
-          Twitter
-        </a>
-        <span> | </span>
-        <a href="https://medium.com/@christylaguardia/" target="_blank" rel="noopener noreferrer">
-          Medium
-        </a> </p>
-    </div>
-  </section>
+  <div class="main">
+    <header>
+      <h1>Christy La&nbsp;Guardia</h1>
+      <nav>
+        <ul class="nav-list">
+          <li><a class="is-active" href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <script id="template-skill" type="text/template">
-    <span class="tag is-medium portfolio-skill">
+    <div class="container">
+      <section id="about">
+        <h2>Hi, I'm Christy</h2>
+        <!-- <h2>What you need to know about me</h2> -->
+        <p>I'm a front-end software engineer located in Missoula, Montana.</p>
+        <p>For the past 12 years, I’ve been shipping software that aims for practical value, building real things for
+          real people to use in the real world. From whipping out an MVP to designing and executing a global app at
+          scale, I’m in. Currently, I’m way deep into <strong>React/Javascript</strong>.</p>
+        <p><em>Here's what you need to know about me:</em>
+        <p>
+        <p>> I’m passionate about building tools that have a <strong>positive impact</strong> on the business and
+          creating
+          a pleasant experience for the end user.</p>
+        <p>> I believe working in tech isn’t just about solving complex problems and building scalable software,
+          <strong>it’s about helping people.</strong></p>
+      </section>
+
+      <section id="contact" class="is-hidden">
+        <h2>You can find me here</h2>
+        <ul class="contact-links">
+          <li>
+            <a href="mailto:christinelaguardia@gmail.com">christinelaguardia@gmail.com</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/christy-la-guardia/" target="_blank"
+              rel="noopener noreferrer">LinkedIn</a>
+          </li>
+          <li>
+            <a href="https://github.com/christylaguardia/" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </li>
+          <li>
+            <a href="https://codepen.io/christylaguardia/" target="_blank" rel="noopener noreferrer">Codepen</a>
+          </li>
+          <li>
+            <a href="https://medium.com/@christylaguardia/" target="_blank" rel="noopener noreferrer">
+              Medium
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/christylga" target="_blank" rel="noopener noreferrer">Twitter</a>
+          </li>
+        </ul>
+      </section>
+
+      <section id="projects" class="is-hidden">
+        <h2>Checkout some of my projects</h2>
+      </section>
+
+      <section id="skills" class="is-hidden">
+        <h2>My continuously expanding toolkit</h2>
+      </section>
+    </div>
+  </div>
+
+  <footer>
+    &copy;2020 Christy La Guardia
+  </footer>
+
+  <script id="skill-template" type="text/template">
+    <li>
       {{#if iconClass}}
       <i class="{{iconClass}}"></i>
       <span> </span>
       {{/if}}
       {{name}}
-    </span>
+    </li>
   </script>
 
-  <script id="template-project" type="text/template">
-    <div class="columns portfolio-project">
-      <div class="column is-one-quarter">
+  <script id="project-template" type="text/template">
+    <div class="project">
+      <div class="columns">
         {{#if img}}
-          <img class="portfolio-image" src="img/{{img}}" alt="{{name}}" />
-        {{/if}}
-      </div>
-      <div class="column">
-        <div class="content">
-          <h3 class="is-uppercase">{{name}}</h3>
-          <p><strong>{{about}}</strong></p>
-          <p><strong>Problem:</strong> {{problem}}</p>
-          <p><strong>Solution:</strong> {{solution}}</p>
-          <p> <a href={{url}} target="_blank">{{cta}}</a> </p>
+          <div class="column">
+            <img class="image" src="img/{{img}}" alt="{{name}}" />
+          </div>
+          {{/if}}
+          <div class="column">
+            <h3>{{name}}</h3>
+            <p><strong>{{about}}</strong></p>
+            <p><a href={{url}} target="_blank">{{cta}}</a></p>
         </div>
       </div>
+      <p><strong>Problem:</strong> {{problem}}</p>
+      <p><strong>Solution:</strong> {{solution}}</p>
     <div>
 	</script>
 
   <script src="src/js/jquery.min.js"></script>
   <script src="src/js/handlebars.min-v4.7.6.js"></script>
-  <script src="src/js/portfolio.js"></script>
+  <script src="src/js/navigation.js"></script>
+  <script src="src/js/projects.js"></script>
+  <script src="src/js/skills.js"></script>
   <script>
     // Wait until page is loaded to display
     $(document).ready(function () {

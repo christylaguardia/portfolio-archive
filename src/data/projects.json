@@ -1,5 +1,25 @@
 [
   {
+    "hidden": true,
+    "name": "ClassPass",
+    "about": "Web and mobile apps for the fitness class aggregator to expand their_______ ",
+    "problem": "Partnering with ClassPass had been a time consuming and complex friction-full process that included disjointed legacy interfaces, electronic paperwork and emails—all relying heavily on CP staff, entailing extra costs, time and risk of human error.",
+    "solution": "I helped build a streamlined UI for signing an agreement and offering classes on the platform. I also created administrative tools for effectively managing these partners and guiding them through the onboarding process.",
+    "cta": "",
+    "url": "",
+    "img": "cp.png"
+  },
+  {
+    "hidden": true,
+    "name": "ClassPass",
+    "about": "",
+    "problem": "The coronavirus pandemic decimated the fitness industry, shrinking ClassPass revenues 96 percent almost overnight. Urgent remedies were needed to save, not just our company, but thousands of small businesses around the world. ",
+    "solution": "Our team rose to the occasion to build out a livestream platform in record time, enabling instructors to offer fitness classes remotely",
+    "cta": "",
+    "url": "",
+    "img": "cp.png"
+  },
+  {
     "name": "Nike",
     "about": "Mobile app connecting NBA fans to exclusive content",
     "problem": "Everyone wants free merch, but only a select few will be lucky enough to win.",

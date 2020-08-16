@@ -1,64 +1,107 @@
-/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
-
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   background-color: rgb(244, 244, 244);
+  background: -webkit-linear-gradient(260deg, #5b86e5, #36d1dc);
+  background: -o-linear-gradient(260deg, #5b86e5, #36d1dc);
+  background: linear-gradient(190deg, #5b86e5, #36d1dc);
+  background-size: 200% auto;
+  background-clip: text;
+  font-family: 'Roboto Mono', monospace;
+  /* height: 100vh; */
 }
 
-h2,
-h3 {
-  font-family: "Montserrat", sans-serif;
+.main {
+  width: 100%;
 }
 
-p {
-  font-family: "Open Sans", sans-serif;
+.container {
+  /* display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: flex-start; */
 }
 
-.portfolio-title {
-  font-size: 4rem;
+h1, h2, h3 {
+  font-family: 'Permanent Marker', cursive;
+  margin: 0;
 }
 
-.portfolio-project:not(:last-child) {
-  border-bottom: 1px solid #333;
+ul {
+  display: inline-block;
+  list-style: none;
+  padding-left: 0;
 }
 
-.portfolio-highlight {
-  background-color: #fff;
+li {
+  display: inline-block;
+  text-transform: lowercase;
 }
 
-.portfolio-motto-container {
-  margin: 24px 0;
-  /* padding: 24px; */
+li:not(:last-child):after {
+  content: " • ";
 }
 
-.portfolio-motto {
-  border: 1px solid #333;
-  border-radius: 3px;
-  margin: 24px;
-  padding: 24px;
+.is-active {
+  /* color: #000; */
 }
 
-.portfolio-motto:first-child {
-  margin-left: 0;
+a, a:active {
+  color: #000;
 }
 
-.portfolio-image {
-  border-radius: 3px;
+header {
+  text-align: center;
+  padding: 2rem 4rem;
 }
 
-.portfolio-skill {
-  padding: 6px 4px;
-}
-
-.portfolio-skill i {
-  padding-right: 4px;
-}
-
-/* Override Bulma */
-
-.content h3 {
+.nav-list {
+  font-size: 1.5rem;
   margin-bottom: 0;
+}
+
+section {
+  max-width: 800px;
+  margin: 1rem auto;
+  padding: 2rem 4rem;
+  background-color: #fff;
+  border-radius: 2px;
+
+  @media screen (max-width: 812px) {
+    margin: 1rem 0.5rem;
+  }
+}
+
+.is-hidden {
+  /* display: none; */
+}
+
+.contact-links {
+  font-size: 1rem;
+}
+
+.project {
+  margin-top: 3rem;
+}
+.columns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
+
+.column p {
+  margin: 0.25rem 0;
+}
+
+.image {
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 4px;
+  margin-right: 2rem;
+}
+
+footer {
+  text-align: center;
+  margin: 3rem;
 }
